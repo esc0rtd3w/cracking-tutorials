@@ -1,0 +1,337 @@
+
+--------------------------------------------------------------------------------------
+Paint Shop Pro v9.0.3.0
+--------------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------------
+Targets:
+
+1) Paint_Shop_Pro_90.exe
+   The actual installer.
+   It is protected by needing a valid serial number to install.
+
+
+2) PSIKey.dll
+   Extracted by installer.
+   Used to verify keys when installing and does not need patched.
+
+
+3) Paint Shop Pro 9.exe
+   Checks for a corrupt install or modified files.
+--------------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------------
+Protection:
+
+1) Cannot install without a valid serial number.
+
+2) Produces a "Damaged or Illegally Modified" error if the main EXE file is executed
+   but the program has not been installed.
+--------------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------------
+Tools Required:
+
+1) OllyDGB, IDA Pro, W32Dasm, or equivalent.
+
+2) Sandboxie, Uniextract, or MSI Administrative Install.
+--------------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------------
+Solution:
+
+Must extract "Paint_Shop_Pro_90.exe" or sandbox to get MSI file.
+
+The "Jasc Paint Shop Pro 9.msi" file must then be extracted.
+
+The data.cab will be extracted if using MSI Administrative Install or Uniextract.
+
+
+
+May not be needed, but I copied the following to root of main EXE folder:
+
+
+- Common\Jasc Software Inc\JascThumbShellExt  <--- Just copied files only
+
+- Common\Jasc Software Inc\JascUpdate   <--- Not needed, but there for completeness
+
+- Windows  <--- Just copied files only
+
+- Windows\Downloaded Program Files  <--- Just copied files only
+
+
+The contents of "program files\Jasc Software Inc\Paint Shop Pro 9" can be considered
+the root folder, wherever you extracted it to. In the released version of this tutorial
+these files will always be placed in "%RELEASENAME%\portable\".
+
+
+
+There is only one file that needs patched now that we have "installed" without having
+to actually type in a serial number or verify in some other way.
+
+
+
+
+
+[Paint Shop Pro 9.exe]
+
+Damaged or Illegally Modified Patch
+
+
+---------------------------------------------------------
+OLD:
+---------------------------------------------------------
+
+00450DA3  |. /74 5D         JE SHORT 00450E02
+00450DA5  |. |8D4C24 0C     LEA ECX,DWORD PTR SS:[ESP+C]
+00450DA9  |. |E8 A2671200   CALL 00577550
+00450DAE  |. |8BF0          MOV ESI,EAX
+00450DB0  |. |85F6          TEST ESI,ESI
+00450DB2  |. |75 44         JNZ SHORT 00450DF8
+00450DB4  |. |6A 01         PUSH 1
+00450DB6  |. |50            PUSH EAX
+00450DB7  |. |8D4C24 14     LEA ECX,DWORD PTR SS:[ESP+14]
+00450DBB  |. |E8 B0671200   CALL 00577570
+00450DC0  |. |8D4C24 0C     LEA ECX,DWORD PTR SS:[ESP+C]
+00450DC4  |. |8BF0          MOV ESI,EAX
+00450DC6  |. |E8 25671200   CALL 005774F0
+00450DCB  |. |85F6          TEST ESI,ESI
+00450DCD  |. |8BF8          MOV EDI,EAX
+00450DCF  |. |74 0A         JE SHORT 00450DDB
+00450DD1  |. |83FF FF       CMP EDI,-1
+00450DD4  |. |74 22         JE SHORT 00450DF8
+00450DD6  |. |83FE 11       CMP ESI,11
+00450DD9  |. |75 1D         JNZ SHORT 00450DF8
+00450DDB  |> |8D4C24 0C     LEA ECX,DWORD PTR SS:[ESP+C]
+00450DDF  |. |E8 AC661200   CALL 00577490
+00450DE4  |. |83F8 04       CMP EAX,4
+00450DE7  |. |74 55         JE SHORT 00450E3E
+00450DE9  |. |83F8 02       CMP EAX,2
+00450DEC  |. |74 50         JE SHORT 00450E3E
+00450DEE  |. |83F8 01       CMP EAX,1
+00450DF1  |. |74 4B         JE SHORT 00450E3E
+00450DF3  |. |83FF FF       CMP EDI,-1
+00450DF6  |. |75 46         JNZ SHORT 00450E3E
+00450DF8  |> |83FE 06       CMP ESI,6
+00450DFB  |. |74 13         JE SHORT 00450E10
+00450DFD  |. |83FE 11       CMP ESI,11
+00450E00  |. |74 0E         JE SHORT 00450E10
+00450E02  |> \6A 00         PUSH 0
+00450E04  |.  6A 00         PUSH 0
+00450E06  |.  68 38425B00   PUSH 005B4238                            ;  ASCII "This copy of Paint Shop Pro has been damaged or illegally modified. Please reinstall from your original source."
+
+
+
+---------------------------------------------------------
+NEW:
+---------------------------------------------------------
+
+00450DA3  |. /90 90         NOP x2                          <--- Modify Bytes
+00450DA5  |. |8D4C24 0C     LEA ECX,DWORD PTR SS:[ESP+C]
+00450DA9  |. |E8 A2671200   CALL 00577550
+00450DAE  |. |8BF0          MOV ESI,EAX
+00450DB0  |. |85F6          TEST ESI,ESI
+00450DB2  |. |90 90         NOP x2                          <--- Modify Bytes
+00450DB4  |. |6A 01         PUSH 1
+00450DB6  |. |50            PUSH EAX
+00450DB7  |. |8D4C24 14     LEA ECX,DWORD PTR SS:[ESP+14]
+00450DBB  |. |E8 B0671200   CALL 00577570
+00450DC0  |. |8D4C24 0C     LEA ECX,DWORD PTR SS:[ESP+C]
+00450DC4  |. |8BF0          MOV ESI,EAX
+00450DC6  |. |E8 25671200   CALL 005774F0
+00450DCB  |. |85F6          TEST ESI,ESI
+00450DCD  |. |8BF8          MOV EDI,EAX
+00450DCF  |. |90 90         NOP x2                          <--- Modify Bytes
+00450DD1  |. |83FF FF       CMP EDI,-1
+00450DD4  |. |90 90         NOP x2                          <--- Modify Bytes
+00450DD6  |. |83FE 11       CMP ESI,11
+00450DD9  |. |90 90         NOP x2                          <--- Modify Bytes
+00450DDB  |> |8D4C24 0C     LEA ECX,DWORD PTR SS:[ESP+C]
+00450DDF  |. |90 90909090   NOP x5                          <--- Modify Bytes
+00450DE4  |. |83F8 04       CMP EAX,4
+00450DE7  |. |EB 55         JMP SHORT 00450E3E              <--- Modify Bytes
+00450DE9  |. |83F8 02       CMP EAX,2
+00450DEC  |. |EB 50         JMP SHORT 00450E3E              <--- Modify Bytes
+00450DEE  |. |83F8 01       CMP EAX,1
+00450DF1  |. |EB 4B         JMP SHORT 00450E3E              <--- Modify Bytes
+00450DF3  |. |83FF FF       CMP EDI,-1
+00450DF6  |. |EB 46         JMP SHORT 00450E3E              <--- Modify Bytes
+00450DF8  |> |83FE 06       CMP ESI,6
+00450DFB  |. |EB 13         JMP SHORT 00450E10              <--- Modify Bytes
+00450DFD  |. |83FE 11       CMP ESI,11
+00450E00  |. |EB 0E         JMP SHORT 00450E10              <--- Modify Bytes
+00450E02  |> \6A 00         PUSH 0
+00450E04  |.  6A 00         PUSH 0
+00450E06  |.  68 38425B00   PUSH 005B4238                            ;  ASCII "This copy of Paint Shop Pro has been damaged or illegally modified. Please reinstall from your original source."
+
+
+
+
+
+[Paint Shop Pro 9.exe]
+
+ERegAttempted Skip Patch (Optional, Not Required)
+
+
+---------------------------------------------------------
+OLD:
+---------------------------------------------------------
+0045113E  |. /0F85 9B000000 JNZ 004511DF
+00451144  |. |6A 01         PUSH 1
+00451146  |. |68 00435B00   PUSH 005B4300                            ;  ASCII "ERegAttempted"
+0045114B  |. |68 F4C25A00   PUSH 005AC2F4                            ;  ASCII "General"
+
+
+
+---------------------------------------------------------
+NEW:
+---------------------------------------------------------
+0045113E     /E9 9C000000   JMP 004511DF                             <--- Modify Bytes
+00451143     |90            NOP                                      <--- Modify Bytes
+00451144  |. |6A 01         PUSH 1
+00451146  |. |68 00435B00   PUSH 005B4300                            ;  ASCII "ERegAttempted"
+0045114B  |. |68 F4C25A00   PUSH 005AC2F4                            ;  ASCII "General"
+--------------------------------------------------------------------------------------
+
+
+
+
+
+[Paint Shop Pro 9.exe]
+
+RunOnce Skip Patch (Optional, Not Required)
+
+
+---------------------------------------------------------
+OLD:
+---------------------------------------------------------
+
+0042D106   . /0F84 CF000000 JE 0042D1DB
+0042D10C   . |8B06          MOV EAX,DWORD PTR DS:[ESI]
+0042D10E   . |6A 01         PUSH 1
+0042D110   . |53            PUSH EBX
+0042D111   . |68 54105B00   PUSH 005B1054                            ;  ASCII "FileAssociations"
+0042D116   . |8D4D 08       LEA ECX,DWORD PTR SS:[EBP+8]
+0042D119   . |51            PUSH ECX
+0042D11A   . |8BCE          MOV ECX,ESI
+0042D11C   . |FF50 50       CALL NEAR DWORD PTR DS:[EAX+50]
+0042D11F   . |395D 08       CMP DWORD PTR SS:[EBP+8],EBX
+0042D122   . |75 23         JNZ SHORT 0042D147
+0042D124   . |53            PUSH EBX
+0042D125   . |53            PUSH EBX
+0042D126   . |53            PUSH EBX
+0042D127   . |53            PUSH EBX
+0042D128   . |53            PUSH EBX
+0042D129   . |6A 7E         PUSH 7E
+0042D12B   . |8D8D A4FDFFFF LEA ECX,DWORD PTR SS:[EBP-25C]
+0042D131   . |E8 5A48FDFF   CALL 00401990
+0042D136   . |68 E4BF5D00   PUSH 005DBFE4
+0042D13B   . |8D95 A4FDFFFF LEA EDX,DWORD PTR SS:[EBP-25C]
+0042D141   . |52            PUSH EDX
+0042D142   . |E8 852F1500   CALL <JMP.&MSVCR71._CxxThrowException>
+0042D147   > |8B4D D4       MOV ECX,DWORD PTR SS:[EBP-2C]
+0042D14A   . |8B55 08       MOV EDX,DWORD PTR SS:[EBP+8]
+0042D14D   . |8B06          MOV EAX,DWORD PTR DS:[ESI]
+0042D14F   . |6A 01         PUSH 1
+0042D151   . |53            PUSH EBX
+0042D152   . |6A 01         PUSH 1
+0042D154   . |6A 01         PUSH 1
+0042D156   . |51            PUSH ECX
+0042D157   . |6A 01         PUSH 1
+0042D159   . |52            PUSH EDX
+0042D15A   . |8BCE          MOV ECX,ESI
+0042D15C   . |C645 FC 05    MOV BYTE PTR SS:[EBP-4],5
+0042D160   . |FF50 78       CALL NEAR DWORD PTR DS:[EAX+78]
+0042D163   . |EB 56         JMP SHORT 0042D1BB
+0042D165   . |8B4D D0       MOV ECX,DWORD PTR SS:[EBP-30]
+0042D168   . |6A 01         PUSH 1
+0042D16A   . |68 4C105B00   PUSH 005B104C                            ;  ASCII "RunOnce"
+0042D16F   . |33DB          XOR EBX,EBX
+0042D171   . |68 F4C25A00   PUSH 005AC2F4                            ;  ASCII "General"
+
+
+
+---------------------------------------------------------
+NEW:
+---------------------------------------------------------
+0042D106     /E9 D0000000   JMP 0042D1DB                             <--- Modify Bytes
+0042D10B     |90            NOP                                      <--- Modify Bytes
+0042D10C   . |8B06          MOV EAX,DWORD PTR DS:[ESI]
+0042D10E   . |6A 01         PUSH 1
+0042D110   . |53            PUSH EBX
+0042D111   . |68 54105B00   PUSH 005B1054                            ;  ASCII "FileAssociations"
+0042D116   . |8D4D 08       LEA ECX,DWORD PTR SS:[EBP+8]
+0042D119   . |51            PUSH ECX
+0042D11A   . |8BCE          MOV ECX,ESI
+0042D11C   . |FF50 50       CALL NEAR DWORD PTR DS:[EAX+50]
+0042D11F   . |395D 08       CMP DWORD PTR SS:[EBP+8],EBX
+0042D122   . |75 23         JNZ SHORT 0042D147
+0042D124   . |53            PUSH EBX
+0042D125   . |53            PUSH EBX
+0042D126   . |53            PUSH EBX
+0042D127   . |53            PUSH EBX
+0042D128   . |53            PUSH EBX
+0042D129   . |6A 7E         PUSH 7E
+0042D12B   . |8D8D A4FDFFFF LEA ECX,DWORD PTR SS:[EBP-25C]
+0042D131   . |E8 5A48FDFF   CALL 00401990
+0042D136   . |68 E4BF5D00   PUSH 005DBFE4
+0042D13B   . |8D95 A4FDFFFF LEA EDX,DWORD PTR SS:[EBP-25C]
+0042D141   . |52            PUSH EDX
+0042D142   . |E8 852F1500   CALL <JMP.&MSVCR71._CxxThrowException>
+0042D147   > |8B4D D4       MOV ECX,DWORD PTR SS:[EBP-2C]
+0042D14A   . |8B55 08       MOV EDX,DWORD PTR SS:[EBP+8]
+0042D14D   . |8B06          MOV EAX,DWORD PTR DS:[ESI]
+0042D14F   . |6A 01         PUSH 1
+0042D151   . |53            PUSH EBX
+0042D152   . |6A 01         PUSH 1
+0042D154   . |6A 01         PUSH 1
+0042D156   . |51            PUSH ECX
+0042D157   . |6A 01         PUSH 1
+0042D159   . |52            PUSH EDX
+0042D15A   . |8BCE          MOV ECX,ESI
+0042D15C   . |C645 FC 05    MOV BYTE PTR SS:[EBP-4],5
+0042D160   . |FF50 78       CALL NEAR DWORD PTR DS:[EAX+78]
+0042D163   . |EB 56         JMP SHORT 0042D1BB
+0042D165   . |8B4D D0       MOV ECX,DWORD PTR SS:[EBP-30]
+0042D168   . |6A 01         PUSH 1
+0042D16A   . |68 4C105B00   PUSH 005B104C                            ;  ASCII "RunOnce"
+0042D16F   . |33DB          XOR EBX,EBX
+0042D171   . |68 F4C25A00   PUSH 005AC2F4                            ;  ASCII "General"
+--------------------------------------------------------------------------------------
+
+
+
+[Paint Shop Pro 9.exe]
+
+Learning Center Skip Patch (DefaultCreated) (Optional, Not Required)
+
+** NOT WORKING **
+
+Only displays if the "Jasc" key is mising from the registry.
+
+---------------------------------------------------------
+OLD:
+---------------------------------------------------------
+
+
+
+
+---------------------------------------------------------
+NEW:
+---------------------------------------------------------
+
+--------------------------------------------------------------------------------------
+
+
+
+
+Now save and launch with "Paint Shop Pro 9.exe"
+
+:)
+
+
+
