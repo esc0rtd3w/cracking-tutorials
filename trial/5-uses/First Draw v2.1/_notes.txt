@@ -1,0 +1,88 @@
+-----------------------------
+Resolution change:
+-----------------------------
+
+00477AD0      E8 5B010000   CALL 00477C30                            ; \1stDraw.00477C30
+
+can NOP if you dont want the resolution to change.....better for debugging
+
+
+-----------------------------
+5 use trial stuff:
+-----------------------------
+
+Nag box # of times left:
+
+00477B6B  |.  E8 ECD3FBFF   CALL 00434F5C	;NOP this
+
+
+
+drawsys.dat <- a 1 byte file that tracks uses. default: 05
+
+drawsys.sys <- "drawsys.dat" is copied to WINDOWS folder as "drawsys.sys"
+
+if deleted from WINDOWS folder or if "drawsys.sys" does not exist, it re-copies "drawsys.dat" back to WINDOWS folder and defaults to 5 more uses.
+
+
+004795DD   . /74 59         JE SHORT 00479638                        ;  compare to see if it exists in WINDOWS folder,  if it JMPS, then the file is created.
+
+
+
+
+00479676   .  E8 5DA4F8FF   CALL 00403AD8
+0047967B   >  807D F3 05    CMP BYTE PTR SS:[EBP-D],5		;compare to 5 uses?
+0047967F   .  76 0C         JBE SHORT 0047968D			;FORCE JMP
+00479681   .  8B45 F8       MOV EAX,DWORD PTR SS:[EBP-8]
+00479684   .  C680 0C040000>MOV BYTE PTR DS:[EAX+40C],0
+0047968B   .  EB 0D         JMP SHORT 0047969A
+0047968D   >  8B45 F8       MOV EAX,DWORD PTR SS:[EBP-8]	;JMP from above JBE
+
+
+
+00479538  |.  E8 E3ADF8FF   CALL 00404320	;call to determine "drawsys.sys"?
+
+
+00404322   . /74 61         JE SHORT 00404385		;if JMP, "drawsys.sys" is read/written to the INSTALL folder instead of the WINDOWS folder. If both "drawsys.dat" and "drawsys.sys" are deleted from the install folder it will write a new "drawsys.sys" file with "FF". 
+
+
+00479500  |.  FE4D FF       DEC BYTE PTR SS:[EBP-1]	;decrease uses by 1 after closed?
+
+
+00403262  |. /74 08         JE SHORT 0040326C	;right after "drawsys.sys" is written, without a value yet.
+
+
+
+00477B38  |.  E8 4B1A0000   CALL 00479588
+
+
+
+
+
+
+3 JMP refs to the COMPARE routine:
+
+00479626   . /EB 53         JMP SHORT 0047967B                       ;  JMPS to CMP routine against 5
+
+00479636   . /EB 43         JMP SHORT 0047967B                       ;  JMPS to CMP routine against 5
+
+
+0047966B   . /EB 0E         JMP SHORT 0047967B                       ;  JMPS to CMP routine against 5
+
+
+
+
+
+-----------------------------
+Expiration stuff:
+-----------------------------
+
+004796AC   . /73 16         JNB SHORT 004796C4			;FORCE JMP
+004796AE   . |B8 20974700   MOV EAX,00479720                         ;  ASCII "Your trial period has expired.
+Please visit www.solidsoftware.co.uk for full version"
+004796B3   . |E8 A4B8FBFF   CALL 00434F5C
+004796B8   . |A1 40BD4700   MOV EAX,DWORD PTR DS:[47BD40]
+004796BD   . |8B00          MOV EAX,DWORD PTR DS:[EAX]
+004796BF   . |E8 C03AFEFF   CALL 0045D184
+004796C4   > \33C0          XOR EAX,EAX
+
+
