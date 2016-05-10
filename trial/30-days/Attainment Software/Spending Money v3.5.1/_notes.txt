@@ -1,0 +1,8 @@
+nop -> 004165CB - 004165D7
+
+
+hex with spaces -> you have %ld days left to evaluate this software.
+
+
+
+-100%-

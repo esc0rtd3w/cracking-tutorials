@@ -1,0 +1,8 @@
+nop -> 0040E7AB - 0040E7B7
+
+
+hex with spaces -> you have %ld days left to evaluate this software.
+
+
+
+-100%-

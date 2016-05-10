@@ -1,0 +1,8 @@
+nop -> 0042047B - 00420487
+
+
+hex with spaces -> you have %ld days left to evaluate this software.
+
+
+
+-100%-
