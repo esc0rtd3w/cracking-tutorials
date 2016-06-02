@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="Windows-1252" ?>
+<XML_DIZ_INFO>
+<MASTER_PAD_VERSION_INFO>
+    <MASTER_PAD_VERSION>1.15</MASTER_PAD_VERSION>
+    <MASTER_PAD_INFO>Portable Application Description, or PAD for short, is a data set that is used by shareware authors to disseminate information to anyone interested in their software products. To find out more go to http://www.asp-shareware.org/pad</MASTER_PAD_INFO>
+</MASTER_PAD_VERSION_INFO>
+<Company_Info>
+        <Company_Name>Soft Experience</Company_Name>
+        <Address_1>15, Avenue de Villiers</Address_1>
+        <Address_2 />
+        <City_Town>Villemoisson sur Orge</City_Town>
+        <State_Province>IDF</State_Province>
+        <Zip_Postal_Code>91360</Zip_Postal_Code>
+        <Country>France</Country>
+        <Company_WebSite_URL>http://www.softexperience.com</Company_WebSite_URL>
+<Contact_Info>
+        <Author_First_Name>Patrick</Author_First_Name>
+        <Author_Last_Name>Peccatte</Author_Last_Name>
+        <Author_Email>patrick@softexperience.com</Author_Email>
+        <Contact_First_Name>Patrick</Contact_First_Name>
+        <Contact_Last_Name>Peccatte</Contact_Last_Name>
+        <Contact_Email>patrick@softexperience.com</Contact_Email>
+    </Contact_Info>
+<Support_Info>
+        <Sales_Email>patrick@softexperience.com</Sales_Email>
+        <Support_Email>support@softexperience.com</Support_Email>
+        <General_Email>patrick@softexperience.com</General_Email>
+        <Sales_Phone>+33 1 69 51 06 73</Sales_Phone>
+        <Support_Phone>+33 1 69 51 06 73</Support_Phone>
+        <General_Phone>+33 1 69 51 06 73</General_Phone>
+        <Fax_Phone />
+    </Support_Info>
+</Company_Info>
+<Program_Info>
+        <Program_Name>WinTopMost</Program_Name>
+        <Program_Version>1.2</Program_Version>
+        <Program_Release_Month>10</Program_Release_Month>
+        <Program_Release_Day>13</Program_Release_Day>
+        <Program_Release_Year>2001</Program_Release_Year>
+        <Program_Cost_Dollars>25</Program_Cost_Dollars>
+        <Program_Cost_Other_Code>EUR</Program_Cost_Other_Code>
+        <Program_Cost_Other>25</Program_Cost_Other>
+        <Program_Type>Shareware</Program_Type>
+        <Program_Release_Status>New Release</Program_Release_Status>
+        <Program_Install_Support>Install and Uninstall</Program_Install_Support>
+        <Program_OS_Support>Win95,Win98,WinME,WinNT 4.x,WinXP,Windows2000</Program_OS_Support>
+        <Program_Language>English</Program_Language>
+<File_Info>
+        <Filename_Versioned>WinTopMost11</Filename_Versioned>
+        <Filename_Previous>WinTopMost10</Filename_Previous>
+        <Filename_Generic>WinTopMost.zip</Filename_Generic>
+        <Filename_Long>WinTopMost</Filename_Long>
+        <File_Size_Bytes>1571364</File_Size_Bytes>
+        <File_Size_K>1535</File_Size_K>
+        <File_Size_MB>1.53</File_Size_MB>
+    </File_Info>
+<Expire_Info>
+        <Has_Expire_Info>N</Has_Expire_Info>
+        <Expire_Count />
+        <Expire_Based_On>Days</Expire_Based_On>
+        <Expire_Other_Info />
+        <Expire_Month />
+        <Expire_Day />
+        <Expire_Year />
+    </Expire_Info>
+        <Program_Change_Info>Now Wintopmost also runs in command line to be used in batchs</Program_Change_Info>
+        <Program_Specific_Category>Utilities</Program_Specific_Category>
+        <Program_Categories>Desktop,Utilities,Windows,Applications,ftp,pc,desktop enhancements,command</Program_Categories>
+        <Program_System_Requirements />
+        <Includes_JAVA_VM>N</Includes_JAVA_VM>
+        <Includes_VB_Runtime>Y</Includes_VB_Runtime>
+        <Includes_DirectX>N</Includes_DirectX>
+</Program_Info>
+<Program_Descriptions>
+<English>
+        <Keywords>WinTopMost,main window,disable close button,close application,shareware,unload,desktop utility,shareware,freeware,Windows,systray,free,download,utility,utilitaire,logiciel,add-ins,software,tool,partagiciel,close button,logout</Keywords>
+        <Char_Desc_45>Applications on top, disable close button</Char_Desc_45>
+        <Char_Desc_80>Manage programs to be always visible and disable close</Char_Desc_80>
+        <Char_Desc_250>Disable the close button for selected applications for example when a clean logout is required for example leaving a Telnet window. Manage automatically applications to be always visible on your desktop.</Char_Desc_250>
+        <Char_Desc_450>WinTopMost put topmost automatically any window and/or disable its X close button  (window's top right corner).
+Put topmost any window or comme back to a &quot;normal&quot; (non topmost) window 
+Can set topmost automatically all windows with captions containing specific strings.
+WinTopMost intercepts windows captions when programs are running. 
+Disable or enable the close button of any window. Can be used in command line.</Char_Desc_450>
+        <Char_Desc_2000>WinTopMost can put topmost automatically any window and/or disable its
+X close button (window's top right corner). 
+Main features :
+- Runs on Windows 95/98/NT 4.0/Windows 2000. 
+- Put allways on top any window or comme back to a &quot;normal&quot; (non topmost)
+    window 
+- Disable or enable X close button of any window. 
+- Can set topmost automatically all windows with captions containing specific strings.  
+WinTopMost intercepts windows captions when programs are running (can  intercept many strings and set topmost many windows). 
+- Can disable automatically X close buttons for all windows with captions containing specific strings. 
+WinTopMost  intercepts windows captions when programs are running (can  intercept many strings and disable X close buttons of many windows). 
+Language: English
+
+You may use WinTopMost to ensure that  the users log out correctly for example for telnet, not just close the application.
+Can run in command line mode.</Char_Desc_2000>
+</English>
+<French>
+        <Keywords>fenetre principale,premier plan,desactiver fermeture application,shareware,main window,shareware,freeware,Windows,systray,free,download,utilitaire,logiciel,add-ins,software,tool,gratugiciel,telechargement,bureau,WinTopMost,fermer application,systeme</Keywords>
+        <Char_Desc_45>Desactiver le bouton fermeture application</Char_Desc_45>
+        <Char_Desc_80>Empêcher la fermeture du programme avec ALT+F4, application toujours visible</Char_Desc_80>
+        <Char_Desc_250>WinTopMost permet de placer automatiquement certaines fenetres de programmes Windows au premier plan et/ou de desactiver leur bouton de fermeture (le X en haut et a droite de la fenetre).</Char_Desc_250>
+        <Char_Desc_450>WinTopMost permet de placer automatiquement certaines fenêtres de programmes Windows au premier plan et/ou de désactiver leur bouton de fermeture (le X en haut et à droite de la fenêtre).
+Utilisable sur toute application, il maintient sa fenêtre au premier plan.
+Empeche la fermeture brutale d'une apllication sensible obligeant l'utilisateur à sortir correctement, par exemple sur telnet.</Char_Desc_450>
+        <Char_Desc_2000>&lt;ul&gt;
+  &lt;/i&gt;&lt;/b&gt;
+  &lt;li&gt;Fonctionne sur Windows 95/98/NT 4.0/Windows 2000&lt;/li&gt;
+  &lt;li&gt;Permet de placer au premier plan&amp;nbsp; (&lt;em&gt;topmost&lt;/em&gt;) une fenêtre de programme
+    quelconque, ou de revenir à un comportement &quot;normal&quot; (&lt;em&gt;non topmost&lt;/em&gt;) de
+    la fenêtre.&lt;/li&gt;
+  &lt;li&gt;Permet de désactiver le bouton de fermeture (X) en haut à droite d'une fenêtre
+    quelconque&lt;/li&gt;
+  &lt;li&gt;Possibilité de toujours afficher au premier plan plusieurs fenêtres en fonction de
+    leurs titres.&lt;br&gt;
+    Lorsque &lt;strong&gt;WinTopMost&lt;/strong&gt; est actif et que vous lancez un programme quelconque,
+    il intercepte le nom de la fenêtre et place celle-ci au premier plan si le nom contient
+    une chaîne de caractères spécifiée.&lt;br&gt;
+    &lt;strong&gt;WinTopMost&lt;/strong&gt; peut intercepter plusieurs chaînes de caractères.&lt;/li&gt;
+  &lt;li&gt;Possibilité de toujours désactiver le bouton de fermeture de plusieurs fenêtres en
+    fonction de leurs titres.&lt;br&gt;
+    Lorsque &lt;strong&gt;WinTopMost&lt;/strong&gt; est actif et que vous lancez un programme quelconque,
+    il intercepte le nom de la fenêtre et désactive son bouton de fermeture si le nom
+    contient une chaîne de caractères spécifiée.&lt;/li&gt;
+&lt;/ul&gt;
+Empeche la fermeture brutale d'une apllication sensible obligeant l'utilisateur à sortir correctement, par exemple sur telnet.
+Langue : anglais.</Char_Desc_2000>
+</French>
+<German>
+        <Keywords />
+        <Char_Desc_45 />
+        <Char_Desc_80 />
+        <Char_Desc_250 />
+        <Char_Desc_450 />
+        <Char_Desc_2000 />
+</German>
+</Program_Descriptions>
+<Web_Info>
+<Application_URLs>
+        <Application_Info_URL>http://peccatte.karefil.com/software/WinTopMost/WinTopMostENG.htm</Application_Info_URL>
+        <Application_Order_URL>https://secure.reg.net/product.asp?ID=10267</Application_Order_URL>
+        <Application_Screenshot_URL>http://peccatte.karefil.com/software/WinTopMost/WinTopMost.jpg</Application_Screenshot_URL>
+        <Application_Icon_URL>http://peccatte.karefil.com/Software/Pictures/WinTopMost.jpg</Application_Icon_URL>
+        <Application_XML_File_URL>http://peccatte.karefil.com/software/WinTopMost/WinTop.xml</Application_XML_File_URL>
+    </Application_URLs>
+<Download_URLs>
+        <Primary_Download_URL>http://peccatte.karefil.com/software/WinTopMost/WinTopMost.zip</Primary_Download_URL>
+        <Secondary_Download_URL />
+        <Additional_Download_URL_1 />
+        <Additional_Download_URL_2 />
+    </Download_URLs>
+</Web_Info>
+<Permissions>
+        <Distribution_Permissions>You may include the program WinTopMost on any CD compilation and distribute it freely with no hacks or keys and not sell the evaluation copy. 
+You must disclose that WinTopMost is a shareware of Soft Experience and that the product is not free.</Distribution_Permissions>
+        <EULA />
+</Permissions>
+<MSN>
+    <MSN_FORM>Y</MSN_FORM>
+    <MSN_IS_32bit>Y</MSN_IS_32bit>
+</MSN>
+</XML_DIZ_INFO>

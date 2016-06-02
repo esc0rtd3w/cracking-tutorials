@@ -1,0 +1,18 @@
+place BP on "Invalid Key"
+
+00420FDE   .  C785 7CFFFFFF>MOV DWORD PTR SS:[EBP-84],00409F14       ;  UNICODE "Invalid key"
+
+
+
+upon hitting OK it will break and the real serial will be in the lower right corner in OllyDBG
+
+0012E70C   00170654  UNICODE "7Iqy-q90G-gzGr-a671"
+
+
+
+
+
+***BLOCKS HUGE LIST OF CRACKING GROUPS***
+
+
+

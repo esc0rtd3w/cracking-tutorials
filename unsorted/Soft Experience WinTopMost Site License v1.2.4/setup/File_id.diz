@@ -1,0 +1,9 @@
+WinTopMost v1.2  - Put topmost any window 
+and/or disable X close buttons. 
+Can set topmost automatically all windows
+ with captions containing specific strings.
+WinTopMost intercepts windows captions,
+when programs are running. 
+Can disable automatically X close buttons 
+for any application selected. Site License.
+$302
