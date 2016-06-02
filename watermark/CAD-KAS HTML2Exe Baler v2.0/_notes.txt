@@ -1,0 +1,30 @@
+ProtoEXE.dat displays DEMO message on compiled EXE's. older versions used a plain EXE renamed to DAT. this version uses an EXE, but all the bytes are shifted by 1 byte higher than normal.
+
+example: Unencrypted (first few bytes) -> 4D5A 5000 0200 0000 0400 0F00
+         
+         Encrypted (first few bytes)   -> 4E5B 5101 0301 0101 0501 1001
+
+so......in theory, if you were to shift every byte 1 number lower than it's current, you would have a normal EXE again that could be loaded in Olly or a hex editor or similar.........that'll take a long time :)
+
+
+
+
+using HexEdit 3.4 you are able to select ALL bytes and increase or decreae by one byte.....just CTRL+A, then decrease by 1 byte.....header should now read "MZP".
+
+next search for the word DEMO.
+
+fill the 2 instances with spaces.
+
+reselect ALL and INCREASE by 1 byte....SAVE........works flawlessly ;)
+
+
+--------------------------------------
+
+
+hex edit DEMO text on title bar
+
+use ResHack to set the order and webpage buttons at the bottom to not show up, do this by setting the width and height to 1.....make them 1x1 pixels and they disappear ;)
+
+
+
+

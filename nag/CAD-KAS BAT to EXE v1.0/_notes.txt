@@ -1,0 +1,61 @@
+this displays a message and executes a pause command on outputted batch files where you must press a key to continue before yours is loaded.
+
+----------------------------------------
+bat2exe.exe
+----------------------------------------
+
+hex edit DEMO text on title bar
+
+use ResHack to set the order and webpage buttons at the bottom to not show up, do this by setting the width and height to 1.....make them 1x1 pixels and they disappear ;)
+
+----------------------------------------
+ProtoEXE.dat
+----------------------------------------
+
+remove DEMO text from output:
+
+decrease all bytes by 1
+
+
+example:
+
+offset start: 00046884
+
+offset end: 00046928
+
+
+encrypted section:
+
++Qmfbtf!cvz!uif!gvmm!wfstjpo!pg!uif!qsphsbn!voefs!xxx/dbelbt/dpn/!Uifo!uijt!+.......M...+Uijt!gjmf!ibt!cffo!dsfbufe!xjui!uif!EFNP!WFSTJPO!pg!DBE.LBT!CBU!3!FYF!2/1"!+
+
+
+
+unencrypted section (1 byte decrease):
+
+*Please buy the full version of the program under www.cadkas.com. Then this *.......L...*This file has been created with the DEMO VERSION of CAD-KAS BAT 2 EXE 1.0! *
+
+
+fill with spaces and then INCREASE by 1 byte each or replace the whole section with "1F" instead of "20" for spaces in hex.
+
+----------------------------------------
+
+the PAUSE command is INCREASED by 1 byte after the WHOLE FILE has been DECREASED by 1 byte.
+
+pause original in hex: 70 61 75 73 65	-> pause	change to	-> cls..
+
+pause encrypted in hex: 71 62 76 74 66	-> qbvtf	change to	-> dmt//
+
+
+THIS WILL EFFECTIVELY BYPASS THE NAG TEXT ON YOUR OUTPUTTED BATCH FILE.....we just sent a CLS.. command instead of the PAUSE command, which basically just clears the window.
+
+----------------------------------------
+
+
+when finished editing, re-increase ALL bytes by 1 byte to restore to original, otherwise the app will give an error when you try and compile and fail.
+
+
+
+
+
+
+

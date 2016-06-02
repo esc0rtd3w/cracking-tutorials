@@ -1,0 +1,103 @@
+009.dat in c:\Windows controls trial uses
+
+
+			  |Day |    |Mth |    |Year|
+
+expires on feb 23, 2010 -> 1700 0000 0200 0000 DA07 0000
+
+expires on mar 27, 2010 -> 1B00 0000 0300 0000 DA07 0000
+
+
+the "0000"'s in between are because of UNICODE
+
+just changing the bytes to a higher date than it currently is will allow an "infinite" trial, but will still display the nag.
+
+example:
+
+expires on dec 31, 9999 -> 1F00 0000 0C00 0000 0F27 0000
+
+------------------------------------
+
+:004016DB 8B4010                  mov eax, dword ptr [eax+10]
+:004016DE 8B4DEC                  mov ecx, dword ptr [ebp-14]
+:004016E1 40                      inc eax
+:004016E2 8B55D8                  mov edx, dword ptr [ebp-28]
+:004016E5 8B09                    mov ecx, dword ptr [ecx]
+:004016E7 3932                    cmp dword ptr [edx], esi
+:004016E9 7D07                    jge 004016F2		;NOP this
+:004016EB 8D51FF                  lea edx, dword ptr [ecx-01]
+:004016EE 3BD0                    cmp edx, eax
+:004016F0 7C10                    jl 00401702		;NOP this
+
+* Referenced by a (U)nconditional or (C)onditional Jump at Address:
+|:004016E9(C)
+|
+:004016F2 3BC8                    cmp ecx, eax
+:004016F4 7C0C                    jl 00401702		;NOP this
+:004016F6 8B4DE8                  mov ecx, dword ptr [ebp-18]
+:004016F9 C7415C00000000          mov [ecx+5C], 00000000
+:00401700 EB1E                    jmp 00401720
+
+* Referenced by a (U)nconditional or (C)onditional Jump at Addresses:
+|:004016F0(C), :004016F4(C)
+|
+:00401702 6A30                    push 00000030
+:00401704 8B4DE8                  mov ecx, dword ptr [ebp-18]
+
+* Possible StringData Ref from Data Obj ->"EXPIRED!"
+                                  |
+:00401707 682C414200              push 0042412C
+
+* Possible StringData Ref from Data Obj ->"THIS PROGRAM IS EXPIRED!"
+
+------------------------------------
+
+00404BE8   .  68 6C444200   PUSH 0042446C                            ;  ASCII "012497RCLAB_SBEE"	<- what?? it's the correct serial....lol
+
+btw...."c:\windows\lpz.dat" holds the serial number for registered status.
+
+in hex: 10 30 31 32 34 39 37 52 43 4C 41 42 5F 53 42 45 45
+ 
+------------------------------------
+
+00404BF8   . /0F85 D4000000 JNZ 00404CD2		;jmps to lpz.dat
+
+0040475F  |. /75 28         JNZ SHORT 00404789		;jmps to lpz.dat ;NOP skips writing to WINDOWS folder???
+
+0040485A  \.^\E9 02FFFFFF   JMP 00404761		;jmps to lpz.dat
+
+
+
+
+* Referenced by a CALL at Addresses:
+|:00401F80   , :00402121   , :004023F7   , :00402708   , :00402A52   
+|:0040356B   
+|
+
+* Possible StringData Ref from Code Obj ->"¸ B"
+                                  |
+:004046DF B887484000              mov eax, 00404887
+:004046E4 E8F3120000              call 004059DC
+:004046E9 81ECD0050000            sub esp, 000005D0
+:004046EF 8D4DEC                  lea ecx, dword ptr [ebp-14]
+:004046F2 E8D7DD0000              call 004124CE
+:004046F7 6804010000              push 00000104
+:004046FC 8D853CFDFFFF            lea eax, dword ptr [ebp+FFFFFD3C]
+:00404702 C745FC00000000          mov [ebp-04], 00000000
+:00404709 50                      push eax
+
+* Reference To: KERNEL32.GetWindowsDirectoryA, Ord:013Ch
+                                  |
+:0040470A FF15DCB64200            Call dword ptr [0042B6DC]
+:00404710 8D853CFDFFFF            lea eax, dword ptr [ebp+FFFFFD3C]
+:00404716 8D4DEC                  lea ecx, dword ptr [ebp-14]
+:00404719 50                      push eax
+:0040471A E813E00000              call 00412732
+:0040471F 8D4DD8                  lea ecx, dword ptr [ebp-28]
+:00404722 E8AF160100              call 00415DD6
+
+* Possible StringData Ref from Data Obj ->"\lpz.dat"
+
+-----------------------------------
+
+would like to get the app to read/write "009.dat" and "lpz.dat" to the install folder rather than the WINDOWS folder.......maybe later

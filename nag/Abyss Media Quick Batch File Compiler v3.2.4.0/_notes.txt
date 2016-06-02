@@ -1,0 +1,167 @@
+--------------------------------------------
+quickbfc.exe
+--------------------------------------------
+
+this is an UNRESTRICTED app, meaning that it is fully functional but it displays trial text in the outputted files it creates.
+
+
+Do This:
+
+Hex offset "1374602" is the start of outputted trial text.
+
+
+change the 2 "echo" commands to "cls."and change the "pause" command at the end to "cls.."
+
+
+this will disable the trial text on outputted batch files.
+
+--------------------------------------------
+
+
+ResHack the "REGISTER" menu item if needed -> RCData -> TMAINFORM.
+
+
+----------------
+
+      object Register1: TMenuItem
+        Caption = 'Register'
+        OnClick = Register1Click
+      end
+
+
+remove above
+
+----------------
+
+OPTIONAL (if not using above method):
+
+
+Lines.Strings = (
+      'echo off'
+      'cls'
+      
+        'cls. -----------------------------------------------------------' +
+        '------'
+      
+        'echo This file created with trial version of Quick Batch File Co' +
+        'mpiler.'
+      'echo Please REGISTER your copy to REMOVE this reminder.'
+      'echo Copyright 2002-2009 by Abyssmedia.com'
+      'echo Offical web-site: http://www.abyssmedia.com/quickbfc/'
+      
+        'cls. -----------------------------------------------------------' +
+        '------'
+      'cls..')
+
+change to
+
+Lines.Strings = ('')
+
+----------------
+
+  object StatusBar: TStatusBar
+    Left = 0
+    Top = 483
+    Width = 712
+    Height = 19
+    Panels = <
+      item
+        Width = 350
+      end
+      item
+        Width = 150
+      end
+      item
+        Text = 'UNREGISTERED COPY'
+        Width = 200
+      end>
+
+change to
+
+        Text = ''
+
+----------------
+
+      object Orderonline1: TMenuItem
+        Caption = 'Order on-line...'
+        ImageIndex = 13
+        OnClick = Orderonline1Click
+      end
+      object CheckUpdates: TMenuItem
+        Caption = 'Check Updates...'
+        OnClick = CheckUpdatesClick
+      end
+
+
+remove these too
+
+--------------------------------------------
+
+
+004F75F7  |. /74 20         JE SHORT 004F7619
+004F75F9  |. |8B83 D8030000 MOV EAX,DWORD PTR DS:[EBX+3D8]
+004F75FF  |. |8B80 50020000 MOV EAX,DWORD PTR DS:[EAX+250]
+004F7605  |. |BA 02000000   MOV EDX,2
+004F760A  |. |E8 410AF9FF   CALL 00488050
+004F760F  |. |BA 2C794F00   MOV EDX,004F792C                         ;  ASCII "Registered Version"
+
+when NOPing "004F75F7  |. /74 20         JE SHORT 004F7619" results below in memory before "004F760A  |. |E8 410AF9FF   CALL 00488050"
+
+
+0012FDA8   016850B8  ASCII "User"
+0012FDAC   016852D8  ASCII "1234567890"
+
+
+
+References in quickbfc:.text to 00488050
+Address    Disassembly                               Comment
+0048846D   CALL 00488050
+00488480   CALL 00488050
+00488500   CALL 00488050
+00488530   CALL 00488050
+0048858C   CALL 00488050
+004885CC   CALL 00488050
+004885DD   CALL 00488050
+0048862F   CALL 00488050
+00488647   CALL 00488050
+004886EA   CALL 00488050
+004888E8   CALL 00488050
+00488A21   CALL 00488050
+00488BC8   CALL 00488050
+004DD30F   CALL 00488050
+004DD344   CALL 00488050
+004F6483   CALL 00488050
+004F6994   CALL 00488050
+004F7098   CALL 00488050
+004F72BD   CALL 00488050
+004F731D   CALL 00488050
+004F734D   CALL 00488050
+004F73D8   CALL 00488050
+004F75BA   CALL 00488050
+004F75DC   CALL 00488050
+004F760A   CALL 00488050
+
+
+
+
+
+
+EAX 00000000
+ECX 7FFDE000
+EDX 00000000
+EBX 019D0044
+ESP 0012E4F4 ASCII "D1ew"
+EBP 0012E528
+
+
+
+
+
+
+
+
+
+
+
+
+
