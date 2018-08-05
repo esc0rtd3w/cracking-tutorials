@@ -1,0 +1,19 @@
+Software  Name                              Module/Label                      State     Comment                                                                                                    
+00404199                                    stt3.exe                          Disabled  some text output
+0040421C                                    stt3.exe                          Enabled   
+00404228                                    stt3.exe                          Enabled   
+00434771                                    stt3.exe                          Disabled  start some loop
+00434785                                    stt3.exe                          Disabled  end some loop
+004CC2D5                                    stt3.exe                          Enabled   
+004CC2FC                                    stt3.exe                          Enabled   
+004CC345                                    stt3.exe                          Enabled   start checking key??
+004CC387                                    stt3.exe                          Enabled   key decision??
+004CC38D                                    stt3.exe                          Enabled   if bad key skip previous line??
+004CC391                                    stt3.exe                          Enabled   
+004CC404                                    stt3.exe                          Enabled   
+0053C0CF                                    stt3.exe                          Enabled   
+0053C19F                                    stt3.exe                          Enabled   
+0053C1A2                                    stt3.exe                          Enabled   
+0053C1E3                                    stt3.exe                          Enabled   
+0053C218                                    stt3.exe                          Enabled   
+0053C226                                    stt3.exe                          Enabled   
