@@ -1,0 +1,47 @@
+Type=Exe
+Reference=*\G{00020430-0000-0000-C000-000000000046}#2.0#0#..\..\..\..\WINDOWS\SYSTEM32\STDOLE2.TLB#OLE Automation
+Object={3B7C8863-D78F-101B-B9B504021C009402}#1.2#0; RICHTX32.OCX
+Object=00000000-0000-0000-0000-000000000000##0; MSINET.OCX
+Form=frmMain.frm
+Form=frmResult.frm
+Module=Functions; Functions.bas
+Form=frmIcon.frm
+UserControl=WebReader.ctl
+Class=clsCakeLicenseE; clsCakeLicenseE.cls
+Form=frmAbout.frm
+Form=frmRegister.frm
+Form=frmVerifyPayment.frm
+Form=frmHelp.frm
+Startup="Sub Main"
+VersionCompanyName="?"
+MajorVer=1
+MinorVer=01
+RevisionVer=0
+Command32 = ""
+HelpContextID = "0"
+CompatibleMode = "0"
+AutoIncrementVer = 0
+ServerSupportFiles = 0
+CompilationType = 0
+OptimizationType = 0
+FavorPentiumPro(tm) = 0
+CodeViewDebugInfo = 0
+NoAliasing = 0
+BoundsCheck = 0
+OverflowCheck = -1
+FlPointCheck = 0
+FDIVCheck = 0
+UnroundedFP = 0
+StartMode = 0
+Unattended = 0
+Retained = 0
+ThreadPerObject = 0
+MaxNumberOfThreads = 1
+
+[MS Transaction Server]
+AutoRefresh = 1
+
+[VB Decompiler]
+Build = 9.8.5389.64863
+Date = 8/3/2018
+
