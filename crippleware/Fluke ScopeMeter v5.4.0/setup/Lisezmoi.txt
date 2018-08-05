@@ -1,0 +1,172 @@
+   Une publication de:
+
+             Fluke Industrial B.V.
+             Almelo, Pays-Bas
+             (C) 1994,2013 Fluke Corporation
+
+   Produit:  SW90W pour Windows(R) XP/Vista/7
+             Logiciel FlukeView(R)
+             pour l'utilisation avec
+             les testeurs ScopeMeter(R)
+
+   Version:  5.4
+   Date:     20 décembre 2013
+
+   Contenu:  1. VERSION DEMO, ACTIVATION ET MISES À JOUR
+             2. Les appareils supportes 
+             3. Lecture et impression du manuel
+             4. Installation sur Windows XP/Vista/7
+             5. Nouveautés de la version 
+             6. Problèmes rencontrés avec le FlukeView
+   ________________________________________________________________
+
+   1. VERSION DEMO, ACTIVATION ET MISES À JOUR
+      Cette version de FlukeView est une version de démonstration
+      avec des fonctionnalités limitées. Pour obtenir la version 
+      complète, un code d'activation fournit lors de l'achat de 
+      FlukeView devra être saisi dans la fenêtre contextuelle 
+      d’Activation.
+      Pour utiliser FlukeView avec des fonctionnalités limitées, 
+      cliquez sur DEMO dans la fenêtre Activation.
+      Cette version permet également aux utilisateurs de la version 
+      FlukeView V4.x de la mettre à jour vers une version 
+      complète V5.x
+   ________________________________________________________________
+
+   2. Les appareils totalement supportes sont:
+
+      - Fluke 190-104, Fluke 190-204, Fluke 190-504.
+      - Fluke 190-062, Fluke 190-102, Fluke 190-202,
+        Fluke 190-502.
+      - Fluke 12x series.
+      - Fluke 19x(B/C) series.
+      - Fluke 2x5C series.
+   ________________________________________________________________
+
+   3. LECTURE ET IMPRESSION DU MANUEL
+
+      Lors du setup de FlukeView, le manuel est installé sur votre
+      PC dans un format électronique (.PDF). Afin de permettre la
+      lecture et l'impression du manuel, il faut que le programme
+      Acrobat Reader V7.0 (ou plus récent) soit installé sur votre
+      système. Pour votre convenance, le logiciel nécessaire à
+      installer Acrobat Reader se trouve sur le CD-ROM dans
+      le répertoire \ACROBAT.
+   ________________________________________________________________
+
+   4. INSTALLATION SUR WINDOWS XP/VISTA/7 
+
+      Il se peut que l'installation sur Windows exige l'autorisation
+      d'agir comme administrateur de système afin de pouvoir
+      réussir la mise au point de votre système. Setup est
+      alors terminé et vous êtes invité à entrer en session comme
+      administrateur et d'exécuter de nouveau Setup.exe.
+      Pendant l'installation, le contrôle des utilisateurs Windows 
+      pourrait vous envoyer un message à propos d'un 
+      programme 'Setup.exe' voulant acceder à votre ordinateur.
+      Dans ce cas, selectionnez continuer pour poursuivre 
+      l'installation de FlukeView
+
+      Pour utiliser l'aide en ligne sous Windows, voir la 
+      base de connaissance Microsoft KB91777607 en installant 
+      Winhlp32.exe et activer les macros
+    ________________________________________________________________
+
+   5. NOUVEAUTES DE LA VERSION
+
+      Par rapport à la version 5.3, les modifications suivantes ont
+      été effectuées :
+
+      - Support du nouveau Fluke 190-504
+
+      Par rapport à la version 5.2, les modifications suivantes ont
+      été effectuées :
+
+      - Support du quantité de mémoires dans
+        nouvelle Fluke 104 et Fluke 204 produits.
+      - Correction valeurs du curseur de la série 120.
+      - Correction d'une erreur lors d'un zoom ScopeRecord.
+      - Correction téléchargement single shot ScopeRecord. 
+      - Téléchargement configurations pour Fluke 190-II corrigée.
+
+      Par rapport à la version 5.1, les modifications suivantes ont
+      été effectuées :
+      - Support du nouveau Fluke 190-502
+      - Améliorations de la gestion de fichiers sous Windows 7
+      - Correction des problèmes liés à la fonction enregistreur
+      - Amélioration de la gestion des fichiers CSV
+      - Correction de la gestion du téléchargement des 
+        formes d’onde de la série 120
+      - Amélioration du téléchargement de la fonction Replay 
+        en mode Glitch OFF
+      - Correction du téléchargement de toutes les mémoires pour 
+        la série 190 II
+
+      Par rapport à la version 5.0, les modifications suivantes ont
+      été effectuées :
+      - Support des nouveaux Fluke 190-062, 190-102 et 190-202
+
+      Par rapport à la version 4.5.2, les modifications suivantes ont
+      été effectuées :
+      - Support des nouveaux Fluke 190-104 et 190-204
+      - Fenêtre de forme d'onde étendue pour supporter jusqu'à 8 
+        courbes.
+      - Ajout du mécanisme d'activation pour activer les versions 
+        de démonstration..
+      - Reconnaissance des périphériques USB.
+
+      Par rapport à la version 4.5, les modifications suivantes ont
+      été effectuées :
+      - Correction du transfert de tracés de tendances longue pour 
+        Firmware V06.xx
+
+      Par rapport à la version 4.4, les modifications suivantes ont
+      été effectuées :
+      - Les Fluke 192C, 215C et 225C sont maintenant supportés
+      - Ajout du transfert de toutes les formes d'ondes de la 
+        mémoire des Fluke 19xB/C et Fluke 2x5C
+      - Modification de la sélection du port COM pour afficher tous
+        les ports disponibles
+ 
+      Par rapport à la version 4.3, les modifications suivantes ont
+      été effectuées :
+      - Support pour Fluke 125
+
+      Par rapport à la version 4.2, les modifications suivantes ont
+      été effectuées :
+      - Support pour Fluke 199XRAY 
+      - Télécommande complète pour Fluke 190B/C à partir de V7.00 
+        et pour Fluke 199XRAY
+   ________________________________________________________________
+
+   6. PROBLEMES RENCONTRES AVEC LE FLUKEVIEW
+
+      Veuillez noter les problémes suivants que vous pouvez
+      rencontrer lorsque vous utilisez FlukeView ScopeMeter
+      pour Windows:
+
+      a. Si le redimensionnement d'une fenêtre entraîne de grands
+         caractères de texte, désactivez le réglage Windows "True
+         Type Fonts Only".
+
+         Sélectionnez:  Démarrer, Paramètres, Panneau de
+         configuration (Control Panel), Polices (Fonts). Dans le menu
+         choisissez: Affichage, Options (View-Options) puis l'onglet
+         True Type (True Type Fonts). Déselectionnez: Affichez les
+         polices true type dans les programmes de mon ordinateur
+         (Show only True Type Fonts in the programs on my computer).
+
+      b. Si l'option d'affichage de Windows "Show window contents
+         while dragging" [Afficher le contenu de la fenêtre en
+         faisant glisser]  est validée, FlukeView affichera
+         uniquement les mises á jour intermédiares tandis que l'on
+         fait glisser les fenêtres d'écran de l'appareil.
+
+      c. suite à l'insertion de modification de dernière minute dans
+         le logiciel, des écart avec le fichier d'aide peuvent 
+         apparaitre.
+
+    ________________________________________________________________
+
+
+   Fin du fichier LISEZMOI.TXT.

@@ -1,0 +1,163 @@
+   Dies ist eine Veröffentlichung von:
+
+             Fluke Industrial B.V.
+             Almelo, Die Niederlande
+             (C) 1994,2013 Fluke Corporation
+
+   Produkt:  SW90W für Windows(R) XP/Vista/7
+             FlukeView(R) Software
+             zur Verwendung mit
+             ScopeMeter(R) Meßgeräten
+
+   Version:  5.4
+
+   Datum:    20 Dezember 2013
+
+   Inhalt:   1. DEMO VERSION, AKTIVIERUNG UND UPDATES
+             2. Unterstützte Instrumente
+             3. Lesen und drucken des Handbuchs
+             4. Installation unter Windows XP/Vista/7
+             5. Firmwarerevisionsübersicht
+             6. Bekannte Probleme bei FlukeView-Anwendungen
+   ________________________________________________________________
+
+   1. DEMO VERSION, AKTIVIERUNG UND UPDATES
+
+      Diese FlukeView Version ist eine Demo Version mit 
+      eingeschränkter Funktionalität. Um volle Funktionalität zu 
+      erhalten muss der Aktivierungscode, welcher beim Kauf der 
+      Software geliefert wird, im Aktivierungsfenster eingegeben 
+      werden.
+      Um FlukeView mit eingeschränkter Funktionalität zu benutzen 
+      klicken Sie DEMO im Aktivierungsfenster.
+      Diese Version ermöglicht zudem den Upgrade für Benutzern von
+      FlukeView Version V4.x auf die Vollversion V5.x.
+   ________________________________________________________________
+
+   2. Unterstützte Instrumente sind:
+
+      - Fluke 190-104, Fluke 190-204, Fluke 190-504.
+      - Fluke 190-062, Fluke 190-102, Fluke 190-202, Fluke 190-502.
+      - Fluke 12x series.
+      - Fluke 19x(B/C) series.
+      - Fluke 2x5C series.
+   ________________________________________________________________
+
+   3. LESEN UND DRUCKEN DES HANDBUCHS
+
+      Während der Installation von FlukeView wird das Handbuch in
+      elektronischem Format (.PDF) auf Ihrem PC installiert. Zum
+      Lesen und Drucken des Handbuchs muß Acrobat Reader V7.0 (oder
+      höher) auf Ihrem System installiert sein. Der Bequemlichkeit
+      halber finden Sie die Installationssoftware für Acrobat
+      Reader im Verzeichnis \ACROBAT Ihres CD-ROM.
+   ________________________________________________________________
+
+   4. INSTALLATION UNTER WINDOWS XP/Vista/7
+
+      Bei der Installation unter Windows könnte es erforderlich
+      sein, daß Sie Administrator-Rechte haben, um Ihr System
+      erfolgreich aktualisieren zu können. Wenn dies der
+      Fall ist und Sie haben nicht solche Rechte, wird das Setup-
+      Programm abgebrochen, und Sie werden aufgefordert, sich
+      nachträglich als Administrator anzumelden und Setup.exe
+      erneut zu starten.
+      Windows Vista verfügt über erweiterte Sicherheitsfunktionen,
+      daher kann es vorkommen, dass während der Installation die 
+      Windows Account Control eine Meldung ausgibt welche 
+      besagt, dass ein unidentifiziertes Programm "Setup.exe" 
+      Zugriff auf Ihren Computer nehmen möchte. In diesem Fall 
+      klicken Sie "Zugriff erlauben" denn es ist das FlukeView 
+      Setup Programm.
+
+      Um die Hilfedatei unter Windows benützen zu können
+      lesen Sie bitte den Microsoft Knowledgebase Artikel 
+      KB91777607 betreffend der Installation von Winhlp32.exe
+      und der aktivierung entsprechender Makros.
+     ____________________________________________________________
+
+   5. REVISIONSÜBERSICHT 
+
+      Gegenüber Ver. 5.3 sind folgende Änderungen vorgenommen worden:
+      - Fluke 190-504 zu unterstützten Geräten hinzugefügt.
+
+      Gegenüber Ver. 5.2 sind folgende Änderungen vorgenommen worden:
+      - Unterstützung mehr Speicher in neuere Fluke 104 und Fluke 204 
+        Produkte.
+      - Korrigierter Cursor-Werte Trendplot für Fluke 12x.
+      - Fehler beim zoom in ScopeRecord behoben.
+      - Fehler herunterladen voller single shot ScopeRecord behoben.
+      - Fehler herunterladen von Setups für Fluke 190-II behoben.
+
+
+      Gegenüber Ver. 5.1 sind folgende Änderungen vorgenommen worden:
+      - Fluke 190-502 zu unterstützten Geräten hinzugefügt.
+      - Verbesserungen im Bezug zu Windows 7 Dateihandhabung
+      - Fehler beim Aufzeichnen von Messwerten in eine Datei behoben
+      - Verbesserte .CSV Dateihandhabung
+      - Fehler beim Herunterladen von Signalformen aus dem 
+        Erfassungsspeicher der Fluke 120 Serie behoben
+      - Verbessertes Herunterladen von Replay mit "Glitch" OFF
+      - Korrigiertes Herunterladen aus allen Speichern für Fluke 190-II
+
+      Gegenüber Ver. 5.0 sind folgende Änderungen vorgenommen worden:
+      - Fluke 190-062, 190-102 und 190-202 zu den unterstützten 
+	Instrumenten hinzugefügt
+
+      Gegenüber Ver. 4.52 sind folgende Änderungen vorgenommen worden:
+      - Fluke 190-104 und 190-204 zu den unterstützten Instrumenten 
+        hinzugefügt
+      - Signalformfenster für die Darstellung von bis zu 8 
+        Signalformen erweitert
+      - Aktivierungsmechanismus zur Aktivierung der Demoversion 
+        hinzugefügt.
+      - Unterstützung für USB Geräteerkennung hinzugefügt
+
+      Gegenüber Ver. 4.5 sind folgende Änderungen vorgenommen worden:
+      - Verbesserte Trendübertragung für Firmware V06.x
+
+      Gegenüber Ver. 4.4 sind folgende Änderungen vorgenommen worden:
+      - Fluke 192C, 215C und 225C werden durch die Software unterstützt.
+      - Tranfer / Download aller Signalformen direkt aus dem Speicher
+        der Fluke 19xB/C und Fluke 2x5C möglich.
+      - Geänderte COM Port Auswahl mit Anzeige der verfügbaren Ports. 
+
+      Gegenüber Ver. 4.3 sind folgende Änderungen vorgenommen worden:
+      - Fluke 125 wird Unterstützt
+
+      Gegenüber Ver. 4.2 sind folgende Änderungen vorgenommen worden:
+      - Fluke 199XRAY wird Unterstützt
+      - Völlige Fernbedienung für Fluke 190B/C ab V7.00 und für 
+        Fluke 199XRAY
+     ____________________________________________________________
+ 
+   6. BEKANNTE PROBLEME BEI FLUKEVIEW-ANWENDUNGEN
+
+      Bitte beachten Sie folgende Probleme, auf die Sie bei
+      Anwendung der FlukeView-ScopeMeter-Software für Windows
+      stoßen könnten:
+
+      a. Wenn die Größenänderung eines Fensters zu großen
+         Text-Zeichnen führt, sollten Sie die Windows-Einstellung
+         "True Type Fonts Only" unwirksam machen.
+
+         Rufen Sie im Windows-Menü "Start", "Einstellungen" und
+         "Systemsteuerung" (Control Panel) auf, doppelklicken auf
+         "Schriftarten" (Fonts), danach wählen Sie "Ansicht",
+         "Optionen..." (View-Options) und "TrueType", dort
+         deaktivieren Sie die Option "Nur Truetype-Schriftarten
+         anzeigen" (Show only True Type Fonts in the programs on my
+         computer).
+
+      b. Wenn die Windows Anzeige-Option "Show window contents while
+         dragging" [Fensterinhalt beim Ziehen der Maus anzeigen]
+         wirksam gemacht wird, zeigt FlukeView beim Ziehen der
+         Instrumenten-Schirmfenster lediglich die zwischenzeitlichen
+         Aktualisierungen.
+
+      c. Aufgrund von Softwareverbesserungen in letzter Minute vor
+         dem Release können kleine Abweichungen in der Hilfedatei
+         auftreten.
+     ________________________________________________________________
+
+   Ende der Datei LIESMICH.TXT.

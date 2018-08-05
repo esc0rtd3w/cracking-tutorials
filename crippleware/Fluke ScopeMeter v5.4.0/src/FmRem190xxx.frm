@@ -1,0 +1,2018 @@
+VERSION 5.00
+Begin VB.Form FmRem190xxx
+  Caption = "Remote Control"
+  ScaleMode = 3
+  AutoRedraw = False
+  FontTransparent = True
+  Picture = "FmRem190xxx.frx":0
+  BorderStyle = 3 'Fixed Dialog
+  'Icon = n/a
+  LinkTopic = "Form1"
+  MaxButton = 0   'False
+  MinButton = 0   'False
+  Visible = 0   'False
+  KeyPreview = -1  'True
+  ClientLeft = 45
+  ClientTop = 435
+  ClientWidth = 10200
+  ClientHeight = 10980
+  ShowInTaskbar = 0   'False
+  StartUpPosition = 3 'Windows Default
+  Begin PictureBox PbGraph
+    BackColor = &H0&
+    ForeColor = &H80000008&
+    Left = 2520
+    Top = 1875
+    Width = 4830
+    Height = 3630
+    TabIndex = 5
+    ScaleMode = 0
+    ScaleLeft = 0
+    ScaleTop = 0
+    ScaleWidth = 324.026
+    ScaleHeight = 244.034
+    AutoRedraw = True
+    FontTransparent = True
+    Appearance = 0 'Flat
+  End
+  Begin PictureBox ProgressBar
+    ForeColor = &H80000008&
+    Left = 3960
+    Top = 5640
+    Width = 2000
+    Height = 225
+    Visible = 0   'False
+    TabIndex = 3
+    ScaleMode = 3
+    AutoRedraw = False
+    FontTransparent = True
+    BorderStyle = 0 'None
+    TabStop = 0   'False
+    Appearance = 0 'Flat
+  End
+  Begin CommandButton ManualOff
+    Caption = "Manual Off"
+    Left = 9000
+    Top = 7680
+    Width = 1065
+    Height = 435
+    TabIndex = 2
+  End
+  Begin CommandButton UpdateScreen
+    Caption = "Update Screen"
+    Left = 9000
+    Top = 8190
+    Width = 1065
+    Height = 435
+    TabIndex = 1
+  End
+  Begin CommandButton BtClose
+    Caption = "Close"
+    Left = 9000
+    Top = 8730
+    Width = 1065
+    Height = 435
+    TabIndex = 0
+  End
+  Begin CommandButton ManualOn
+    Caption = "Manual On"
+    Left = 9000
+    Top = 7680
+    Width = 1065
+    Height = 435
+    Visible = 0   'False
+    TabIndex = 4
+  End
+End
+
+Attribute VB_Name = "FmRem190xxx"
+
+
+Private Sub Form_Load() 'A01660
+  Dim var_2C As Variant
+  loc_00A016DA: ReDim var_2C(esi To 6)
+  loc_00A01733: ecx = CInt(217)
+  loc_00A01744: 00000002h = 00000002h - eax+00000014h
+  loc_00A0174D: 00000002h = 00000002h + eax+0000000Ch
+  loc_00A01750: ecx = CInt(327)
+  loc_00A01764: 00000003h = 00000003h - eax+00000014h
+  loc_00A0176D: 00000003h = 00000003h + eax+0000000Ch
+  loc_00A01770: ecx = CInt(26)
+  loc_00A01787: 00000004h = 00000004h - eax+00000014h
+  loc_00A0178D: 00000004h = 00000004h + eax+0000000Ch
+  loc_00A01790: ecx = CInt(327)
+  loc_00A017AA: 00000005h = 00000005h - eax+00000014h
+  loc_00A017B6: 00000005h = 00000005h + eax+0000000Ch
+  loc_00A017B9: ecx = CInt(243)
+  loc_00A017D3: 00000006h = 00000006h - eax+00000014h
+  loc_00A017DF: 00000006h = 00000006h + eax+0000000Ch
+  loc_00A017E2: ecx = CInt(-1)
+  loc_00A01804: ecx = Array(var_2C)
+  loc_00A01822: ReDim var_2C(0 To 6)
+  loc_00A01852: ecx = 0
+  loc_00A0187E: ecx = CInt(217)
+  loc_00A0188F: 00000002h = 00000002h - eax+00000014h
+  loc_00A01898: 00000002h = 00000002h + eax+0000000Ch
+  loc_00A0189B: ecx = CInt(80)
+  loc_00A018B2: 00000003h = 00000003h - eax+00000014h
+  loc_00A018B8: 00000003h = 00000003h + eax+0000000Ch
+  loc_00A018BB: ecx = CInt(26)
+  loc_00A018CF: 00000004h = 00000004h - eax+00000014h
+  loc_00A018D8: 00000004h = 00000004h + eax+0000000Ch
+  loc_00A018DB: ecx = CInt(80)
+  loc_00A018F5: 00000005h = 00000005h - eax+00000014h
+  loc_00A01901: 00000005h = 00000005h + eax+0000000Ch
+  loc_00A01904: ecx = CInt(243)
+  loc_00A0191E: 00000006h = 00000006h - eax+00000014h
+  loc_00A0192A: 00000006h = 00000006h + eax+0000000Ch
+  loc_00A0192D: ecx = CInt(35)
+  loc_00A0194F: ecx = Array(var_2C)
+  loc_00A0196D: ReDim var_2C(0 To 6)
+  loc_00A0199D: ecx = CInt(80)
+  loc_00A019C9: ecx = CInt(217)
+  loc_00A019DA: 00000002h = 00000002h - eax+00000014h
+  loc_00A019E3: 00000002h = 00000002h + eax+0000000Ch
+  loc_00A019E6: ecx = CInt(80)
+  loc_00A019FA: 00000003h = 00000003h - eax+00000014h
+  loc_00A01A03: 00000003h = 00000003h + eax+0000000Ch
+  loc_00A01A06: ecx = CInt(26)
+  loc_00A01A1A: 00000004h = 00000004h - eax+00000014h
+  loc_00A01A23: 00000004h = 00000004h + eax+0000000Ch
+  loc_00A01A26: ecx = CInt(160)
+  loc_00A01A40: 00000005h = 00000005h - eax+00000014h
+  loc_00A01A4C: 00000005h = 00000005h + eax+0000000Ch
+  loc_00A01A4F: ecx = CInt(243)
+  loc_00A01A69: 00000006h = 00000006h - eax+00000014h
+  loc_00A01A75: 00000006h = 00000006h + eax+0000000Ch
+  loc_00A01A78: ecx = CInt(30)
+  loc_00A01A9A: ecx = Array(var_2C)
+  loc_00A01AB8: ReDim var_2C(0 To 6)
+  loc_00A01AE8: ecx = CInt(160)
+  loc_00A01B14: ecx = CInt(217)
+  loc_00A01B25: 00000002h = 00000002h - eax+00000014h
+  loc_00A01B2E: 00000002h = 00000002h + eax+0000000Ch
+  loc_00A01B31: ecx = CInt(80)
+  loc_00A01B45: 00000003h = 00000003h - eax+00000014h
+  loc_00A01B4E: 00000003h = 00000003h + eax+0000000Ch
+  loc_00A01B51: ecx = CInt(26)
+  loc_00A01B65: 00000004h = 00000004h - eax+00000014h
+  loc_00A01B6E: 00000004h = 00000004h + eax+0000000Ch
+  loc_00A01B71: ecx = CInt(240)
+  loc_00A01B8B: 00000005h = 00000005h - eax+00000014h
+  loc_00A01B97: 00000005h = 00000005h + eax+0000000Ch
+  loc_00A01B9A: ecx = CInt(243)
+  loc_00A01BB4: 00000006h = 00000006h - eax+00000014h
+  loc_00A01BC0: 00000006h = 00000006h + eax+0000000Ch
+  loc_00A01BC3: ecx = CInt(31)
+  loc_00A01BE5: ecx = Array(var_2C)
+  loc_00A01C03: ReDim var_2C(0 To 6)
+  loc_00A01C33: ecx = CInt(240)
+  loc_00A01C5F: ecx = CInt(217)
+  loc_00A01C70: 00000002h = 00000002h - eax+00000014h
+  loc_00A01C79: 00000002h = 00000002h + eax+0000000Ch
+  loc_00A01C7C: ecx = CInt(80)
+  loc_00A01C90: 00000003h = 00000003h - eax+00000014h
+  loc_00A01C99: 00000003h = 00000003h + eax+0000000Ch
+  loc_00A01C9C: ecx = CInt(26)
+  loc_00A01CB0: 00000004h = 00000004h - eax+00000014h
+  loc_00A01CB9: 00000004h = 00000004h + eax+0000000Ch
+  loc_00A01CBC: ecx = CInt(320)
+  loc_00A01CD6: 00000005h = 00000005h - eax+00000014h
+  loc_00A01CE2: 00000005h = 00000005h + eax+0000000Ch
+  loc_00A01CE5: ecx = CInt(243)
+  loc_00A01CFF: 00000006h = 00000006h - eax+00000014h
+  loc_00A01D0B: 00000006h = 00000006h + eax+0000000Ch
+  loc_00A01D0E: ecx = CInt(32)
+  loc_00A01D30: ecx = Array(var_2C)
+  loc_00A01D4E: ReDim var_2C(0 To 6)
+  loc_00A01D7E: ecx = CInt(168)
+  loc_00A01DAA: ecx = CInt(413)
+  loc_00A01DBB: 00000002h = 00000002h - eax+00000014h
+  loc_00A01DC4: 00000002h = 00000002h + eax+0000000Ch
+  loc_00A01DC7: ecx = CInt(324)
+  loc_00A01DDB: 00000003h = 00000003h - eax+00000014h
+  loc_00A01DE4: 00000003h = 00000003h + eax+0000000Ch
+  loc_00A01DE7: ecx = CInt(28)
+  loc_00A01DFB: 00000004h = 00000004h - eax+00000014h
+  loc_00A01E04: 00000004h = 00000004h + eax+0000000Ch
+  loc_00A01E07: ecx = CInt(492)
+  loc_00A01E21: 00000005h = 00000005h - eax+00000014h
+  loc_00A01E2D: 00000005h = 00000005h + eax+0000000Ch
+  loc_00A01E30: ecx = CInt(441)
+  loc_00A01E4A: 00000006h = 00000006h - eax+00000014h
+  loc_00A01E56: 00000006h = 00000006h + eax+0000000Ch
+  loc_00A01E59: ecx = CInt(-1)
+  loc_00A01E7E: ecx = Array(var_2C)
+  loc_00A01E9C: ReDim var_2C(0 To 6)
+  loc_00A01ECC: ecx = CInt(168)
+  loc_00A01EF8: ecx = CInt(413)
+  loc_00A01F09: 00000002h = 00000002h - eax+00000014h
+  loc_00A01F12: 00000002h = 00000002h + eax+0000000Ch
+  loc_00A01F15: ecx = CInt(61)
+  loc_00A01F29: 00000003h = 00000003h - eax+00000014h
+  loc_00A01F32: 00000003h = 00000003h + eax+0000000Ch
+  loc_00A01F35: ecx = CInt(28)
+  loc_00A01F49: 00000004h = 00000004h - eax+00000014h
+  loc_00A01F52: 00000004h = 00000004h + eax+0000000Ch
+  loc_00A01F55: ecx = CInt(229)
+  loc_00A01F6F: 00000005h = 00000005h - eax+00000014h
+  loc_00A01F7B: 00000005h = 00000005h + eax+0000000Ch
+  loc_00A01F7E: ecx = CInt(441)
+  loc_00A01F9E: 00000006h = 00000006h - eax+00000014h
+  loc_00A01FA4: 00000006h = 00000006h + eax+0000000Ch
+  loc_00A01FA7: ecx = CInt(35)
+  loc_00A01FCC: ecx = Array(var_2C)
+  loc_00A01FEA: ReDim var_2C(0 To 6)
+  loc_00A0201A: ecx = CInt(255)
+  loc_00A02046: ecx = CInt(413)
+  loc_00A02057: 00000002h = 00000002h - eax+00000014h
+  loc_00A02060: 00000002h = 00000002h + eax+0000000Ch
+  loc_00A02063: ecx = CInt(61)
+  loc_00A02077: 00000003h = 00000003h - eax+00000014h
+  loc_00A02080: 00000003h = 00000003h + eax+0000000Ch
+  loc_00A02083: ecx = CInt(28)
+  loc_00A02097: 00000004h = 00000004h - eax+00000014h
+  loc_00A020A0: 00000004h = 00000004h + eax+0000000Ch
+  loc_00A020A3: ecx = CInt(316)
+  loc_00A020BD: 00000005h = 00000005h - eax+00000014h
+  loc_00A020C9: 00000005h = 00000005h + eax+0000000Ch
+  loc_00A020CC: ecx = CInt(441)
+  loc_00A020E6: 00000006h = 00000006h - eax+00000014h
+  loc_00A020F2: 00000006h = 00000006h + eax+0000000Ch
+  loc_00A020F5: ecx = CInt(30)
+  loc_00A0211A: ecx = Array(var_2C)
+  loc_00A02138: ReDim var_2C(0 To 6)
+  loc_00A02168: ecx = CInt(343)
+  loc_00A02194: ecx = CInt(413)
+  loc_00A021A5: 00000002h = 00000002h - eax+00000014h
+  loc_00A021AE: 00000002h = 00000002h + eax+0000000Ch
+  loc_00A021B1: ecx = CInt(61)
+  loc_00A021C5: 00000003h = 00000003h - eax+00000014h
+  loc_00A021CE: 00000003h = 00000003h + eax+0000000Ch
+  loc_00A021D1: ecx = CInt(28)
+  loc_00A021E5: 00000004h = 00000004h - eax+00000014h
+  loc_00A021EE: 00000004h = 00000004h + eax+0000000Ch
+  loc_00A021F1: ecx = CInt(404)
+  loc_00A0220B: 00000005h = 00000005h - eax+00000014h
+  loc_00A02217: 00000005h = 00000005h + eax+0000000Ch
+  loc_00A0221A: ecx = CInt(441)
+  loc_00A02234: 00000006h = 00000006h - eax+00000014h
+  loc_00A02240: 00000006h = 00000006h + eax+0000000Ch
+  loc_00A02243: ecx = CInt(31)
+  loc_00A02268: ecx = Array(var_2C)
+  loc_00A02286: ReDim var_2C(0 To 6)
+  loc_00A022B6: ecx = CInt(429)
+  loc_00A022E2: ecx = CInt(413)
+  loc_00A022F6: 00000002h = 00000002h - eax+00000014h
+  loc_00A022FC: 00000002h = 00000002h + eax+0000000Ch
+  loc_00A022FF: ecx = CInt(61)
+  loc_00A02313: 00000003h = 00000003h - eax+00000014h
+  loc_00A0231C: 00000003h = 00000003h + eax+0000000Ch
+  loc_00A0231F: ecx = CInt(28)
+  loc_00A02333: 00000004h = 00000004h - eax+00000014h
+  loc_00A0233C: 00000004h = 00000004h + eax+0000000Ch
+  loc_00A0233F: ecx = CInt(490)
+  loc_00A02359: 00000005h = 00000005h - eax+00000014h
+  loc_00A02365: 00000005h = 00000005h + eax+0000000Ch
+  loc_00A02368: ecx = CInt(441)
+  loc_00A02382: 00000006h = 00000006h - eax+00000014h
+  loc_00A0238E: 00000006h = 00000006h + eax+0000000Ch
+  loc_00A02391: ecx = CInt(32)
+  loc_00A023B6: ecx = Array(var_2C)
+  loc_00A023D4: ReDim var_2C(0 To 6)
+  loc_00A02404: ecx = CInt(168)
+  loc_00A02430: ecx = CInt(446)
+  loc_00A02441: 00000002h = 00000002h - eax+00000014h
+  loc_00A0244A: 00000002h = 00000002h + eax+0000000Ch
+  loc_00A0244D: ecx = CInt(61)
+  loc_00A02461: 00000003h = 00000003h - eax+00000014h
+  loc_00A0246A: 00000003h = 00000003h + eax+0000000Ch
+  loc_00A0246D: ecx = CInt(108)
+  loc_00A02481: 00000004h = 00000004h - eax+00000014h
+  loc_00A0248A: 00000004h = 00000004h + eax+0000000Ch
+  loc_00A0248D: ecx = CInt(229)
+  loc_00A024A7: 00000005h = 00000005h - eax+00000014h
+  loc_00A024B3: 00000005h = 00000005h + eax+0000000Ch
+  loc_00A024B6: ecx = CInt(554)
+  loc_00A024D0: 00000006h = 00000006h - eax+00000014h
+  loc_00A024DC: 00000006h = 00000006h + eax+0000000Ch
+  loc_00A024DF: ecx = CInt(-1)
+  loc_00A02504: ecx = Array(var_2C)
+  loc_00A02522: ReDim var_2C(0 To 6)
+  loc_00A02552: ecx = CInt(168)
+  loc_00A0257E: ecx = CInt(446)
+  loc_00A0258F: 00000002h = 00000002h - eax+00000014h
+  loc_00A02598: 00000002h = 00000002h + eax+0000000Ch
+  loc_00A0259B: ecx = CInt(61)
+  loc_00A025AF: 00000003h = 00000003h - eax+00000014h
+  loc_00A025B8: 00000003h = 00000003h + eax+0000000Ch
+  loc_00A025BB: ecx = CInt(33)
+  loc_00A025CF: 00000004h = 00000004h - eax+00000014h
+  loc_00A025D8: 00000004h = 00000004h + eax+0000000Ch
+  loc_00A025DB: ecx = CInt(229)
+  loc_00A025F5: 00000005h = 00000005h - eax+00000014h
+  loc_00A02601: 00000005h = 00000005h + eax+0000000Ch
+  loc_00A02604: ecx = CInt(479)
+  loc_00A0261E: 00000006h = 00000006h - eax+00000014h
+  loc_00A0262A: 00000006h = 00000006h + eax+0000000Ch
+  loc_00A0262D: ecx = CInt(29)
+  loc_00A02652: ecx = Array(var_2C)
+  loc_00A02670: ReDim var_2C(0 To 6)
+  loc_00A026A0: ecx = CInt(168)
+  loc_00A026CC: ecx = CInt(481)
+  loc_00A026DD: 00000002h = 00000002h - eax+00000014h
+  loc_00A026E6: 00000002h = 00000002h + eax+0000000Ch
+  loc_00A026E9: ecx = CInt(61)
+  loc_00A026FD: 00000003h = 00000003h - eax+00000014h
+  loc_00A02706: 00000003h = 00000003h + eax+0000000Ch
+  loc_00A02709: ecx = CInt(33)
+  loc_00A0271D: 00000004h = 00000004h - eax+00000014h
+  loc_00A02726: 00000004h = 00000004h + eax+0000000Ch
+  loc_00A02729: ecx = CInt(229)
+  loc_00A02743: 00000005h = 00000005h - eax+00000014h
+  loc_00A0274F: 00000005h = 00000005h + eax+0000000Ch
+  loc_00A02752: ecx = CInt(514)
+  loc_00A0276C: 00000006h = 00000006h - eax+00000014h
+  loc_00A02778: 00000006h = 00000006h + eax+0000000Ch
+  loc_00A0277B: ecx = CInt(5)
+  loc_00A027A0: ecx = Array(var_2C)
+  loc_00A027BE: ReDim var_2C(0 To 6)
+  loc_00A027EE: ecx = CInt(168)
+  loc_00A0281A: ecx = CInt(516)
+  loc_00A0282B: 00000002h = 00000002h - eax+00000014h
+  loc_00A02834: 00000002h = 00000002h + eax+0000000Ch
+  loc_00A02837: ecx = CInt(61)
+  loc_00A0284B: 00000003h = 00000003h - eax+00000014h
+  loc_00A02854: 00000003h = 00000003h + eax+0000000Ch
+  loc_00A02857: ecx = CInt(33)
+  loc_00A0286B: 00000004h = 00000004h - eax+00000014h
+  loc_00A02874: 00000004h = 00000004h + eax+0000000Ch
+  loc_00A02877: ecx = CInt(229)
+  loc_00A02891: 00000005h = 00000005h - eax+00000014h
+  loc_00A0289D: 00000005h = 00000005h + eax+0000000Ch
+  loc_00A028A0: ecx = CInt(549)
+  loc_00A028C0: 00000006h = 00000006h - eax+00000014h
+  loc_00A028C6: 00000006h = 00000006h + eax+0000000Ch
+  loc_00A028C9: ecx = CInt(23)
+  loc_00A028EE: ecx = Array(var_2C)
+  loc_00A0290C: ReDim var_2C(0 To 6)
+  loc_00A0293C: ecx = CInt(232)
+  loc_00A02968: ecx = CInt(446)
+  loc_00A02979: 00000002h = 00000002h - eax+00000014h
+  loc_00A02982: 00000002h = 00000002h + eax+0000000Ch
+  loc_00A02985: ecx = CInt(199)
+  loc_00A02999: 00000003h = 00000003h - eax+00000014h
+  loc_00A029A2: 00000003h = 00000003h + eax+0000000Ch
+  loc_00A029A5: ecx = CInt(108)
+  loc_00A029B9: 00000004h = 00000004h - eax+00000014h
+  loc_00A029C2: 00000004h = 00000004h + eax+0000000Ch
+  loc_00A029C5: ecx = CInt(431)
+  loc_00A029E5: 00000005h = 00000005h - eax+00000014h
+  loc_00A029EB: 00000005h = 00000005h + eax+0000000Ch
+  loc_00A029EE: ecx = CInt(554)
+  loc_00A02A08: 00000006h = 00000006h - eax+00000014h
+  loc_00A02A14: 00000006h = 00000006h + eax+0000000Ch
+  loc_00A02A17: ecx = CInt(-1)
+  loc_00A02A3C: ecx = Array(var_2C)
+  loc_00A02A5A: ReDim var_2C(0 To 6)
+  loc_00A02A8A: ecx = CInt(306)
+  loc_00A02AB6: ecx = CInt(455)
+  loc_00A02AC7: 00000002h = 00000002h - eax+00000014h
+  loc_00A02AD0: 00000002h = 00000002h + eax+0000000Ch
+  loc_00A02AD3: ecx = CInt(47)
+  loc_00A02AE7: 00000003h = 00000003h - eax+00000014h
+  loc_00A02AF0: 00000003h = 00000003h + eax+0000000Ch
+  loc_00A02AF3: ecx = CInt(30)
+  loc_00A02B0A: 00000004h = 00000004h - eax+00000014h
+  loc_00A02B10: 00000004h = 00000004h + eax+0000000Ch
+  loc_00A02B13: ecx = CInt(353)
+  loc_00A02B2D: 00000005h = 00000005h - eax+00000014h
+  loc_00A02B39: 00000005h = 00000005h + eax+0000000Ch
+  loc_00A02B3C: ecx = CInt(485)
+  loc_00A02B56: 00000006h = 00000006h - eax+00000014h
+  loc_00A02B62: 00000006h = 00000006h + eax+0000000Ch
+  loc_00A02B65: ecx = CInt(25)
+  loc_00A02B8A: ecx = Array(var_2C)
+  loc_00A02BA8: ReDim var_2C(0 To 6)
+  loc_00A02BD8: ecx = CInt(306)
+  loc_00A02C04: ecx = CInt(508)
+  loc_00A02C15: 00000002h = 00000002h - eax+00000014h
+  loc_00A02C1E: 00000002h = 00000002h + eax+0000000Ch
+  loc_00A02C21: ecx = CInt(47)
+  loc_00A02C35: 00000003h = 00000003h - eax+00000014h
+  loc_00A02C3E: 00000003h = 00000003h + eax+0000000Ch
+  loc_00A02C41: ecx = CInt(30)
+  loc_00A02C55: 00000004h = 00000004h - eax+00000014h
+  loc_00A02C5E: 00000004h = 00000004h + eax+0000000Ch
+  loc_00A02C61: ecx = CInt(353)
+  loc_00A02C7B: 00000005h = 00000005h - eax+00000014h
+  loc_00A02C87: 00000005h = 00000005h + eax+0000000Ch
+  loc_00A02C8A: ecx = CInt(538)
+  loc_00A02CA4: 00000006h = 00000006h - eax+00000014h
+  loc_00A02CB0: 00000006h = 00000006h + eax+0000000Ch
+  loc_00A02CB3: ecx = CInt(1)
+  loc_00A02CD8: ecx = Array(var_2C)
+  loc_00A02CF6: ReDim var_2C(0 To 6)
+  loc_00A02D26: ecx = CInt(273)
+  loc_00A02D52: ecx = CInt(473)
+  loc_00A02D63: 00000002h = 00000002h - eax+00000014h
+  loc_00A02D6C: 00000002h = 00000002h + eax+0000000Ch
+  loc_00A02D6F: ecx = CInt(30)
+  loc_00A02D83: 00000003h = 00000003h - eax+00000014h
+  loc_00A02D8C: 00000003h = 00000003h + eax+0000000Ch
+  loc_00A02D8F: ecx = CInt(47)
+  loc_00A02DA3: 00000004h = 00000004h - eax+00000014h
+  loc_00A02DAC: 00000004h = 00000004h + eax+0000000Ch
+  loc_00A02DAF: ecx = CInt(303)
+  loc_00A02DC9: 00000005h = 00000005h - eax+00000014h
+  loc_00A02DD5: 00000005h = 00000005h + eax+0000000Ch
+  loc_00A02DD8: ecx = CInt(520)
+  loc_00A02DF2: 00000006h = 00000006h - eax+00000014h
+  loc_00A02DFE: 00000006h = 00000006h + eax+0000000Ch
+  loc_00A02E01: ecx = CInt(28)
+  loc_00A02E26: ecx = Array(var_2C)
+  loc_00A02E44: ReDim var_2C(0 To 6)
+  loc_00A02E74: ecx = CInt(356)
+  loc_00A02EA0: ecx = CInt(473)
+  loc_00A02EB1: 00000002h = 00000002h - eax+00000014h
+  loc_00A02EBA: 00000002h = 00000002h + eax+0000000Ch
+  loc_00A02EBD: ecx = CInt(30)
+  loc_00A02ED1: 00000003h = 00000003h - eax+00000014h
+  loc_00A02EDA: 00000003h = 00000003h + eax+0000000Ch
+  loc_00A02EDD: ecx = CInt(47)
+  loc_00A02EF1: 00000004h = 00000004h - eax+00000014h
+  loc_00A02EFA: 00000004h = 00000004h + eax+0000000Ch
+  loc_00A02EFD: ecx = CInt(386)
+  loc_00A02F17: 00000005h = 00000005h - eax+00000014h
+  loc_00A02F23: 00000005h = 00000005h + eax+0000000Ch
+  loc_00A02F26: ecx = CInt(520)
+  loc_00A02F40: 00000006h = 00000006h - eax+00000014h
+  loc_00A02F4C: 00000006h = 00000006h + eax+0000000Ch
+  loc_00A02F4F: ecx = CInt(26)
+  loc_00A02F74: ecx = Array(var_2C)
+  loc_00A02F92: ReDim var_2C(0 To 6)
+  loc_00A02FC2: ecx = CInt(232)
+  loc_00A02FEE: ecx = CInt(446)
+  loc_00A02FFF: 00000002h = 00000002h - eax+00000014h
+  loc_00A03008: 00000002h = 00000002h + eax+0000000Ch
+  loc_00A0300B: ecx = CInt(47)
+  loc_00A0301F: 00000003h = 00000003h - eax+00000014h
+  loc_00A03028: 00000003h = 00000003h + eax+0000000Ch
+  loc_00A0302B: ecx = CInt(28)
+  loc_00A0303F: 00000004h = 00000004h - eax+00000014h
+  loc_00A03048: 00000004h = 00000004h + eax+0000000Ch
+  loc_00A0304B: ecx = CInt(279)
+  loc_00A03065: 00000005h = 00000005h - eax+00000014h
+  loc_00A03071: 00000005h = 00000005h + eax+0000000Ch
+  loc_00A03074: ecx = CInt(474)
+  loc_00A0308E: 00000006h = 00000006h - eax+00000014h
+  loc_00A0309A: 00000006h = 00000006h + eax+0000000Ch
+  loc_00A0309D: ecx = CInt(34)
+  loc_00A030C2: ecx = Array(var_2C)
+  loc_00A030E0: ReDim var_2C(0 To 6)
+  loc_00A03110: ecx = CInt(380)
+  loc_00A0313C: ecx = CInt(446)
+  loc_00A0314D: 00000002h = 00000002h - eax+00000014h
+  loc_00A03156: 00000002h = 00000002h + eax+0000000Ch
+  loc_00A03159: ecx = CInt(47)
+  loc_00A0316D: 00000003h = 00000003h - eax+00000014h
+  loc_00A03176: 00000003h = 00000003h + eax+0000000Ch
+  loc_00A03179: ecx = CInt(28)
+  loc_00A0318D: 00000004h = 00000004h - eax+00000014h
+  loc_00A03196: 00000004h = 00000004h + eax+0000000Ch
+  loc_00A03199: ecx = CInt(427)
+  loc_00A031B3: 00000005h = 00000005h - eax+00000014h
+  loc_00A031BF: 00000005h = 00000005h + eax+0000000Ch
+  loc_00A031C2: ecx = CInt(474)
+  loc_00A031DC: 00000006h = 00000006h - eax+00000014h
+  loc_00A031E8: 00000006h = 00000006h + eax+0000000Ch
+  loc_00A031EB: ecx = CInt(24)
+  loc_00A03210: ecx = Array(var_2C)
+  loc_00A0322E: ReDim var_2C(0 To 6)
+  loc_00A0325E: ecx = CInt(429)
+  loc_00A0328A: ecx = CInt(446)
+  loc_00A0329B: 00000002h = 00000002h - eax+00000014h
+  loc_00A032A4: 00000002h = 00000002h + eax+0000000Ch
+  loc_00A032A7: ecx = CInt(64)
+  loc_00A032BB: 00000003h = 00000003h - eax+00000014h
+  loc_00A032C4: 00000003h = 00000003h + eax+0000000Ch
+  loc_00A032C7: ecx = CInt(108)
+  loc_00A032DB: 00000004h = 00000004h - eax+00000014h
+  loc_00A032E4: 00000004h = 00000004h + eax+0000000Ch
+  loc_00A032E7: ecx = CInt(493)
+  loc_00A03301: 00000005h = 00000005h - eax+00000014h
+  loc_00A0330D: 00000005h = 00000005h + eax+0000000Ch
+  loc_00A03310: ecx = CInt(554)
+  loc_00A0332A: 00000006h = 00000006h - eax+00000014h
+  loc_00A03336: 00000006h = 00000006h + eax+0000000Ch
+  loc_00A03339: ecx = CInt(-1)
+  loc_00A0335E: ecx = Array(var_2C)
+  loc_00A0337C: ReDim var_2C(0 To 6)
+  loc_00A033AC: ecx = CInt(429)
+  loc_00A033D8: ecx = CInt(446)
+  loc_00A033E9: 00000002h = 00000002h - eax+00000014h
+  loc_00A033F2: 00000002h = 00000002h + eax+0000000Ch
+  loc_00A033F5: ecx = CInt(61)
+  loc_00A03409: 00000003h = 00000003h - eax+00000014h
+  loc_00A03412: 00000003h = 00000003h + eax+0000000Ch
+  loc_00A03415: ecx = CInt(33)
+  loc_00A0342C: 00000004h = 00000004h - eax+00000014h
+  loc_00A03432: 00000004h = 00000004h + eax+0000000Ch
+  loc_00A03435: ecx = CInt(490)
+  loc_00A0344F: 00000005h = 00000005h - eax+00000014h
+  loc_00A0345B: 00000005h = 00000005h + eax+0000000Ch
+  loc_00A0345E: ecx = CInt(479)
+  loc_00A03478: 00000006h = 00000006h - eax+00000014h
+  loc_00A03484: 00000006h = 00000006h + eax+0000000Ch
+  loc_00A03487: ecx = CInt(33)
+  loc_00A034AC: ecx = Array(var_2C)
+  loc_00A034CA: ReDim var_2C(0 To 6)
+  loc_00A034FA: ecx = CInt(429)
+  loc_00A03526: ecx = CInt(481)
+  loc_00A03537: 00000002h = 00000002h - eax+00000014h
+  loc_00A03540: 00000002h = 00000002h + eax+0000000Ch
+  loc_00A03543: ecx = CInt(61)
+  loc_00A0355A: 00000003h = 00000003h - eax+00000014h
+  loc_00A03560: 00000003h = 00000003h + eax+0000000Ch
+  loc_00A03563: ecx = CInt(33)
+  loc_00A03577: 00000004h = 00000004h - eax+00000014h
+  loc_00A03580: 00000004h = 00000004h + eax+0000000Ch
+  loc_00A03583: ecx = CInt(490)
+  loc_00A0359D: 00000005h = 00000005h - eax+00000014h
+  loc_00A035A9: 00000005h = 00000005h + eax+0000000Ch
+  loc_00A035AC: ecx = CInt(514)
+  loc_00A035C6: 00000006h = 00000006h - eax+00000014h
+  loc_00A035D2: 00000006h = 00000006h + eax+0000000Ch
+  loc_00A035D5: ecx = CInt(27)
+  loc_00A035FA: ecx = Array(var_2C)
+  loc_00A03618: ReDim var_2C(0 To 6)
+  loc_00A03648: ecx = CInt(429)
+  loc_00A03674: ecx = CInt(516)
+  loc_00A03688: 00000002h = 00000002h - eax+00000014h
+  loc_00A0368E: 00000002h = 00000002h + eax+0000000Ch
+  loc_00A03691: ecx = CInt(61)
+  loc_00A036A5: 00000003h = 00000003h - eax+00000014h
+  loc_00A036AE: 00000003h = 00000003h + eax+0000000Ch
+  loc_00A036B1: ecx = CInt(33)
+  loc_00A036C5: 00000004h = 00000004h - eax+00000014h
+  loc_00A036CE: 00000004h = 00000004h + eax+0000000Ch
+  loc_00A036D1: ecx = CInt(490)
+  loc_00A036EB: 00000005h = 00000005h - eax+00000014h
+  loc_00A036F7: 00000005h = 00000005h + eax+0000000Ch
+  loc_00A036FA: ecx = CInt(549)
+  loc_00A03714: 00000006h = 00000006h - eax+00000014h
+  loc_00A03720: 00000006h = 00000006h + eax+0000000Ch
+  loc_00A03723: ecx = CInt(3)
+  loc_00A03748: ecx = Array(var_2C)
+  loc_00A03766: ReDim var_2C(0 To 6)
+  loc_00A03796: ecx = CInt(168)
+  loc_00A037C2: ecx = CInt(556)
+  loc_00A037D3: 00000002h = 00000002h - eax+00000014h
+  loc_00A037DC: 00000002h = 00000002h + eax+0000000Ch
+  loc_00A037DF: ecx = CInt(323)
+  loc_00A037F3: 00000003h = 00000003h - eax+00000014h
+  loc_00A037FC: 00000003h = 00000003h + eax+0000000Ch
+  loc_00A037FF: ecx = CInt(29)
+  loc_00A03813: 00000004h = 00000004h - eax+00000014h
+  loc_00A0381C: 00000004h = 00000004h + eax+0000000Ch
+  loc_00A0381F: ecx = CInt(491)
+  loc_00A03839: 00000005h = 00000005h - eax+00000014h
+  loc_00A03845: 00000005h = 00000005h + eax+0000000Ch
+  loc_00A03848: ecx = CInt(585)
+  loc_00A03862: 00000006h = 00000006h - eax+00000014h
+  loc_00A0386E: 00000006h = 00000006h + eax+0000000Ch
+  loc_00A03871: ecx = CInt(-1)
+  loc_00A03896: ecx = Array(var_2C)
+  loc_00A038B4: ReDim var_2C(0 To 6)
+  loc_00A038E4: ecx = CInt(168)
+  loc_00A03910: ecx = CInt(556)
+  loc_00A03921: 00000002h = 00000002h - eax+00000014h
+  loc_00A0392A: 00000002h = 00000002h + eax+0000000Ch
+  loc_00A0392D: ecx = CInt(61)
+  loc_00A03941: 00000003h = 00000003h - eax+00000014h
+  loc_00A0394A: 00000003h = 00000003h + eax+0000000Ch
+  loc_00A0394D: ecx = CInt(29)
+  loc_00A03961: 00000004h = 00000004h - eax+00000014h
+  loc_00A0396A: 00000004h = 00000004h + eax+0000000Ch
+  loc_00A0396D: ecx = CInt(229)
+  loc_00A03987: 00000005h = 00000005h - eax+00000014h
+  loc_00A03993: 00000005h = 00000005h + eax+0000000Ch
+  loc_00A03996: ecx = CInt(585)
+  loc_00A039B0: 00000006h = 00000006h - eax+00000014h
+  loc_00A039BC: 00000006h = 00000006h + eax+0000000Ch
+  loc_00A039BF: ecx = CInt(11)
+  loc_00A039E4: ecx = Array(var_2C)
+  loc_00A03A02: ReDim var_2C(0 To 6)
+  loc_00A03A32: ecx = CInt(233)
+  loc_00A03A5E: ecx = CInt(556)
+  loc_00A03A6F: 00000002h = 00000002h - eax+00000014h
+  loc_00A03A78: 00000002h = 00000002h + eax+0000000Ch
+  loc_00A03A7B: ecx = CInt(61)
+  loc_00A03A8F: 00000003h = 00000003h - eax+00000014h
+  loc_00A03A98: 00000003h = 00000003h + eax+0000000Ch
+  loc_00A03A9B: ecx = CInt(29)
+  loc_00A03AAF: 00000004h = 00000004h - eax+00000014h
+  loc_00A03AB8: 00000004h = 00000004h + eax+0000000Ch
+  loc_00A03ABB: ecx = CInt(294)
+  loc_00A03AD5: 00000005h = 00000005h - eax+00000014h
+  loc_00A03AE1: 00000005h = 00000005h + eax+0000000Ch
+  loc_00A03AE4: ecx = CInt(585)
+  loc_00A03AFE: 00000006h = 00000006h - eax+00000014h
+  loc_00A03B0A: 00000006h = 00000006h + eax+0000000Ch
+  loc_00A03B0D: ecx = CInt(18)
+  loc_00A03B32: ecx = Array(var_2C)
+  loc_00A03B50: ReDim var_2C(0 To 6)
+  loc_00A03B80: ecx = CInt(299)
+  loc_00A03BAC: ecx = CInt(556)
+  loc_00A03BBD: 00000002h = 00000002h - eax+00000014h
+  loc_00A03BC6: 00000002h = 00000002h + eax+0000000Ch
+  loc_00A03BC9: ecx = CInt(61)
+  loc_00A03BDD: 00000003h = 00000003h - eax+00000014h
+  loc_00A03BE6: 00000003h = 00000003h + eax+0000000Ch
+  loc_00A03BE9: ecx = CInt(29)
+  loc_00A03BFD: 00000004h = 00000004h - eax+00000014h
+  loc_00A03C06: 00000004h = 00000004h + eax+0000000Ch
+  loc_00A03C09: ecx = CInt(360)
+  loc_00A03C23: 00000005h = 00000005h - eax+00000014h
+  loc_00A03C2F: 00000005h = 00000005h + eax+0000000Ch
+  loc_00A03C32: ecx = CInt(585)
+  loc_00A03C52: 00000006h = 00000006h - eax+00000014h
+  loc_00A03C58: 00000006h = 00000006h + eax+0000000Ch
+  loc_00A03C5B: ecx = CInt(19)
+  loc_00A03C80: ecx = Array(var_2C)
+  loc_00A03C9E: ReDim var_2C(0 To 6)
+  loc_00A03CCE: ecx = CInt(364)
+  loc_00A03CFA: ecx = CInt(556)
+  loc_00A03D0B: 00000002h = 00000002h - eax+00000014h
+  loc_00A03D14: 00000002h = 00000002h + eax+0000000Ch
+  loc_00A03D17: ecx = CInt(61)
+  loc_00A03D2B: 00000003h = 00000003h - eax+00000014h
+  loc_00A03D34: 00000003h = 00000003h + eax+0000000Ch
+  loc_00A03D37: ecx = CInt(29)
+  loc_00A03D4B: 00000004h = 00000004h - eax+00000014h
+  loc_00A03D54: 00000004h = 00000004h + eax+0000000Ch
+  loc_00A03D57: ecx = CInt(425)
+  loc_00A03D71: 00000005h = 00000005h - eax+00000014h
+  loc_00A03D7D: 00000005h = 00000005h + eax+0000000Ch
+  loc_00A03D80: ecx = CInt(585)
+  loc_00A03D9A: 00000006h = 00000006h - eax+00000014h
+  loc_00A03DA6: 00000006h = 00000006h + eax+0000000Ch
+  loc_00A03DA9: ecx = CInt(20)
+  loc_00A03DCE: ecx = Array(var_2C)
+  loc_00A03DEC: ReDim var_2C(0 To 6)
+  loc_00A03E1C: ecx = CInt(430)
+  loc_00A03E48: ecx = CInt(556)
+  loc_00A03E59: 00000002h = 00000002h - eax+00000014h
+  loc_00A03E62: 00000002h = 00000002h + eax+0000000Ch
+  loc_00A03E65: ecx = CInt(61)
+  loc_00A03E79: 00000003h = 00000003h - eax+00000014h
+  loc_00A03E82: 00000003h = 00000003h + eax+0000000Ch
+  loc_00A03E85: ecx = CInt(29)
+  loc_00A03E99: 00000004h = 00000004h - eax+00000014h
+  loc_00A03EA2: 00000004h = 00000004h + eax+0000000Ch
+  loc_00A03EA5: ecx = CInt(491)
+  loc_00A03EBF: 00000005h = 00000005h - eax+00000014h
+  loc_00A03ECB: 00000005h = 00000005h + eax+0000000Ch
+  loc_00A03ECE: ecx = CInt(585)
+  loc_00A03EE8: 00000006h = 00000006h - eax+00000014h
+  loc_00A03EF4: 00000006h = 00000006h + eax+0000000Ch
+  loc_00A03EF7: ecx = CInt(21)
+  loc_00A03F1C: ecx = Array(var_2C)
+  loc_00A03F3A: ReDim var_2C(0 To 6)
+  loc_00A03F6A: ecx = CInt(218)
+  loc_00A03F96: ecx = CInt(587)
+  loc_00A03FAA: 00000002h = 00000002h - eax+00000014h
+  loc_00A03FB0: 00000002h = 00000002h + eax+0000000Ch
+  loc_00A03FB3: ecx = CInt(261)
+  loc_00A03FC7: 00000003h = 00000003h - eax+00000014h
+  loc_00A03FD0: 00000003h = 00000003h + eax+0000000Ch
+  loc_00A03FD3: ecx = CInt(40)
+  loc_00A03FE7: 00000004h = 00000004h - eax+00000014h
+  loc_00A03FF0: 00000004h = 00000004h + eax+0000000Ch
+  loc_00A03FF3: ecx = CInt(479)
+  loc_00A0400D: 00000005h = 00000005h - eax+00000014h
+  loc_00A04019: 00000005h = 00000005h + eax+0000000Ch
+  loc_00A0401C: ecx = CInt(627)
+  loc_00A04036: 00000006h = 00000006h - eax+00000014h
+  loc_00A04042: 00000006h = 00000006h + eax+0000000Ch
+  loc_00A04045: ecx = CInt(-1)
+  loc_00A0406A: ecx = Array(var_2C)
+  loc_00A04088: ReDim var_2C(0 To 6)
+  loc_00A040B8: ecx = CInt(218)
+  loc_00A040E4: ecx = CInt(587)
+  loc_00A040F5: 00000002h = 00000002h - eax+00000014h
+  loc_00A040FE: 00000002h = 00000002h + eax+0000000Ch
+  loc_00A04101: ecx = CInt(39)
+  loc_00A04115: 00000003h = 00000003h - eax+00000014h
+  loc_00A0411E: 00000003h = 00000003h + eax+0000000Ch
+  loc_00A04121: ecx = CInt(40)
+  loc_00A04135: 00000004h = 00000004h - eax+00000014h
+  loc_00A0413E: 00000004h = 00000004h + eax+0000000Ch
+  loc_00A04141: ecx = CInt(257)
+  loc_00A0415B: 00000005h = 00000005h - eax+00000014h
+  loc_00A04167: 00000005h = 00000005h + eax+0000000Ch
+  loc_00A0416A: ecx = CInt(627)
+  loc_00A04184: 00000006h = 00000006h - eax+00000014h
+  loc_00A04190: 00000006h = 00000006h + eax+0000000Ch
+  loc_00A04193: ecx = CInt(17)
+  loc_00A041B8: ecx = Array(var_2C)
+  loc_00A041D6: ReDim var_2C(0 To 6)
+  loc_00A04206: ecx = CInt(260)
+  loc_00A04232: ecx = CInt(587)
+  loc_00A04243: 00000002h = 00000002h - eax+00000014h
+  loc_00A0424C: 00000002h = 00000002h + eax+0000000Ch
+  loc_00A0424F: ecx = CInt(35)
+  loc_00A04263: 00000003h = 00000003h - eax+00000014h
+  loc_00A0426C: 00000003h = 00000003h + eax+0000000Ch
+  loc_00A0426F: ecx = CInt(40)
+  loc_00A04283: 00000004h = 00000004h - eax+00000014h
+  loc_00A0428C: 00000004h = 00000004h + eax+0000000Ch
+  loc_00A0428F: ecx = CInt(295)
+  loc_00A042A9: 00000005h = 00000005h - eax+00000014h
+  loc_00A042B5: 00000005h = 00000005h + eax+0000000Ch
+  loc_00A042B8: ecx = CInt(627)
+  loc_00A042D2: 00000006h = 00000006h - eax+00000014h
+  loc_00A042DE: 00000006h = 00000006h + eax+0000000Ch
+  loc_00A042E1: ecx = CInt(12)
+  loc_00A04306: ecx = Array(var_2C)
+  loc_00A04324: ReDim var_2C(0 To 6)
+  loc_00A04354: ecx = CInt(300)
+  loc_00A04380: ecx = CInt(587)
+  loc_00A04391: 00000002h = 00000002h - eax+00000014h
+  loc_00A0439A: 00000002h = 00000002h + eax+0000000Ch
+  loc_00A0439D: ecx = CInt(45)
+  loc_00A043B1: 00000003h = 00000003h - eax+00000014h
+  loc_00A043BA: 00000003h = 00000003h + eax+0000000Ch
+  loc_00A043BD: ecx = CInt(40)
+  loc_00A043D1: 00000004h = 00000004h - eax+00000014h
+  loc_00A043DA: 00000004h = 00000004h + eax+0000000Ch
+  loc_00A043DD: ecx = CInt(345)
+  loc_00A043F7: 00000005h = 00000005h - eax+00000014h
+  loc_00A04403: 00000005h = 00000005h + eax+0000000Ch
+  loc_00A04406: ecx = CInt(627)
+  loc_00A04420: 00000006h = 00000006h - eax+00000014h
+  loc_00A0442C: 00000006h = 00000006h + eax+0000000Ch
+  loc_00A0442F: ecx = CInt(13)
+  loc_00A04454: ecx = Array(var_2C)
+  loc_00A04472: ReDim var_2C(0 To 6)
+  loc_00A044A2: ecx = CInt(345)
+  loc_00A044CE: ecx = CInt(587)
+  loc_00A044DF: 00000002h = 00000002h - eax+00000014h
+  loc_00A044E8: 00000002h = 00000002h + eax+0000000Ch
+  loc_00A044EB: ecx = CInt(45)
+  loc_00A044FF: 00000003h = 00000003h - eax+00000014h
+  loc_00A04508: 00000003h = 00000003h + eax+0000000Ch
+  loc_00A0450B: ecx = CInt(40)
+  loc_00A0451F: 00000004h = 00000004h - eax+00000014h
+  loc_00A04528: 00000004h = 00000004h + eax+0000000Ch
+  loc_00A0452B: ecx = CInt(390)
+  loc_00A04545: 00000005h = 00000005h - eax+00000014h
+  loc_00A04551: 00000005h = 00000005h + eax+0000000Ch
+  loc_00A04554: ecx = CInt(627)
+  loc_00A0456E: 00000006h = 00000006h - eax+00000014h
+  loc_00A0457A: 00000006h = 00000006h + eax+0000000Ch
+  loc_00A0457D: ecx = CInt(14)
+  loc_00A045A2: ecx = Array(var_2C)
+  loc_00A045C0: ReDim var_2C(0 To 6)
+  loc_00A045F0: ecx = CInt(395)
+  loc_00A0461C: ecx = CInt(587)
+  loc_00A0462D: 00000002h = 00000002h - eax+00000014h
+  loc_00A04636: 00000002h = 00000002h + eax+0000000Ch
+  loc_00A04639: ecx = CInt(44)
+  loc_00A0464D: 00000003h = 00000003h - eax+00000014h
+  loc_00A04656: 00000003h = 00000003h + eax+0000000Ch
+  loc_00A04659: ecx = CInt(40)
+  loc_00A0466D: 00000004h = 00000004h - eax+00000014h
+  loc_00A04676: 00000004h = 00000004h + eax+0000000Ch
+  loc_00A04679: ecx = CInt(439)
+  loc_00A04699: 00000005h = 00000005h - eax+00000014h
+  loc_00A0469F: 00000005h = 00000005h + eax+0000000Ch
+  loc_00A046A2: ecx = CInt(627)
+  loc_00A046BC: 00000006h = 00000006h - eax+00000014h
+  loc_00A046C8: 00000006h = 00000006h + eax+0000000Ch
+  loc_00A046CB: ecx = CInt(15)
+  loc_00A046F0: ecx = Array(var_2C)
+  loc_00A0470E: ReDim var_2C(0 To 6)
+  loc_00A0473E: ecx = CInt(441)
+  loc_00A0476A: ecx = CInt(587)
+  loc_00A0477B: 00000002h = 00000002h - eax+00000014h
+  loc_00A04784: 00000002h = 00000002h + eax+0000000Ch
+  loc_00A04787: ecx = CInt(38)
+  loc_00A0479B: 00000003h = 00000003h - eax+00000014h
+  loc_00A047A4: 00000003h = 00000003h + eax+0000000Ch
+  loc_00A047A7: ecx = CInt(40)
+  loc_00A047BE: 00000004h = 00000004h - eax+00000014h
+  loc_00A047C4: 00000004h = 00000004h + eax+0000000Ch
+  loc_00A047C7: ecx = CInt(479)
+  loc_00A047E1: 00000005h = 00000005h - eax+00000014h
+  loc_00A047ED: 00000005h = 00000005h + eax+0000000Ch
+  loc_00A047F0: ecx = CInt(627)
+  loc_00A0480A: 00000006h = 00000006h - eax+00000014h
+  loc_00A04816: 00000006h = 00000006h + eax+0000000Ch
+  loc_00A04819: ecx = CInt(16)
+  loc_00A0483E: ecx = Array(var_2C)
+  loc_00A0485C: ReDim var_2C(0 To 6)
+  loc_00A0488C: ecx = CInt(218)
+  loc_00A048B8: ecx = CInt(627)
+  loc_00A048C9: 00000002h = 00000002h - eax+00000014h
+  loc_00A048D2: 00000002h = 00000002h + eax+0000000Ch
+  loc_00A048D5: ecx = CInt(261)
+  loc_00A048E9: 00000003h = 00000003h - eax+00000014h
+  loc_00A048F2: 00000003h = 00000003h + eax+0000000Ch
+  loc_00A048F5: ecx = CInt(37)
+  loc_00A04909: 00000004h = 00000004h - eax+00000014h
+  loc_00A04912: 00000004h = 00000004h + eax+0000000Ch
+  loc_00A04915: ecx = CInt(479)
+  loc_00A0492F: 00000005h = 00000005h - eax+00000014h
+  loc_00A0493B: 00000005h = 00000005h + eax+0000000Ch
+  loc_00A0493E: ecx = CInt(664)
+  loc_00A04958: 00000006h = 00000006h - eax+00000014h
+  loc_00A04964: 00000006h = 00000006h + eax+0000000Ch
+  loc_00A04967: ecx = CInt(-1)
+  loc_00A0498C: ecx = Array(var_2C)
+  loc_00A049AA: ReDim var_2C(0 To 6)
+  loc_00A049DA: ecx = CInt(218)
+  loc_00A04A06: ecx = CInt(627)
+  loc_00A04A17: 00000002h = 00000002h - eax+00000014h
+  loc_00A04A20: 00000002h = 00000002h + eax+0000000Ch
+  loc_00A04A23: ecx = CInt(39)
+  loc_00A04A37: 00000003h = 00000003h - eax+00000014h
+  loc_00A04A40: 00000003h = 00000003h + eax+0000000Ch
+  loc_00A04A43: ecx = CInt(37)
+  loc_00A04A57: 00000004h = 00000004h - eax+00000014h
+  loc_00A04A60: 00000004h = 00000004h + eax+0000000Ch
+  loc_00A04A63: ecx = CInt(257)
+  loc_00A04A7D: 00000005h = 00000005h - eax+00000014h
+  loc_00A04A89: 00000005h = 00000005h + eax+0000000Ch
+  loc_00A04A8C: ecx = CInt(664)
+  loc_00A04AA6: 00000006h = 00000006h - eax+00000014h
+  loc_00A04AB2: 00000006h = 00000006h + eax+0000000Ch
+  loc_00A04AB5: ecx = CInt(4)
+  loc_00A04ADA: ecx = Array(var_2C)
+  loc_00A04AF8: ReDim var_2C(0 To 6)
+  loc_00A04B28: ecx = CInt(260)
+  loc_00A04B54: ecx = CInt(627)
+  loc_00A04B65: 00000002h = 00000002h - eax+00000014h
+  loc_00A04B6E: 00000002h = 00000002h + eax+0000000Ch
+  loc_00A04B71: ecx = CInt(35)
+  loc_00A04B85: 00000003h = 00000003h - eax+00000014h
+  loc_00A04B8E: 00000003h = 00000003h + eax+0000000Ch
+  loc_00A04B91: ecx = CInt(37)
+  loc_00A04BA5: 00000004h = 00000004h - eax+00000014h
+  loc_00A04BAE: 00000004h = 00000004h + eax+0000000Ch
+  loc_00A04BB1: ecx = CInt(295)
+  loc_00A04BCB: 00000005h = 00000005h - eax+00000014h
+  loc_00A04BD7: 00000005h = 00000005h + eax+0000000Ch
+  loc_00A04BDA: ecx = CInt(664)
+  loc_00A04BF0: 00000006h = 00000006h - eax+00000014h
+  loc_00A04BFC: 00000006h = 00000006h + eax+0000000Ch
+  loc_00A04BFF: ecx = CInt(6)
+  loc_00A04C24: ecx = Array(var_2C)
+  loc_00A04C42: ReDim var_2C(0 To 6)
+  loc_00A04C72: ecx = CInt(300)
+  loc_00A04C9E: ecx = CInt(627)
+  loc_00A04CAF: 00000002h = 00000002h - eax+00000014h
+  loc_00A04CB8: 00000002h = 00000002h + eax+0000000Ch
+  loc_00A04CBB: ecx = CInt(45)
+  loc_00A04CCF: 00000003h = 00000003h - eax+00000014h
+  loc_00A04CD8: 00000003h = 00000003h + eax+0000000Ch
+  loc_00A04CDB: ecx = CInt(37)
+  loc_00A04CEF: 00000004h = 00000004h - eax+00000014h
+  loc_00A04CF8: 00000004h = 00000004h + eax+0000000Ch
+  loc_00A04CFB: ecx = CInt(345)
+  loc_00A04D15: 00000005h = 00000005h - eax+00000014h
+  loc_00A04D21: 00000005h = 00000005h + eax+0000000Ch
+  loc_00A04D24: ecx = CInt(664)
+  loc_00A04D3E: 00000006h = 00000006h - eax+00000014h
+  loc_00A04D4A: 00000006h = 00000006h + eax+0000000Ch
+  loc_00A04D4D: ecx = CInt(7)
+  loc_00A04D72: ecx = Array(var_2C)
+  loc_00A04D90: ReDim var_2C(0 To 6)
+  loc_00A04DC0: ecx = CInt(345)
+  loc_00A04DEC: ecx = CInt(627)
+  loc_00A04DFD: 00000002h = 00000002h - eax+00000014h
+  loc_00A04E06: 00000002h = 00000002h + eax+0000000Ch
+  loc_00A04E09: ecx = CInt(45)
+  loc_00A04E1D: 00000003h = 00000003h - eax+00000014h
+  loc_00A04E26: 00000003h = 00000003h + eax+0000000Ch
+  loc_00A04E29: ecx = CInt(37)
+  loc_00A04E3D: 00000004h = 00000004h - eax+00000014h
+  loc_00A04E46: 00000004h = 00000004h + eax+0000000Ch
+  loc_00A04E49: ecx = CInt(390)
+  loc_00A04E63: 00000005h = 00000005h - eax+00000014h
+  loc_00A04E6F: 00000005h = 00000005h + eax+0000000Ch
+  loc_00A04E72: ecx = CInt(664)
+  loc_00A04E8C: 00000006h = 00000006h - eax+00000014h
+  loc_00A04E98: 00000006h = 00000006h + eax+0000000Ch
+  loc_00A04E9B: ecx = CInt(8)
+  loc_00A04EC0: ecx = Array(var_2C)
+  loc_00A04EDE: ReDim var_2C(0 To 6)
+  loc_00A04F0E: ecx = CInt(395)
+  loc_00A04F3A: ecx = CInt(627)
+  loc_00A04F4B: 00000002h = 00000002h - eax+00000014h
+  loc_00A04F54: 00000002h = 00000002h + eax+0000000Ch
+  loc_00A04F57: ecx = CInt(44)
+  loc_00A04F6B: 00000003h = 00000003h - eax+00000014h
+  loc_00A04F74: 00000003h = 00000003h + eax+0000000Ch
+  loc_00A04F77: ecx = CInt(37)
+  loc_00A04F8B: 00000004h = 00000004h - eax+00000014h
+  loc_00A04F94: 00000004h = 00000004h + eax+0000000Ch
+  loc_00A04F97: ecx = CInt(439)
+  loc_00A04FB1: 00000005h = 00000005h - eax+00000014h
+  loc_00A04FBD: 00000005h = 00000005h + eax+0000000Ch
+  loc_00A04FC0: ecx = CInt(664)
+  loc_00A04FDA: 00000006h = 00000006h - eax+00000014h
+  loc_00A04FE6: 00000006h = 00000006h + eax+0000000Ch
+  loc_00A04FE9: ecx = CInt(9)
+  loc_00A0500E: ecx = Array(var_2C)
+  loc_00A0502C: ReDim var_2C(0 To 6)
+  loc_00A0505C: ecx = CInt(441)
+  loc_00A05088: ecx = CInt(627)
+  loc_00A05099: 00000002h = 00000002h - eax+00000014h
+  loc_00A050A2: 00000002h = 00000002h + eax+0000000Ch
+  loc_00A050A5: ecx = CInt(38)
+  loc_00A050B9: 00000003h = 00000003h - eax+00000014h
+  loc_00A050C2: 00000003h = 00000003h + eax+0000000Ch
+  loc_00A050C5: ecx = CInt(37)
+  loc_00A050D9: 00000004h = 00000004h - eax+00000014h
+  loc_00A050E2: 00000004h = 00000004h + eax+0000000Ch
+  loc_00A050E5: ecx = CInt(479)
+  loc_00A050FF: 00000005h = 00000005h - eax+00000014h
+  loc_00A0510B: 00000005h = 00000005h + eax+0000000Ch
+  loc_00A0510E: ecx = CInt(664)
+  loc_00A05128: 00000006h = 00000006h - eax+00000014h
+  loc_00A05134: 00000006h = 00000006h + eax+0000000Ch
+  loc_00A05137: ecx = CInt(10)
+  loc_00A0515C: ecx = Array(var_2C)
+  loc_00A0517A: ReDim var_2C(0 To 6)
+  loc_00A051AA: ecx = CInt(179)
+  loc_00A051D6: ecx = CInt(626)
+  loc_00A051E7: 00000002h = 00000002h - eax+00000014h
+  loc_00A051F0: 00000002h = 00000002h + eax+0000000Ch
+  loc_00A051F3: ecx = CInt(35)
+  loc_00A0520A: 00000003h = 00000003h - eax+00000014h
+  loc_00A05210: 00000003h = 00000003h + eax+0000000Ch
+  loc_00A05213: ecx = CInt(35)
+  loc_00A05227: 00000004h = 00000004h - eax+00000014h
+  loc_00A05230: 00000004h = 00000004h + eax+0000000Ch
+  loc_00A05233: ecx = CInt(214)
+  loc_00A0524D: 00000005h = 00000005h - eax+00000014h
+  loc_00A05259: 00000005h = 00000005h + eax+0000000Ch
+  loc_00A0525C: ecx = CInt(661)
+  loc_00A05289: ecx = CInt(-1)
+  loc_00A052AE: ecx = Array(var_2C)
+  loc_00A052D6: ProgressBar.Visible = False
+  loc_00A05326: ManualOff.Visible = False
+  loc_00A05364: ManualOn.Visible = False
+  loc_00A0538E: var_eax = FmRem190xxx.Proc_98_12_A05450(Me, var_18, var_2C, Me, var_18, var_2C)
+  loc_00A05397: var_eax = FmRem190xxx.Proc_98_16_A07950(Me, Me, var_18, var_2C)
+  loc_00A053C7: call __vbaCastObj(var_00A23160, var_004A0340, Me, 00000000h, var_2C)
+  loc_00A053D6: var_eax = call Proc_95EE10(var_18, 0, var_18)
+  loc_00A053E4: call __vbaCastObj(var_18, var_004A9C0C, __vbaCastObj(var_00A23160, var_004A0340, Me, 00000000h, var_2C))
+  loc_00A0540F: GoTo loc_00A05430
+  loc_00A0542F: Exit Sub
+  loc_00A05430: 'Referenced from: 00A0540F
+End Sub
+
+Private Sub Form_Resize() 'A05930
+  Dim var_1C As Variant
+  Dim var_00A23160 As CommandButton
+  loc_00A05985: If ebx+00000318h <> 0 Then GoTo loc_00A05DF5
+  loc_00A0599B: var_24 = Me.ScaleWidth
+  loc_00A059E8: var_1C = Global.Screen
+  loc_00A05A08: var_28 = Global.TwipsPerPixelX
+  loc_00A05A29: var_20 = Global.TwipsPerPixelX
+  loc_00A05A49: fsubr st0, real4 ptr var_20
+  loc_00A05A55: var_18 = CLng((var_28 * var_24))
+  loc_00A05A84: var_1C = Global.Screen
+  loc_00A05AA4: var_20 = Global.TwipsPerPixelX
+  loc_00A05ADD: var_eax = Unknown_VTable_Call[eax+00000084h]
+  loc_00A05B07: var_eax = Unknown_VTable_Call[ecx+00000108h]
+  loc_00A05B47: var_1C = Global.Screen
+  loc_00A05B67: var_28 = Global.TwipsPerPixelY
+  loc_00A05B88: var_20 = Global.TwipsPerPixelY
+  loc_00A05BA8: fsubr st0, real4 ptr var_20
+  loc_00A05BB4: var_18 = CLng((var_28 * var_24))
+  loc_00A05BE3: var_1C = Global.Screen
+  loc_00A05C03: var_20 = Global.TwipsPerPixelY
+  loc_00A05C3C: var_eax = Unknown_VTable_Call[eax+0000008Ch]
+  loc_00A05CA1: FmRem190xxx.BtClose.Enabled = False
+  loc_00A05CFD: FmRem190xxx.UpdateScreen.Enabled = False
+  loc_00A05D23: var_eax = FmRem190xxx.Proc_98_13_A05620(Me, var_1C, var_00A23160, var_00A23160, var_1C, var_00A23160, var_00A23160)
+  loc_00A05D6B: FmRem190xxx.BtClose.Enabled = True
+  loc_00A05DC7: FmRem190xxx.UpdateScreen.Enabled = True
+  loc_00A05DF5: 'Referenced from: 00A05985
+  loc_00A05DFE: GoTo loc_00A05E0A
+  loc_00A05E09: Exit Sub
+  loc_00A05E0A: 'Referenced from: 00A05DFE
+End Sub
+
+Private Sub Form_Unload(Cancel As Integer) 'A05E30
+  loc_00A05E78: var_eax = call Proc_95ED20(edi, esi, ebx)
+End Sub
+
+Private Sub Form_QueryUnload(Cancel As Integer, UnloadMode As Integer) 'A058B0
+  loc_00A058F8: If esi+00000314h <> var_FFFFFF Then GoTo loc_00A05902
+  loc_00A05902: 'Referenced from: 00A058F8
+End Sub
+
+Private Sub Form_KeyDown(KeyCode As Integer, Shift As Integer) 'A013F0
+  Dim var_20 As CommandButton
+  Dim var_00A23160 As CommandButton
+  loc_00A01442: If edi+00000314h <> 0 Then GoTo loc_00A01622
+  loc_00A0148C: FmRem190xxx.BtClose.Enabled = False
+  loc_00A014E8: FmRem190xxx.UpdateScreen.Enabled = False
+  loc_00A01516: var_eax = call Proc_9472A0(KeyCode, var_20, var_00A23160)
+  loc_00A0151F: var_1C = call Proc_9472A0(KeyCode, var_20, var_00A23160)
+  loc_00A01522: If call Proc_9472A0(KeyCode, var_20, var_00A23160) = 0 Then GoTo loc_00A01561
+  loc_00A0152B: var_eax = FmRem190xxx.Proc_98_14_A05EA0(Me, var_1C, var_00A23160, var_20, var_00A23160)
+  loc_00A01535: var_eax = call Proc_36_3_947390(var_1C, var_00A23160, Me)
+  loc_00A01542: If edi+00000316h <> 0 Then GoTo loc_00A0154D
+  loc_00A01547: var_eax = FmRem190xxx.Proc_98_13_A05620(Me, esi)
+  loc_00A0154D: 'Referenced from: 00A01542
+  loc_00A0155B: var_eax = FmRem190xxx.Proc_98_14_A05EA0(Me, 0)
+  loc_00A01561: 'Referenced from: 00A01522
+  loc_00A0159F: FmRem190xxx.BtClose.Enabled = True
+  loc_00A015FD: FmRem190xxx.UpdateScreen.Enabled = True
+  loc_00A01622: 'Referenced from: 00A01442
+  loc_00A0162A: GoTo loc_00A01636
+  loc_00A01635: Exit Sub
+  loc_00A01636: 'Referenced from: 00A0162A
+End Sub
+
+Private Sub Form_MouseDown(Button As Integer, Shift As Integer, X As Single, Y As Single) 'A05590
+  loc_00A055E9: var_eax = FmRem190xxx.Proc_98_15_A07650(Me, CInt(6.37066138261923E-314), CInt(6.37066138261923E-314))
+End Sub
+
+Private Sub ManualOff_Click() 'A07060
+  loc_00A070C9: UpdateScreen.Visible = False
+  loc_00A07107: ManualOff.Visible = False
+  loc_00A07147: ManualOn.Visible = True
+  loc_00A07176: GoTo loc_00A07182
+  loc_00A07181: Exit Sub
+  loc_00A07182: 'Referenced from: 00A07176
+End Sub
+
+Private Sub ManualOn_Click() 'A071B0
+  loc_00A0721D: UpdateScreen.Visible = True
+  loc_00A0725B: ManualOff.Visible = True
+  loc_00A0729B: ManualOn.Visible = False
+  loc_00A072CA: GoTo loc_00A072D6
+  loc_00A072D5: Exit Sub
+  loc_00A072D6: 'Referenced from: 00A072CA
+End Sub
+
+Private Sub PbGraph_MouseDown(Button As Integer, Shift As Integer, X As Single, Y As Single) 'A07300
+  loc_00A07359: var_eax = FmRem190xxx.Proc_98_15_A07650(Me, CInt(6.37066138261923E-314), CInt(6.37066138261923E-314))
+End Sub
+
+Private Sub BtClose_Click() 'A01300
+  loc_00A0134F: If esi+00000314h <> 0 Then GoTo loc_00A013B7
+  loc_00A0137F: call __vbaCastObj(var_00A23160, var_004A0340, 0, __vbaCastObj, ebx)
+  loc_00A01396: var_eax = call Proc_44_4_95E7A0(var_18, var_1C, var_18)
+  loc_00A013A4: call __vbaCastObj(var_18, var_004A9C0C, __vbaCastObj(var_00A23160, var_004A0340, 0, __vbaCastObj, ebx))
+  loc_00A013B7: 'Referenced from: 00A0134F
+  loc_00A013BF: GoTo loc_00A013CB
+  loc_00A013CA: Exit Sub
+  loc_00A013CB: 'Referenced from: 00A013BF
+End Sub
+
+Private Sub UpdateScreen_Click() 'A07390
+  Dim var_18 As CommandButton
+  Dim var_00A23160 As CommandButton
+  loc_00A0741C: FmRem190xxx.BtClose.Enabled = False
+  loc_00A07478: FmRem190xxx.UpdateScreen.Enabled = False
+  loc_00A074B6: UpdateScreen.Enabled = False
+  loc_00A074EB: var_eax = FmRem190xxx.Proc_98_14_A05EA0(Me, &H12, var_18, var_18, Me, var_18, var_00A23160)
+  loc_00A074F4: var_eax = FmRem190xxx.Proc_98_13_A05620(Me, var_00A23160, var_18, var_00A23160)
+  loc_00A07508: var_eax = FmRem190xxx.Proc_98_14_A05EA0(Me, var_1C, var_00A23160)
+  loc_00A07525: UpdateScreen.Enabled = True
+  loc_00A07594: FmRem190xxx.BtClose.Enabled = True
+  loc_00A075EC: FmRem190xxx.UpdateScreen.Enabled = True
+  loc_00A0761B: GoTo loc_00A07627
+  loc_00A07626: Exit Sub
+  loc_00A07627: 'Referenced from: 00A0761B
+End Sub
+
+Public Function DetermineKeyId(X, Y) 'A08210
+  loc_00A08253: var_120 = Y
+  loc_00A0825A: var_180 = Y
+  loc_00A0830D: var_F0 = X
+  loc_00A08314: var_150 = X
+  loc_00A0831B: call __vbaVarIndexLoad(var_28, Me, 00000001h, var_CC)
+  loc_00A08325: var_ret_1 = ( > __vbaVarIndexLoad(var_28, Me, 00000001h, var_CC))
+  loc_00A08361: call __vbaVarIndexLoad(var_48, Me, 00000001h, var_FC)
+  loc_00A0836B: var_ret_2 = ( > __vbaVarIndexLoad(var_48, Me, 00000001h, var_FC))
+  loc_00A0837C: var_ret_3 =  And var_ret_2
+  loc_00A083B9: call __vbaVarIndexLoad(var_78, Me.SaveProp, var_12C)
+  loc_00A083C6: var_ret_4 = ( < __vbaVarIndexLoad(var_78, Me.SaveProp, var_12C))
+  loc_00A083D4: var_ret_5 =  And var_ret_4
+  loc_00A08414: call __vbaVarIndexLoad(var_A8, Me.SaveProp, var_15C)
+  loc_00A08421: var_ret_6 = ( < __vbaVarIndexLoad(var_A8, Me.SaveProp, var_15C))
+  loc_00A0842F: var_ret_7 =  And var_ret_6
+  loc_00A08438: var_18C = CBool(var_ret_7)
+  loc_00A08465: var_F0 = X
+  loc_00A0846C: If var_18C = 0 Then GoTo loc_00A0885F
+  loc_00A08490: var_120 = X
+  loc_00A084CD: call __vbaVarIndexLoad(var_28, var_198, 00000001h, var_CC)
+  loc_00A084D7: var_ret_8 = ( > __vbaVarIndexLoad(var_28, var_198, 00000001h, var_CC))
+  loc_00A08518: call __vbaVarIndexLoad(var_48, var_198, 00000001h, var_FC)
+  loc_00A08522: var_ret_9 = ( < __vbaVarIndexLoad(var_48, var_198, 00000001h, var_FC))
+  loc_00A08536: var_18C = CBool( And var_ret_9)
+  loc_00A08558: If var_18C = 0 Then GoTo loc_00A085AA
+  loc_00A0858D: call __vbaVarIndexLoad(var_28, var_198, 00000001h, var_CC)
+  loc_00A08593: __vbaVarIndexLoad(var_28, var_198, 00000001h, var_CC) = CInt()
+  loc_00A0859C: var_18 = __vbaVarIndexLoad(var_28, var_198, 00000001h, var_CC)
+  loc_00A085A5: GoTo loc_00A0C2EC
+  loc_00A085AA: 'Referenced from: 00A08558
+  loc_00A085C8: var_F0 = X
+  loc_00A085DC: var_120 = X
+  loc_00A0860C: call __vbaVarIndexLoad(var_28, var_19C, 00000001h, var_CC)
+  loc_00A08616: var_ret_B = ( > __vbaVarIndexLoad(var_28, var_19C, 00000001h, var_CC))
+  loc_00A08657: call __vbaVarIndexLoad(var_48, var_19C, 00000001h, var_FC)
+  loc_00A08675: var_18C = CBool( And ( < __vbaVarIndexLoad(var_48, var_19C, 00000001h, var_FC)))
+  loc_00A08697: If var_18C = 0 Then GoTo loc_00A086E9
+  loc_00A086CC: call __vbaVarIndexLoad(var_28, var_19C, 00000001h, var_CC)
+  loc_00A086D2: __vbaVarIndexLoad(var_28, var_19C, 00000001h, var_CC) = CInt()
+  loc_00A086DB: var_18 = __vbaVarIndexLoad(var_28, var_19C, 00000001h, var_CC)
+  loc_00A086E4: GoTo loc_00A0C2EC
+  loc_00A086E9: 'Referenced from: 00A08697
+  loc_00A08707: var_F0 = X
+  loc_00A0871B: var_120 = X
+  loc_00A0874B: call __vbaVarIndexLoad(var_28, var_1A0, 00000001h, var_CC)
+  loc_00A08755: var_ret_E = ( > __vbaVarIndexLoad(var_28, var_1A0, 00000001h, var_CC))
+  loc_00A08796: call __vbaVarIndexLoad(var_48, var_1A0, 00000001h, var_FC)
+  loc_00A087B4: var_18C = CBool( And ( < __vbaVarIndexLoad(var_48, var_1A0, 00000001h, var_FC)))
+  loc_00A087D6: If var_18C = 0 Then GoTo loc_00A08828
+  loc_00A0880B: call __vbaVarIndexLoad(var_28, var_1A0, 00000001h, var_CC)
+  loc_00A08811: __vbaVarIndexLoad(var_28, var_1A0, 00000001h, var_CC) = CInt()
+  loc_00A0881A: var_18 = __vbaVarIndexLoad(var_28, var_1A0, 00000001h, var_CC)
+  loc_00A08823: GoTo loc_00A0C2EC
+  loc_00A08828: 'Referenced from: 00A087D6
+  loc_00A08841: var_F0 = X
+  loc_00A08848: var_120 = X
+  loc_00A0885A: GoTo loc_00A0C03C
+  loc_00A0885F: 'Referenced from: 00A0846C
+  loc_00A08868: var_120 = Y
+  loc_00A0886F: var_180 = Y
+  loc_00A088E6: call __vbaVarIndexLoad(var_28, var_1A4, 00000001h, var_CC)
+  loc_00A088F0: var_ret_11 = ( > __vbaVarIndexLoad(var_28, var_1A4, 00000001h, var_CC))
+  loc_00A08933: call __vbaVarIndexLoad(var_48, Me.Width = %x1s, var_FC)
+  loc_00A08948: var_ret_13 =  And ( > __vbaVarIndexLoad(var_48, Me.Width = %x1s, var_FC))
+  loc_00A08988: call __vbaVarIndexLoad(var_78, Me.Width = %x1s, var_12C)
+  loc_00A089A3: var_ret_15 =  And ( < __vbaVarIndexLoad(var_78, Me.Width = %x1s, var_12C))
+  loc_00A089E6: call __vbaVarIndexLoad(var_A8, Me.Width = %x1s, var_15C)
+  loc_00A08A0A: var_18C = CBool( And ( < __vbaVarIndexLoad(var_A8, Me.Width = %x1s, var_15C)))
+  loc_00A08A3E: If var_18C = 0 Then GoTo loc_00A08E3D
+  loc_00A08AA2: call __vbaVarIndexLoad(var_28, var_1A8, 00000001h, var_CC)
+  loc_00A08AAC: var_ret_18 = ( > __vbaVarIndexLoad(var_28, var_1A8, 00000001h, var_CC))
+  loc_00A08AED: call __vbaVarIndexLoad(var_48, var_1A8, 00000001h, var_FC)
+  loc_00A08B0B: var_18C = CBool( And ( < __vbaVarIndexLoad(var_48, var_1A8, 00000001h, var_FC)))
+  loc_00A08B2D: If var_18C = 0 Then GoTo loc_00A08B7F
+  loc_00A08B62: call __vbaVarIndexLoad(var_28, var_1A8, 00000001h, var_CC)
+  loc_00A08B68: __vbaVarIndexLoad(var_28, var_1A8, 00000001h, var_CC) = CInt()
+  loc_00A08B71: var_18 = __vbaVarIndexLoad(var_28, var_1A8, 00000001h, var_CC)
+  loc_00A08B7A: GoTo loc_00A0C2EC
+  loc_00A08B7F: 'Referenced from: 00A08B2D
+  loc_00A08BE4: call __vbaVarIndexLoad(var_28, var_1AC, 00000001h, var_CC)
+  loc_00A08BEE: var_ret_1B = ( > __vbaVarIndexLoad(var_28, var_1AC, 00000001h, var_CC))
+  loc_00A08C2F: call __vbaVarIndexLoad(var_48, var_1AC, 00000001h, var_FC)
+  loc_00A08C4D: var_18C = CBool( And ( < __vbaVarIndexLoad(var_48, var_1AC, 00000001h, var_FC)))
+  loc_00A08C6F: If var_18C = 0 Then GoTo loc_00A08CC1
+  loc_00A08CA4: call __vbaVarIndexLoad(var_28, var_1AC, 00000001h, var_CC)
+  loc_00A08CAA: __vbaVarIndexLoad(var_28, var_1AC, 00000001h, var_CC) = CInt()
+  loc_00A08CB3: var_18 = __vbaVarIndexLoad(var_28, var_1AC, 00000001h, var_CC)
+  loc_00A08CBC: GoTo loc_00A0C2EC
+  loc_00A08CC1: 'Referenced from: 00A08C6F
+  loc_00A08D26: call __vbaVarIndexLoad(var_28, var_1B0, 00000001h, var_CC)
+  loc_00A08D30: var_ret_1E = ( > __vbaVarIndexLoad(var_28, var_1B0, 00000001h, var_CC))
+  loc_00A08D71: call __vbaVarIndexLoad(var_48, var_1B0, 00000001h, var_FC)
+  loc_00A08D8F: var_18C = CBool( And ( < __vbaVarIndexLoad(var_48, var_1B0, 00000001h, var_FC)))
+  loc_00A08DB1: If var_18C = 0 Then GoTo loc_00A08E03
+  loc_00A08DE6: call __vbaVarIndexLoad(var_28, var_1B0, 00000001h, var_CC)
+  loc_00A08DEC: __vbaVarIndexLoad(var_28, var_1B0, 00000001h, var_CC) = CInt()
+  loc_00A08DF5: var_18 = __vbaVarIndexLoad(var_28, var_1B0, 00000001h, var_CC)
+  loc_00A08DFE: GoTo loc_00A0C2EC
+  loc_00A08E03: 'Referenced from: 00A08DB1
+  loc_00A08E38: GoTo loc_00A0C03C
+  loc_00A08E3D: 'Referenced from: 00A08A3E
+  loc_00A08E46: var_120 = Y
+  loc_00A08E4D: var_180 = Y
+  loc_00A08EC4: call __vbaVarIndexLoad(var_28, var_1B4, 00000001h, var_CC)
+  loc_00A08ECE: var_ret_21 = ( > __vbaVarIndexLoad(var_28, var_1B4, 00000001h, var_CC))
+  loc_00A08F11: call __vbaVarIndexLoad(var_48, Me.FontUnderline = %x1b, var_FC)
+  loc_00A08F26: var_ret_23 =  And ( > __vbaVarIndexLoad(var_48, Me.FontUnderline = %x1b, var_FC))
+  loc_00A08F66: call __vbaVarIndexLoad(var_78, Me.FontUnderline = %x1b, var_12C)
+  loc_00A08F81: var_ret_25 =  And ( < __vbaVarIndexLoad(var_78, Me.FontUnderline = %x1b, var_12C))
+  loc_00A08FC4: call __vbaVarIndexLoad(var_A8, Me.FontUnderline = %x1b, var_15C)
+  loc_00A08FE8: var_18C = CBool( And ( < __vbaVarIndexLoad(var_A8, Me.FontUnderline = %x1b, var_15C)))
+  loc_00A09015: If var_18C = 0 Then GoTo loc_00A09343
+  loc_00A09050: var_F0 = Y
+  loc_00A0905A: var_120 = Y
+  loc_00A09087: call __vbaVarIndexLoad(var_28, var_1B8, 00000001h, var_CC)
+  loc_00A09091: var_ret_28 = ( > __vbaVarIndexLoad(var_28, var_1B8, 00000001h, var_CC))
+  loc_00A090D2: call __vbaVarIndexLoad(var_48, var_1B8, 00000001h, var_FC)
+  loc_00A090F0: var_18C = CBool( And ( < __vbaVarIndexLoad(var_48, var_1B8, 00000001h, var_FC)))
+  loc_00A09112: If var_18C = 0 Then GoTo loc_00A09164
+  loc_00A09147: call __vbaVarIndexLoad(var_28, var_1B8, 00000001h, var_CC)
+  loc_00A0914D: __vbaVarIndexLoad(var_28, var_1B8, 00000001h, var_CC) = CInt()
+  loc_00A09156: var_18 = __vbaVarIndexLoad(var_28, var_1B8, 00000001h, var_CC)
+  loc_00A0915F: GoTo loc_00A0C2EC
+  loc_00A09164: 'Referenced from: 00A09112
+  loc_00A09188: var_F0 = Y
+  loc_00A0919C: var_120 = Y
+  loc_00A091CC: call __vbaVarIndexLoad(var_28, var_1BC, 00000001h, var_CC)
+  loc_00A091D6: var_ret_2B = ( > __vbaVarIndexLoad(var_28, var_1BC, 00000001h, var_CC))
+  loc_00A09217: call __vbaVarIndexLoad(var_48, var_1BC, 00000001h, var_FC)
+  loc_00A09235: var_18C = CBool( And ( < __vbaVarIndexLoad(var_48, var_1BC, 00000001h, var_FC)))
+  loc_00A09257: If var_18C = 0 Then GoTo loc_00A092A9
+  loc_00A0928C: call __vbaVarIndexLoad(var_28, var_1BC, 00000001h, var_CC)
+  loc_00A09292: __vbaVarIndexLoad(var_28, var_1BC, 00000001h, var_CC) = CInt()
+  loc_00A0929B: var_18 = __vbaVarIndexLoad(var_28, var_1BC, 00000001h, var_CC)
+  loc_00A092A4: GoTo loc_00A0C2EC
+  loc_00A092A9: 'Referenced from: 00A09257
+  loc_00A092AE: var_F0 = Y
+  loc_00A092C4: var_120 = Y
+  loc_00A0930B: call __vbaVarIndexLoad(var_28, Me.ScaleWidth = %x1s, 00000001h, var_CC)
+  loc_00A09315: var_ret_2E = ( > __vbaVarIndexLoad(var_28, Me.ScaleWidth = %x1s, 00000001h, var_CC))
+  loc_00A0933E: GoTo loc_00A0C099
+  loc_00A09343: 'Referenced from: 00A09015
+  loc_00A0934C: var_120 = Y
+  loc_00A09353: var_180 = Y
+  loc_00A093D1: call __vbaVarIndexLoad(var_28, var_1C0, 00000001h, var_CC)
+  loc_00A093DB: var_ret_2F = ( > __vbaVarIndexLoad(var_28, var_1C0, 00000001h, var_CC))
+  loc_00A0941E: call __vbaVarIndexLoad(var_48, Me.ScaleMode = %StkVar1, var_FC)
+  loc_00A09433: var_ret_31 =  And ( > __vbaVarIndexLoad(var_48, Me.ScaleMode = %StkVar1, var_FC))
+  loc_00A09473: call __vbaVarIndexLoad(var_78, Me.ScaleMode = %StkVar1, var_12C)
+  loc_00A0948E: var_ret_33 =  And ( < __vbaVarIndexLoad(var_78, Me.ScaleMode = %StkVar1, var_12C))
+  loc_00A094D1: call __vbaVarIndexLoad(var_A8, Me.ScaleMode = %StkVar1, var_15C)
+  loc_00A094F5: var_18C = CBool( And ( < __vbaVarIndexLoad(var_A8, Me.ScaleMode = %StkVar1, var_15C)))
+  loc_00A09533: If var_18C = 0 Then GoTo loc_00A0A1A6
+  loc_00A09542: var_120 = Y
+  loc_00A09549: var_180 = Y
+  loc_00A095B6: call __vbaVarIndexLoad(var_28, var_1C4, 00000001h, var_CC)
+  loc_00A095C0: var_ret_36 = ( > __vbaVarIndexLoad(var_28, var_1C4, 00000001h, var_CC))
+  loc_00A09600: call __vbaVarIndexLoad(var_48, var_1C4, 00000001h, var_FC)
+  loc_00A09615: var_ret_38 =  And ( > __vbaVarIndexLoad(var_48, var_1C4, 00000001h, var_FC))
+  loc_00A09652: call __vbaVarIndexLoad(var_78, var_1C4, 00000001h, var_12C)
+  loc_00A0966D: var_ret_3A =  And ( < __vbaVarIndexLoad(var_78, var_1C4, 00000001h, var_12C))
+  loc_00A096AD: call __vbaVarIndexLoad(var_A8, var_1C4, 00000001h, var_15C)
+  loc_00A096D1: var_18C = CBool( And ( < __vbaVarIndexLoad(var_A8, var_1C4, 00000001h, var_15C)))
+  loc_00A096FE: If var_18C = 0 Then GoTo loc_00A09750
+  loc_00A09733: call __vbaVarIndexLoad(var_28, var_1C4, 00000001h, var_CC)
+  loc_00A09739: __vbaVarIndexLoad(var_28, var_1C4, 00000001h, var_CC) = CInt()
+  loc_00A09742: var_18 = __vbaVarIndexLoad(var_28, var_1C4, 00000001h, var_CC)
+  loc_00A0974B: GoTo loc_00A0C2EC
+  loc_00A09750: 'Referenced from: 00A096FE
+  loc_00A09759: var_120 = Y
+  loc_00A09760: var_180 = Y
+  loc_00A097DE: call __vbaVarIndexLoad(var_28, var_1C8, 00000001h, var_CC)
+  loc_00A097E8: var_ret_3D = ( > __vbaVarIndexLoad(var_28, var_1C8, 00000001h, var_CC))
+  loc_00A09828: call __vbaVarIndexLoad(var_48, var_1C8, 00000001h, var_FC)
+  loc_00A0983D: var_ret_3F =  And ( > __vbaVarIndexLoad(var_48, var_1C8, 00000001h, var_FC))
+  loc_00A0987A: call __vbaVarIndexLoad(var_78, var_1C8, 00000001h, var_12C)
+  loc_00A09895: var_ret_41 =  And ( < __vbaVarIndexLoad(var_78, var_1C8, 00000001h, var_12C))
+  loc_00A098D5: call __vbaVarIndexLoad(var_A8, var_1C8, 00000001h, var_15C)
+  loc_00A098F9: var_18C = CBool( And ( < __vbaVarIndexLoad(var_A8, var_1C8, 00000001h, var_15C)))
+  loc_00A09926: If var_18C = 0 Then GoTo loc_00A09978
+  loc_00A0995B: call __vbaVarIndexLoad(var_28, var_1C8, 00000001h, var_CC)
+  loc_00A09961: __vbaVarIndexLoad(var_28, var_1C8, 00000001h, var_CC) = CInt()
+  loc_00A0996A: var_18 = __vbaVarIndexLoad(var_28, var_1C8, 00000001h, var_CC)
+  loc_00A09973: GoTo loc_00A0C2EC
+  loc_00A09978: 'Referenced from: 00A09926
+  loc_00A09981: var_120 = Y
+  loc_00A09988: var_180 = Y
+  loc_00A09A06: call __vbaVarIndexLoad(var_28, var_1CC, 00000001h, var_CC)
+  loc_00A09A10: var_ret_44 = ( > __vbaVarIndexLoad(var_28, var_1CC, 00000001h, var_CC))
+  loc_00A09A50: call __vbaVarIndexLoad(var_48, var_1CC, 00000001h, var_FC)
+  loc_00A09A65: var_ret_46 =  And ( > __vbaVarIndexLoad(var_48, var_1CC, 00000001h, var_FC))
+  loc_00A09AA2: call __vbaVarIndexLoad(var_78, var_1CC, 00000001h, var_12C)
+  loc_00A09ABD: var_ret_48 =  And ( < __vbaVarIndexLoad(var_78, var_1CC, 00000001h, var_12C))
+  loc_00A09AFD: call __vbaVarIndexLoad(var_A8, var_1CC, 00000001h, var_15C)
+  loc_00A09B21: var_18C = CBool( And ( < __vbaVarIndexLoad(var_A8, var_1CC, 00000001h, var_15C)))
+  loc_00A09B4E: If var_18C = 0 Then GoTo loc_00A09BA0
+  loc_00A09B83: call __vbaVarIndexLoad(var_28, var_1CC, 00000001h, var_CC)
+  loc_00A09B89: __vbaVarIndexLoad(var_28, var_1CC, 00000001h, var_CC) = CInt()
+  loc_00A09B92: var_18 = __vbaVarIndexLoad(var_28, var_1CC, 00000001h, var_CC)
+  loc_00A09B9B: GoTo loc_00A0C2EC
+  loc_00A09BA0: 'Referenced from: 00A09B4E
+  loc_00A09BA9: var_120 = Y
+  loc_00A09BB0: var_180 = Y
+  loc_00A09C2E: call __vbaVarIndexLoad(var_28, var_1D0, 00000001h, var_CC)
+  loc_00A09C38: var_ret_4B = ( > __vbaVarIndexLoad(var_28, var_1D0, 00000001h, var_CC))
+  loc_00A09C78: call __vbaVarIndexLoad(var_48, var_1D0, 00000001h, var_FC)
+  loc_00A09C8D: var_ret_4D =  And ( > __vbaVarIndexLoad(var_48, var_1D0, 00000001h, var_FC))
+  loc_00A09CCA: call __vbaVarIndexLoad(var_78, var_1D0, 00000001h, var_12C)
+  loc_00A09CE5: var_ret_4F =  And ( < __vbaVarIndexLoad(var_78, var_1D0, 00000001h, var_12C))
+  loc_00A09D25: call __vbaVarIndexLoad(var_A8, var_1D0, 00000001h, var_15C)
+  loc_00A09D49: var_18C = CBool( And ( < __vbaVarIndexLoad(var_A8, var_1D0, 00000001h, var_15C)))
+  loc_00A09D76: If var_18C = 0 Then GoTo loc_00A09DC8
+  loc_00A09DAB: call __vbaVarIndexLoad(var_28, var_1D0, 00000001h, var_CC)
+  loc_00A09DB1: __vbaVarIndexLoad(var_28, var_1D0, 00000001h, var_CC) = CInt()
+  loc_00A09DBA: var_18 = __vbaVarIndexLoad(var_28, var_1D0, 00000001h, var_CC)
+  loc_00A09DC3: GoTo loc_00A0C2EC
+  loc_00A09DC8: 'Referenced from: 00A09D76
+  loc_00A09DD1: var_120 = Y
+  loc_00A09DD8: var_180 = Y
+  loc_00A09E56: call __vbaVarIndexLoad(var_28, var_1D4, 00000001h, var_CC)
+  loc_00A09E60: var_ret_52 = ( > __vbaVarIndexLoad(var_28, var_1D4, 00000001h, var_CC))
+  loc_00A09EA0: call __vbaVarIndexLoad(var_48, var_1D4, 00000001h, var_FC)
+  loc_00A09EB5: var_ret_54 =  And ( > __vbaVarIndexLoad(var_48, var_1D4, 00000001h, var_FC))
+  loc_00A09EF2: call __vbaVarIndexLoad(var_78, var_1D4, 00000001h, var_12C)
+  loc_00A09F0D: var_ret_56 =  And ( < __vbaVarIndexLoad(var_78, var_1D4, 00000001h, var_12C))
+  loc_00A09F4D: call __vbaVarIndexLoad(var_A8, var_1D4, 00000001h, var_15C)
+  loc_00A09F71: var_18C = CBool( And ( < __vbaVarIndexLoad(var_A8, var_1D4, 00000001h, var_15C)))
+  loc_00A09F9E: If var_18C = 0 Then GoTo loc_00A09FF0
+  loc_00A09FD3: call __vbaVarIndexLoad(var_28, var_1D4, 00000001h, var_CC)
+  loc_00A09FD9: __vbaVarIndexLoad(var_28, var_1D4, 00000001h, var_CC) = CInt()
+  loc_00A09FE2: var_18 = __vbaVarIndexLoad(var_28, var_1D4, 00000001h, var_CC)
+  loc_00A09FEB: GoTo loc_00A0C2EC
+  loc_00A09FF0: 'Referenced from: 00A09F9E
+  loc_00A09FFB: var_120 = Y
+  loc_00A0A009: var_180 = Y
+  loc_00A0A075: call __vbaVarIndexLoad(var_28, Me.LinkMode = %StkVar1, 00000001h, var_CC)
+  loc_00A0A07F: var_ret_59 = ( > __vbaVarIndexLoad(var_28, Me.LinkMode = %StkVar1, 00000001h, var_CC))
+  loc_00A0A0BA: call __vbaVarIndexLoad(var_48, Me.LinkMode = %StkVar1, 00000001h, var_FC)
+  loc_00A0A0CF: var_ret_5B =  And ( > __vbaVarIndexLoad(var_48, Me.LinkMode = %StkVar1, 00000001h, var_FC))
+  loc_00A0A106: call __vbaVarIndexLoad(var_78, Me.LinkMode = %StkVar1, 00000001h, var_12C)
+  loc_00A0A121: var_ret_5D =  And ( < __vbaVarIndexLoad(var_78, Me.LinkMode = %StkVar1, 00000001h, var_12C))
+  loc_00A0A15C: call __vbaVarIndexLoad(var_A8, Me.LinkMode = %StkVar1, 00000001h, var_15C)
+  loc_00A0A177: var_ret_5F =  And ( < __vbaVarIndexLoad(var_A8, Me.LinkMode = %StkVar1, 00000001h, var_15C))
+  loc_00A0A1A1: GoTo loc_00A0C0E0
+  loc_00A0A1A6: 'Referenced from: 00A09533
+  loc_00A0A1AF: var_120 = Y
+  loc_00A0A1B6: var_180 = Y
+  loc_00A0A223: call __vbaVarIndexLoad(var_28, var_1D8, 00000001h, var_CC)
+  loc_00A0A22D: var_ret_60 = ( > __vbaVarIndexLoad(var_28, var_1D8, 00000001h, var_CC))
+  loc_00A0A270: call __vbaVarIndexLoad(var_48, edx+00000006h-00000000h, 00000001h, var_FC)
+  loc_00A0A27A: var_ret_61 = ( > __vbaVarIndexLoad(var_48, edx+00000006h-00000000h, 00000001h, var_FC))
+  loc_00A0A285: var_eax = CBool(var_ret_5F)
+  loc_00A0A2C5: call __vbaVarIndexLoad(var_78, ecx+00000184h, 00000001h, var_12C)
+  loc_00A0A2D2: var_ret_62 = ( < __vbaVarIndexLoad(var_78, ecx+00000184h, 00000001h, var_12C))
+  loc_00A0A2E0: var_eax = CBool(var_ret_5F)
+  loc_00A0A323: call __vbaVarIndexLoad(var_A8, ecx+00000184h, 00000001h, var_15C)
+  loc_00A0A330: var_ret_63 = ( < __vbaVarIndexLoad(var_A8, ecx+00000184h, 00000001h, var_15C))
+  loc_00A0A33E: var_eax = CBool(var_ret_5F)
+  loc_00A0A347: var_18C = CBool(CBool(var_ret_5F))
+  loc_00A0A374: If var_18C = 0 Then GoTo loc_00A0A6A2
+  loc_00A0A3AF: var_F0 = Y
+  loc_00A0A3B9: var_120 = Y
+  loc_00A0A3E6: call __vbaVarIndexLoad(var_28, var_1DC, 00000001h, var_CC)
+  loc_00A0A3F0: var_ret_64 = ( > __vbaVarIndexLoad(var_28, var_1DC, 00000001h, var_CC))
+  loc_00A0A431: call __vbaVarIndexLoad(var_48, var_1DC, 00000001h, var_FC)
+  loc_00A0A43B: var_ret_65 = ( < __vbaVarIndexLoad(var_48, var_1DC, 00000001h, var_FC))
+  loc_00A0A446: var_eax = CBool(var_ret_5F)
+  loc_00A0A44F: var_18C = CBool(CBool(var_ret_5F))
+  loc_00A0A471: If var_18C = 0 Then GoTo loc_00A0A4C3
+  loc_00A0A4A6: call __vbaVarIndexLoad(var_28, var_1DC, 00000001h, var_CC)
+  loc_00A0A4AC: __vbaVarIndexLoad(var_28, var_1DC, 00000001h, var_CC) = CInt()
+  loc_00A0A4B5: var_18 = __vbaVarIndexLoad(var_28, var_1DC, 00000001h, var_CC)
+  loc_00A0A4BE: GoTo loc_00A0C2EC
+  loc_00A0A4C3: 'Referenced from: 00A0A471
+  loc_00A0A4E7: var_F0 = Y
+  loc_00A0A4FB: var_120 = Y
+  loc_00A0A52B: call __vbaVarIndexLoad(var_28, var_1E0, 00000001h, var_CC)
+  loc_00A0A535: var_ret_66 = ( > __vbaVarIndexLoad(var_28, var_1E0, 00000001h, var_CC))
+  loc_00A0A576: call __vbaVarIndexLoad(var_48, var_1E0, 00000001h, var_FC)
+  loc_00A0A580: var_ret_67 = ( < __vbaVarIndexLoad(var_48, var_1E0, 00000001h, var_FC))
+  loc_00A0A58B: var_eax = CBool(var_ret_5F)
+  loc_00A0A594: var_18C = CBool(CBool(var_ret_5F))
+  loc_00A0A5B6: If var_18C = 0 Then GoTo loc_00A0A608
+  loc_00A0A5EB: call __vbaVarIndexLoad(var_28, var_1E0, 00000001h, var_CC)
+  loc_00A0A5F1: __vbaVarIndexLoad(var_28, var_1E0, 00000001h, var_CC) = CInt()
+  loc_00A0A5FA: var_18 = __vbaVarIndexLoad(var_28, var_1E0, 00000001h, var_CC)
+  loc_00A0A603: GoTo loc_00A0C2EC
+  loc_00A0A608: 'Referenced from: 00A0A5B6
+  loc_00A0A60D: var_F0 = Y
+  loc_00A0A623: var_120 = Y
+  loc_00A0A66A: call __vbaVarIndexLoad(var_28, edx+00000006h-00000000h, 00000001h, var_CC)
+  loc_00A0A674: var_ret_68 = ( > __vbaVarIndexLoad(var_28, edx+00000006h-00000000h, 00000001h, var_CC))
+  loc_00A0A69D: GoTo loc_00A0C099
+  loc_00A0A6A2: 'Referenced from: 00A0A374
+  loc_00A0A6AB: var_120 = Y
+  loc_00A0A6B2: var_180 = Y
+  loc_00A0A6C4: var_F0 = edx+000001B4h
+  loc_00A0A6F1: var_150 = edx+000001B4h
+  loc_00A0A730: call __vbaVarIndexLoad(var_28, var_1E4, 00000001h, var_CC)
+  loc_00A0A73A: var_ret_69 = ( > __vbaVarIndexLoad(var_28, var_1E4, 00000001h, var_CC))
+  loc_00A0A77D: call __vbaVarIndexLoad(var_48, Me.Tag = %StkVar1, var_FC)
+  loc_00A0A787: var_ret_6A = ( > __vbaVarIndexLoad(var_48, Me.Tag = %StkVar1, var_FC))
+  loc_00A0A792: var_eax = CBool(var_ret_5F)
+  loc_00A0A7D2: call __vbaVarIndexLoad(var_78, Me.Tag = %StkVar1, var_12C)
+  loc_00A0A7DF: var_ret_6B = ( < __vbaVarIndexLoad(var_78, Me.Tag = %StkVar1, var_12C))
+  loc_00A0A7ED: var_eax = CBool(var_ret_5F)
+  loc_00A0A830: call __vbaVarIndexLoad(var_A8, Me.Tag = %StkVar1, var_15C)
+  loc_00A0A83D: var_ret_6C = ( < __vbaVarIndexLoad(var_A8, Me.Tag = %StkVar1, var_15C))
+  loc_00A0A84B: var_eax = CBool(var_ret_5F)
+  loc_00A0A854: var_18C = CBool(CBool(var_ret_5F))
+  loc_00A0A881: var_F0 = edx+000001B4h
+  loc_00A0A888: If var_18C = 0 Then GoTo loc_00A0AEA3
+  loc_00A0A8AF: var_120 = edx+000001B4h
+  loc_00A0A8EC: call __vbaVarIndexLoad(var_28, var_1E8, 00000001h, var_CC)
+  loc_00A0A8F6: var_ret_6D = ( > __vbaVarIndexLoad(var_28, var_1E8, 00000001h, var_CC))
+  loc_00A0A937: call __vbaVarIndexLoad(var_48, var_1E8, 00000001h, var_FC)
+  loc_00A0A941: var_ret_6E = ( < __vbaVarIndexLoad(var_48, var_1E8, 00000001h, var_FC))
+  loc_00A0A94C: var_eax = CBool(var_ret_5F)
+  loc_00A0A955: var_18C = CBool(CBool(var_ret_5F))
+  loc_00A0A977: If var_18C = 0 Then GoTo loc_00A0A9C9
+  loc_00A0A9AC: call __vbaVarIndexLoad(var_28, var_1E8, 00000001h, var_CC)
+  loc_00A0A9B2: __vbaVarIndexLoad(var_28, var_1E8, 00000001h, var_CC) = CInt()
+  loc_00A0A9BB: var_18 = __vbaVarIndexLoad(var_28, var_1E8, 00000001h, var_CC)
+  loc_00A0A9C4: GoTo loc_00A0C2EC
+  loc_00A0A9C9: 'Referenced from: 00A0A977
+  loc_00A0A9EA: var_F0 = edx+000001B4h
+  loc_00A0A9FE: var_120 = edx+000001B4h
+  loc_00A0AA2E: call __vbaVarIndexLoad(var_28, var_1EC, 00000001h, var_CC)
+  loc_00A0AA38: var_ret_6F = ( > __vbaVarIndexLoad(var_28, var_1EC, 00000001h, var_CC))
+  loc_00A0AA79: call __vbaVarIndexLoad(var_48, var_1EC, 00000001h, var_FC)
+  loc_00A0AA83: var_ret_70 = ( < __vbaVarIndexLoad(var_48, var_1EC, 00000001h, var_FC))
+  loc_00A0AA8E: var_eax = CBool(var_ret_5F)
+  loc_00A0AA97: var_18C = CBool(CBool(var_ret_5F))
+  loc_00A0AAB9: If var_18C = 0 Then GoTo loc_00A0AB0B
+  loc_00A0AAEE: call __vbaVarIndexLoad(var_28, var_1EC, 00000001h, var_CC)
+  loc_00A0AAF4: __vbaVarIndexLoad(var_28, var_1EC, 00000001h, var_CC) = CInt()
+  loc_00A0AAFD: var_18 = __vbaVarIndexLoad(var_28, var_1EC, 00000001h, var_CC)
+  loc_00A0AB06: GoTo loc_00A0C2EC
+  loc_00A0AB0B: 'Referenced from: 00A0AAB9
+  loc_00A0AB2C: var_F0 = edx+000001B4h
+  loc_00A0AB40: var_120 = edx+000001B4h
+  loc_00A0AB70: call __vbaVarIndexLoad(var_28, var_1F0, 00000001h, var_CC)
+  loc_00A0AB7A: var_ret_71 = ( > __vbaVarIndexLoad(var_28, var_1F0, 00000001h, var_CC))
+  loc_00A0ABBB: call __vbaVarIndexLoad(var_48, var_1F0, 00000001h, var_FC)
+  loc_00A0ABC5: var_ret_72 = ( < __vbaVarIndexLoad(var_48, var_1F0, 00000001h, var_FC))
+  loc_00A0ABD0: var_eax = CBool(var_ret_5F)
+  loc_00A0ABD9: var_18C = CBool(CBool(var_ret_5F))
+  loc_00A0ABFB: If var_18C = 0 Then GoTo loc_00A0AC4D
+  loc_00A0AC30: call __vbaVarIndexLoad(var_28, var_1F0, 00000001h, var_CC)
+  loc_00A0AC36: __vbaVarIndexLoad(var_28, var_1F0, 00000001h, var_CC) = CInt()
+  loc_00A0AC3F: var_18 = __vbaVarIndexLoad(var_28, var_1F0, 00000001h, var_CC)
+  loc_00A0AC48: GoTo loc_00A0C2EC
+  loc_00A0AC4D: 'Referenced from: 00A0ABFB
+  loc_00A0AC6E: var_F0 = edx+000001B4h
+  loc_00A0AC82: var_120 = edx+000001B4h
+  loc_00A0ACB2: call __vbaVarIndexLoad(var_28, var_1F4, 00000001h, var_CC)
+  loc_00A0ACBC: var_ret_73 = ( > __vbaVarIndexLoad(var_28, var_1F4, 00000001h, var_CC))
+  loc_00A0ACFD: call __vbaVarIndexLoad(var_48, var_1F4, 00000001h, var_FC)
+  loc_00A0AD07: var_ret_74 = ( < __vbaVarIndexLoad(var_48, var_1F4, 00000001h, var_FC))
+  loc_00A0AD12: var_eax = CBool(var_ret_5F)
+  loc_00A0AD1B: var_18C = CBool(CBool(var_ret_5F))
+  loc_00A0AD3D: If var_18C = 0 Then GoTo loc_00A0AD8F
+  loc_00A0AD72: call __vbaVarIndexLoad(var_28, var_1F4, 00000001h, var_CC)
+  loc_00A0AD78: __vbaVarIndexLoad(var_28, var_1F4, 00000001h, var_CC) = CInt()
+  loc_00A0AD81: var_18 = __vbaVarIndexLoad(var_28, var_1F4, 00000001h, var_CC)
+  loc_00A0AD8A: GoTo loc_00A0C2EC
+  loc_00A0AD8F: 'Referenced from: 00A0AD3D
+  loc_00A0AD94: var_F0 = edx+000001B4h
+  loc_00A0ADAA: var_120 = edx+000001B4h
+  loc_00A0ADEE: call __vbaVarIndexLoad(var_28, edx+00000006h-00000000h, 00000001h, var_CC)
+  loc_00A0ADF8: var_ret_75 = ( > __vbaVarIndexLoad(var_28, edx+00000006h-00000000h, 00000001h, var_CC))
+  loc_00A0AE34: call __vbaVarIndexLoad(var_48, edx+00000006h-00000000h, 00000001h, var_FC)
+  loc_00A0AE3E: var_ret_76 = ( < __vbaVarIndexLoad(var_48, edx+00000006h-00000000h, 00000001h, var_FC))
+  loc_00A0AE49: var_eax = CBool(var_ret_5F)
+  loc_00A0AE6B: If CBool(CBool(var_ret_5F)) = 0 Then GoTo loc_00A0C2EC
+  loc_00A0AE9E: GoTo loc_00A0BAE2
+  loc_00A0AEA3: 'Referenced from: 00A0A888
+  loc_00A0AEAC: var_120 = Y
+  loc_00A0AEB3: var_180 = Y
+  loc_00A0AEE9: var_150 = edx+00000214h
+  loc_00A0AF2A: call __vbaVarIndexLoad(var_28, var_1F8, 00000001h, var_CC)
+  loc_00A0AF34: var_ret_77 = ( > __vbaVarIndexLoad(var_28, var_1F8, 00000001h, var_CC))
+  loc_00A0AF77: call __vbaVarIndexLoad(var_48, Me.MouseIcon = %StkVar1, var_FC)
+  loc_00A0AF81: var_ret_78 = ( > __vbaVarIndexLoad(var_48, Me.MouseIcon = %StkVar1, var_FC))
+  loc_00A0AF8C: var_eax = CBool(CBool(var_ret_5F))
+  loc_00A0AFCC: call __vbaVarIndexLoad(var_78, Me.MouseIcon = %StkVar1, var_12C)
+  loc_00A0AFD9: var_ret_79 = ( < __vbaVarIndexLoad(var_78, Me.MouseIcon = %StkVar1, var_12C))
+  loc_00A0AFE7: var_eax = CBool(CBool(var_ret_5F))
+  loc_00A0B02A: call __vbaVarIndexLoad(var_A8, Me.MouseIcon = %StkVar1, var_15C)
+  loc_00A0B037: var_ret_7A = ( < __vbaVarIndexLoad(var_A8, Me.MouseIcon = %StkVar1, var_15C))
+  loc_00A0B045: var_eax = CBool(CBool(var_ret_5F))
+  loc_00A0B04E: var_18C = CBool(CBool(CBool(var_ret_5F)))
+  loc_00A0B07B: var_F0 = edx+00000214h
+  loc_00A0B082: If var_18C = 0 Then GoTo loc_00A0B7DF
+  loc_00A0B0A9: var_120 = edx+00000214h
+  loc_00A0B0E6: call __vbaVarIndexLoad(var_28, var_1FC, 00000001h, var_CC)
+  loc_00A0B0F0: var_ret_7B = ( > __vbaVarIndexLoad(var_28, var_1FC, 00000001h, var_CC))
+  loc_00A0B131: call __vbaVarIndexLoad(var_48, var_1FC, 00000001h, var_FC)
+  loc_00A0B13B: var_ret_7C = ( < __vbaVarIndexLoad(var_48, var_1FC, 00000001h, var_FC))
+  loc_00A0B146: var_eax = CBool(CBool(var_ret_5F))
+  loc_00A0B14F: var_18C = CBool(CBool(CBool(var_ret_5F)))
+  loc_00A0B171: If var_18C = 0 Then GoTo loc_00A0B1C3
+  loc_00A0B1A6: call __vbaVarIndexLoad(var_28, var_1FC, 00000001h, var_CC)
+  loc_00A0B1AC: __vbaVarIndexLoad(var_28, var_1FC, 00000001h, var_CC) = CInt()
+  loc_00A0B1B5: var_18 = __vbaVarIndexLoad(var_28, var_1FC, 00000001h, var_CC)
+  loc_00A0B1BE: GoTo loc_00A0C2EC
+  loc_00A0B1C3: 'Referenced from: 00A0B171
+  loc_00A0B1E4: var_F0 = edx+00000214h
+  loc_00A0B1F8: var_120 = edx+00000214h
+  loc_00A0B228: call __vbaVarIndexLoad(var_28, var_200, 00000001h, var_CC)
+  loc_00A0B232: var_ret_7D = ( > __vbaVarIndexLoad(var_28, var_200, 00000001h, var_CC))
+  loc_00A0B273: call __vbaVarIndexLoad(var_48, var_200, 00000001h, var_FC)
+  loc_00A0B27D: var_ret_7E = ( < __vbaVarIndexLoad(var_48, var_200, 00000001h, var_FC))
+  loc_00A0B288: var_eax = CBool(CBool(var_ret_5F))
+  loc_00A0B291: var_18C = CBool(CBool(CBool(var_ret_5F)))
+  loc_00A0B2B3: If var_18C = 0 Then GoTo loc_00A0B305
+  loc_00A0B2E8: call __vbaVarIndexLoad(var_28, var_200, 00000001h, var_CC)
+  loc_00A0B2EE: __vbaVarIndexLoad(var_28, var_200, 00000001h, var_CC) = CInt()
+  loc_00A0B2F7: var_18 = __vbaVarIndexLoad(var_28, var_200, 00000001h, var_CC)
+  loc_00A0B300: GoTo loc_00A0C2EC
+  loc_00A0B305: 'Referenced from: 00A0B2B3
+  loc_00A0B326: var_F0 = edx+00000214h
+  loc_00A0B33A: var_120 = edx+00000214h
+  loc_00A0B36A: call __vbaVarIndexLoad(var_28, var_204, 00000001h, var_CC)
+  loc_00A0B374: var_ret_7F = ( > __vbaVarIndexLoad(var_28, var_204, 00000001h, var_CC))
+  loc_00A0B3B5: call __vbaVarIndexLoad(var_48, var_204, 00000001h, var_FC)
+  loc_00A0B3BF: var_ret_80 = ( < __vbaVarIndexLoad(var_48, var_204, 00000001h, var_FC))
+  loc_00A0B3CA: var_eax = CBool(CBool(var_ret_5F))
+  loc_00A0B3D3: var_18C = CBool(CBool(CBool(var_ret_5F)))
+  loc_00A0B3F5: If var_18C = 0 Then GoTo loc_00A0B447
+  loc_00A0B42A: call __vbaVarIndexLoad(var_28, var_204, 00000001h, var_CC)
+  loc_00A0B430: __vbaVarIndexLoad(var_28, var_204, 00000001h, var_CC) = CInt()
+  loc_00A0B439: var_18 = __vbaVarIndexLoad(var_28, var_204, 00000001h, var_CC)
+  loc_00A0B442: GoTo loc_00A0C2EC
+  loc_00A0B447: 'Referenced from: 00A0B3F5
+  loc_00A0B468: var_F0 = edx+00000214h
+  loc_00A0B47C: var_120 = edx+00000214h
+  loc_00A0B4AC: call __vbaVarIndexLoad(var_28, var_208, 00000001h, var_CC)
+  loc_00A0B4B6: var_ret_81 = ( > __vbaVarIndexLoad(var_28, var_208, 00000001h, var_CC))
+  loc_00A0B4F7: call __vbaVarIndexLoad(var_48, var_208, 00000001h, var_FC)
+  loc_00A0B501: var_ret_82 = ( < __vbaVarIndexLoad(var_48, var_208, 00000001h, var_FC))
+  loc_00A0B50C: var_eax = CBool(CBool(var_ret_5F))
+  loc_00A0B515: var_18C = CBool(CBool(CBool(var_ret_5F)))
+  loc_00A0B537: If var_18C = 0 Then GoTo loc_00A0B589
+  loc_00A0B56C: call __vbaVarIndexLoad(var_28, var_208, 00000001h, var_CC)
+  loc_00A0B572: __vbaVarIndexLoad(var_28, var_208, 00000001h, var_CC) = CInt()
+  loc_00A0B57B: var_18 = __vbaVarIndexLoad(var_28, var_208, 00000001h, var_CC)
+  loc_00A0B584: GoTo loc_00A0C2EC
+  loc_00A0B589: 'Referenced from: 00A0B537
+  loc_00A0B5AA: var_F0 = edx+00000214h
+  loc_00A0B5BE: var_120 = edx+00000214h
+  loc_00A0B5EE: call __vbaVarIndexLoad(var_28, var_20C, 00000001h, var_CC)
+  loc_00A0B5F8: var_ret_83 = ( > __vbaVarIndexLoad(var_28, var_20C, 00000001h, var_CC))
+  loc_00A0B639: call __vbaVarIndexLoad(var_48, var_20C, 00000001h, var_FC)
+  loc_00A0B643: var_ret_84 = ( < __vbaVarIndexLoad(var_48, var_20C, 00000001h, var_FC))
+  loc_00A0B64E: var_eax = CBool(CBool(var_ret_5F))
+  loc_00A0B657: var_18C = CBool(CBool(CBool(var_ret_5F)))
+  loc_00A0B679: If var_18C = 0 Then GoTo loc_00A0B6CB
+  loc_00A0B6AE: call __vbaVarIndexLoad(var_28, var_20C, 00000001h, var_CC)
+  loc_00A0B6B4: __vbaVarIndexLoad(var_28, var_20C, 00000001h, var_CC) = CInt()
+  loc_00A0B6BD: var_18 = __vbaVarIndexLoad(var_28, var_20C, 00000001h, var_CC)
+  loc_00A0B6C6: GoTo loc_00A0C2EC
+  loc_00A0B6CB: 'Referenced from: 00A0B679
+  loc_00A0B6D0: var_F0 = edx+00000214h
+  loc_00A0B6E6: var_120 = edx+00000214h
+  loc_00A0B72A: call __vbaVarIndexLoad(var_28, Me.OLEDropMode = %StkVar1, 00000001h, var_CC)
+  loc_00A0B734: var_ret_85 = ( > __vbaVarIndexLoad(var_28, Me.OLEDropMode = %StkVar1, 00000001h, var_CC))
+  loc_00A0B770: call __vbaVarIndexLoad(var_48, Me.OLEDropMode = %StkVar1, 00000001h, var_FC)
+  loc_00A0B77A: var_ret_86 = ( < __vbaVarIndexLoad(var_48, Me.OLEDropMode = %StkVar1, 00000001h, var_FC))
+  loc_00A0B785: var_eax = CBool(CBool(var_ret_5F))
+  loc_00A0B7A7: If CBool(CBool(CBool(var_ret_5F))) = 0 Then GoTo loc_00A0C2EC
+  loc_00A0B7DA: GoTo loc_00A0BAE2
+  loc_00A0B7DF: 'Referenced from: 00A0B082
+  loc_00A0B7E8: var_120 = Y
+  loc_00A0B7EF: var_180 = Y
+  loc_00A0B866: call __vbaVarIndexLoad(var_28, var_210, 00000001h, var_CC)
+  loc_00A0B870: var_ret_87 = ( > __vbaVarIndexLoad(var_28, var_210, 00000001h, var_CC))
+  loc_00A0B8B3: call __vbaVarIndexLoad(var_48, Me.PaletteMode = %StkVar1, var_FC)
+  loc_00A0B8BD: var_ret_88 = ( > __vbaVarIndexLoad(var_48, Me.PaletteMode = %StkVar1, var_FC))
+  loc_00A0B8C8: var_eax = CBool(CBool(CBool(var_ret_5F)))
+  loc_00A0B908: call __vbaVarIndexLoad(var_78, Me.PaletteMode = %StkVar1, var_12C)
+  loc_00A0B915: var_ret_89 = ( < __vbaVarIndexLoad(var_78, Me.PaletteMode = %StkVar1, var_12C))
+  loc_00A0B923: var_eax = CBool(CBool(CBool(var_ret_5F)))
+  loc_00A0B966: call __vbaVarIndexLoad(var_A8, Me.PaletteMode = %StkVar1, var_15C)
+  loc_00A0B973: var_ret_8A = ( < __vbaVarIndexLoad(var_A8, Me.PaletteMode = %StkVar1, var_15C))
+  loc_00A0B981: var_eax = CBool(CBool(CBool(var_ret_5F)))
+  loc_00A0B98A: var_18C = CBool(CBool(CBool(CBool(var_ret_5F))))
+  loc_00A0B9BE: If var_18C = 0 Then GoTo loc_00A0C11B
+  loc_00A0BA22: call __vbaVarIndexLoad(var_28, var_214, 00000001h, var_CC)
+  loc_00A0BA2C: var_ret_8B = ( > __vbaVarIndexLoad(var_28, var_214, 00000001h, var_CC))
+  loc_00A0BA6D: call __vbaVarIndexLoad(var_48, var_214, 00000001h, var_FC)
+  loc_00A0BA77: var_ret_8C = ( < __vbaVarIndexLoad(var_48, var_214, 00000001h, var_FC))
+  loc_00A0BA82: var_eax = CBool(CBool(CBool(var_ret_5F)))
+  loc_00A0BA8B: var_18C = CBool(CBool(CBool(CBool(var_ret_5F))))
+  loc_00A0BAAD: If var_18C = 0 Then GoTo loc_00A0BAFF
+  loc_00A0BAE2: 'Referenced from: 00A0AE9E
+  loc_00A0BAE2: call __vbaVarIndexLoad(var_28, var_214, 00000001h, var_CC)
+  loc_00A0BAE8: __vbaVarIndexLoad(var_28, var_214, 00000001h, var_CC) = CInt()
+  loc_00A0BAF1: var_18 = __vbaVarIndexLoad(var_28, var_214, 00000001h, var_CC)
+  loc_00A0BAFA: GoTo loc_00A0C2EC
+  loc_00A0BAFF: 
+  loc_00A0BB64: call __vbaVarIndexLoad(var_28, var_218, 00000001h, var_CC)
+  loc_00A0BB6E: var_ret_8D = ( > __vbaVarIndexLoad(var_28, var_218, 00000001h, var_CC))
+  loc_00A0BBAF: call __vbaVarIndexLoad(var_48, var_218, 00000001h, var_FC)
+  loc_00A0BBB9: var_ret_8E = ( < __vbaVarIndexLoad(var_48, var_218, 00000001h, var_FC))
+  loc_00A0BBC4: var_eax = CBool(CBool(CBool(var_ret_5F)))
+  loc_00A0BBCD: var_18C = CBool(CBool(CBool(CBool(var_ret_5F))))
+  loc_00A0BBEF: If var_18C = 0 Then GoTo loc_00A0BC41
+  loc_00A0BC24: call __vbaVarIndexLoad(var_28, var_218, 00000001h, var_CC)
+  loc_00A0BC2A: __vbaVarIndexLoad(var_28, var_218, 00000001h, var_CC) = CInt()
+  loc_00A0BC33: var_18 = __vbaVarIndexLoad(var_28, var_218, 00000001h, var_CC)
+  loc_00A0BC3C: GoTo loc_00A0C2EC
+  loc_00A0BC41: 'Referenced from: 00A0BBEF
+  loc_00A0BCA6: call __vbaVarIndexLoad(var_28, var_21C, 00000001h, var_CC)
+  loc_00A0BCB0: var_ret_8F = ( > __vbaVarIndexLoad(var_28, var_21C, 00000001h, var_CC))
+  loc_00A0BCF1: call __vbaVarIndexLoad(var_48, var_21C, 00000001h, var_FC)
+  loc_00A0BCFB: var_ret_90 = ( < __vbaVarIndexLoad(var_48, var_21C, 00000001h, var_FC))
+  loc_00A0BD06: var_eax = CBool(CBool(CBool(var_ret_5F)))
+  loc_00A0BD0F: var_18C = CBool(CBool(CBool(CBool(var_ret_5F))))
+  loc_00A0BD31: If var_18C = 0 Then GoTo loc_00A0BD83
+  loc_00A0BD66: call __vbaVarIndexLoad(var_28, var_21C, 00000001h, var_CC)
+  loc_00A0BD6C: __vbaVarIndexLoad(var_28, var_21C, 00000001h, var_CC) = CInt()
+  loc_00A0BD75: var_18 = __vbaVarIndexLoad(var_28, var_21C, 00000001h, var_CC)
+  loc_00A0BD7E: GoTo loc_00A0C2EC
+  loc_00A0BD83: 'Referenced from: 00A0BD31
+  loc_00A0BDE8: call __vbaVarIndexLoad(var_28, var_220, 00000001h, var_CC)
+  loc_00A0BDF2: var_ret_91 = ( > __vbaVarIndexLoad(var_28, var_220, 00000001h, var_CC))
+  loc_00A0BE33: call __vbaVarIndexLoad(var_48, var_220, 00000001h, var_FC)
+  loc_00A0BE3D: var_ret_92 = ( < __vbaVarIndexLoad(var_48, var_220, 00000001h, var_FC))
+  loc_00A0BE48: var_eax = CBool(CBool(CBool(var_ret_5F)))
+  loc_00A0BE51: var_18C = CBool(CBool(CBool(CBool(var_ret_5F))))
+  loc_00A0BE73: If var_18C = 0 Then GoTo loc_00A0BEC5
+  loc_00A0BEA8: call __vbaVarIndexLoad(var_28, var_220, 00000001h, var_CC)
+  loc_00A0BEAE: __vbaVarIndexLoad(var_28, var_220, 00000001h, var_CC) = CInt()
+  loc_00A0BEB7: var_18 = __vbaVarIndexLoad(var_28, var_220, 00000001h, var_CC)
+  loc_00A0BEC0: GoTo loc_00A0C2EC
+  loc_00A0BEC5: 'Referenced from: 00A0BE73
+  loc_00A0BF2A: call __vbaVarIndexLoad(var_28, var_224, 00000001h, var_CC)
+  loc_00A0BF34: var_ret_93 = ( > __vbaVarIndexLoad(var_28, var_224, 00000001h, var_CC))
+  loc_00A0BF75: call __vbaVarIndexLoad(var_48, var_224, 00000001h, var_FC)
+  loc_00A0BF7F: var_ret_94 = ( < __vbaVarIndexLoad(var_48, var_224, 00000001h, var_FC))
+  loc_00A0BF8A: var_eax = CBool(CBool(CBool(var_ret_5F)))
+  loc_00A0BF93: var_18C = CBool(CBool(CBool(CBool(var_ret_5F))))
+  loc_00A0BFB5: If var_18C = 0 Then GoTo loc_00A0C007
+  loc_00A0BFEA: call __vbaVarIndexLoad(var_28, var_224, 00000001h, var_CC)
+  loc_00A0BFF0: __vbaVarIndexLoad(var_28, var_224, 00000001h, var_CC) = CInt()
+  loc_00A0BFF9: var_18 = __vbaVarIndexLoad(var_28, var_224, 00000001h, var_CC)
+  loc_00A0C002: GoTo loc_00A0C2EC
+  loc_00A0C007: 'Referenced from: 00A0BFB5
+  loc_00A0C03C: 'Referenced from: 00A0885A
+  loc_00A0C066: call __vbaVarIndexLoad(var_28, Me.OLEDrag, 00000001h, var_CC)
+  loc_00A0C070: var_ret_95 = ( > __vbaVarIndexLoad(var_28, Me.OLEDrag, 00000001h, var_CC))
+  loc_00A0C099: 'Referenced from: 00A0933E
+  loc_00A0C0AC: call __vbaVarIndexLoad(var_48, Me.OLEDrag, 00000001h, var_FC)
+  loc_00A0C0B6: var_ret_96 = ( < __vbaVarIndexLoad(var_48, Me.OLEDrag, 00000001h, var_FC))
+  loc_00A0C0C1: var_eax = CBool(CBool(CBool(var_ret_5F)))
+  loc_00A0C0E0: 'Referenced from: 00A0A1A1
+  loc_00A0C0E3: If CBool(CBool(CBool(CBool(var_ret_5F)))) = 0 Then GoTo loc_00A0C2EC
+  loc_00A0C116: GoTo loc_00A0BAE2
+  loc_00A0C11B: 
+  loc_00A0C126: var_120 = Y
+  loc_00A0C12D: var_180 = Y
+  loc_00A0C199: call __vbaVarIndexLoad(var_28, FmRem190xxx.ManualOff, 00000001h, var_CC)
+  loc_00A0C1A3: var_ret_97 = ( > __vbaVarIndexLoad(var_28, FmRem190xxx.ManualOff, 00000001h, var_CC))
+  loc_00A0C1DE: call __vbaVarIndexLoad(var_48, FmRem190xxx.ManualOff, 00000001h, var_FC)
+  loc_00A0C1E8: var_ret_98 = ( > __vbaVarIndexLoad(var_48, FmRem190xxx.ManualOff, 00000001h, var_FC))
+  loc_00A0C1F3: var_eax = CBool(CBool(CBool(CBool(var_ret_5F))))
+  loc_00A0C22A: call __vbaVarIndexLoad(var_78, FmRem190xxx.ManualOff, 00000001h, var_12C)
+  loc_00A0C237: var_ret_99 = ( < __vbaVarIndexLoad(var_78, FmRem190xxx.ManualOff, 00000001h, var_12C))
+  loc_00A0C245: var_eax = CBool(CBool(CBool(CBool(var_ret_5F))))
+  loc_00A0C280: call __vbaVarIndexLoad(var_A8, FmRem190xxx.ManualOff, 00000001h, var_15C)
+  loc_00A0C28D: var_ret_9A = ( < __vbaVarIndexLoad(var_A8, FmRem190xxx.ManualOff, 00000001h, var_15C))
+  loc_00A0C29B: var_eax = CBool(CBool(CBool(CBool(var_ret_5F))))
+  loc_00A0C2C8: If CBool(CBool(CBool(CBool(CBool(var_ret_5F))))) = 0 Then GoTo loc_00A0C2EC
+  loc_00A0C2D0: var_eax = Call FmRem190xxx.BtClose_Click
+  loc_00A0C2EC: 'Referenced from: 00A085A5
+  loc_00A0C2F1: GoTo loc_00A0C33A
+  loc_00A0C339: Exit Sub
+  loc_00A0C33A: 'Referenced from: 00A0C2F1
+End Function
+
+Public Sub Proc_98_12_A05450
+  loc_00A054BD: call __vbaCastObj(var_1C, var_14, var_1C, var_004A04E0, var_1C, Me, Me, Set %StkVar1 = %StkVar2 'Ignore this, Me, ebx)
+  loc_00A054D2: var_eax = call Proc_95_7_9FF310(var_18, &H48CE, var_18)
+  loc_00A05518: call __vbaCastObj(var_1C, var_14, var_1C, var_004A04E0, var_1C, Me, Me)
+  loc_00A0552D: var_eax = call Proc_95_7_9FF310(var_18, &H48CF, var_18)
+  loc_00A05553: var_eax = FmRem190xxx.Proc_98_14_A05EA0(Me)
+  loc_00A0555E: GoTo loc_00A05578
+  loc_00A05577: Exit Sub
+  loc_00A05578: 'Referenced from: 00A0555E
+End Sub
+
+Public Sub Proc_98_13_A05620
+  Dim var_58 As PictureBox
+  loc_00A05656: repz stosd
+  loc_00A05699: ProgressBar.Visible = True
+  loc_00A056CB: var_eax = call Proc_62_26_9B88F0(&HE10, var_58, Me)
+  loc_00A056EB: var_eax = call Proc_9BCEA0(var_60, var_64, var_44)
+  loc_00A056F3: If call Proc_9BCEA0(var_60, var_64, var_44) <> 0 Then GoTo loc_00A05820
+  loc_00A05708: var_eax = call Proc_9EE930(var_30, 4, var_50)
+  loc_00A0573D: var_eax = call Proc_66_107_9ECE40(var_60, var_64, var_4C)
+  loc_00A05745: var_40 = call Proc_66_107_9ECE40(var_60, var_64, var_4C)
+  loc_00A05749: var_eax = call Proc_9ED640(var_40, var_68, esi)
+  loc_00A05751: If call Proc_9ED640(var_40, var_68, esi) = 0 Then GoTo loc_00A05820
+  loc_00A0575B: var_eax = call Proc_9EC290(var_40, var_6C, var_70)
+  loc_00A0576B: call Proc_9EC290(var_40, var_6C, var_70) = call Proc_9EC290(var_40, var_6C, var_70) + call Proc_9EC290(var_40, var_6C, var_70)
+  loc_00A05783: var_eax = call Proc_62_68_9C2760(eax+ecx-00000850h, var_40, esi)
+  loc_00A05796: var_eax = call Proc_52_1_984CC0(var_40, esi, 3)
+  loc_00A0579E: If call Proc_52_1_984CC0(var_40, esi, 3) = 0 Then GoTo loc_00A05811
+  loc_00A057AB: var_eax = call Proc_9BD000(3, var_40, var_44)
+  loc_00A057F9: var_eax = call Proc_62_57_9BEAD0(var_58, var_40, var_58)
+  loc_00A05811: 'Referenced from: 00A0579E
+  loc_00A0581B: var_eax = call Proc_66_106_9ECC40(var_40, var_00A23160, var_50)
+  loc_00A05820: 'Referenced from: 00A056F3
+  loc_00A0583A: ProgressBar.Visible = esi
+  loc_00A05866: GoTo loc_00A0587C
+  loc_00A0587B: Exit Sub
+  loc_00A0587C: 'Referenced from: 00A05866
+End Sub
+
+Public Sub Proc_98_14_A05EA0
+  Dim var_00A23160 As Me
+  loc_00A05EE0: If eax <> 0 Then GoTo loc_00A05F2B
+  loc_00A05F0D: var_eax = call Proc_9FFFB0(var_4C, 0, 10629472)
+  loc_00A05F1F: FmRem190xxx.Caption = call Proc_9FFFB0(var_4C, 0, 10629472)
+  loc_00A05F26: GoTo loc_00A06F68
+  loc_00A05F2B: 'Referenced from: 00A05EE0
+  loc_00A05F5A: call __vbaVarIndexLoad(var_24, Me, 00000001h, var_28)
+  loc_00A05F64: __vbaVarIndexLoad(var_24, Me, 00000001h, var_28) = CInt()
+  loc_00A05F6F: setz dl
+  loc_00A05F85: If var_48 = 0 Then GoTo loc_00A05FB2
+  loc_00A05FAD: GoTo loc_00A06F49
+  loc_00A05FB2: 'Referenced from: 00A05F85
+  loc_00A05FDB: call __vbaVarIndexLoad(var_24, Me, 00000001h, var_28)
+  loc_00A05FE5: __vbaVarIndexLoad(var_24, Me, 00000001h, var_28) = CInt()
+  loc_00A05FF0: setz dl
+  loc_00A06006: If var_48 = 0 Then GoTo loc_00A06033
+  loc_00A0602E: GoTo loc_00A06F49
+  loc_00A06033: 'Referenced from: 00A06006
+  loc_00A0605C: call __vbaVarIndexLoad(var_24, Me, 00000001h, var_28)
+  loc_00A06066: __vbaVarIndexLoad(var_24, Me, 00000001h, var_28) = CInt()
+  loc_00A06071: setz dl
+  loc_00A06087: If var_48 = 0 Then GoTo loc_00A060B4
+  loc_00A060AF: GoTo loc_00A06F49
+  loc_00A060B4: 'Referenced from: 00A06087
+  loc_00A060DD: call __vbaVarIndexLoad(var_24, Me, 00000001h, var_28)
+  loc_00A060E7: __vbaVarIndexLoad(var_24, Me, 00000001h, var_28) = CInt()
+  loc_00A060F2: setz dl
+  loc_00A06108: If var_48 = 0 Then GoTo loc_00A06135
+  loc_00A06130: GoTo loc_00A06F49
+  loc_00A06135: 'Referenced from: 00A06108
+  loc_00A0615E: call __vbaVarIndexLoad(var_24, Me, 00000001h, var_28)
+  loc_00A06168: __vbaVarIndexLoad(var_24, Me, 00000001h, var_28) = CInt()
+  loc_00A06173: setz dl
+  loc_00A06189: If var_48 = 0 Then GoTo loc_00A061B6
+  loc_00A061B1: GoTo loc_00A06F49
+  loc_00A061B6: 'Referenced from: 00A06189
+  loc_00A061DF: call __vbaVarIndexLoad(var_24, Me, 00000001h, var_28)
+  loc_00A061E9: __vbaVarIndexLoad(var_24, Me, 00000001h, var_28) = CInt()
+  loc_00A061F4: setz dl
+  loc_00A0620A: If var_48 = 0 Then GoTo loc_00A06237
+  loc_00A06232: GoTo loc_00A06F49
+  loc_00A06237: 'Referenced from: 00A0620A
+  loc_00A06260: call __vbaVarIndexLoad(var_24, Me, 00000001h, var_28)
+  loc_00A0626A: __vbaVarIndexLoad(var_24, Me, 00000001h, var_28) = CInt()
+  loc_00A06275: setz dl
+  loc_00A0628B: If var_48 = 0 Then GoTo loc_00A062B8
+  loc_00A062B3: GoTo loc_00A06F49
+  loc_00A062B8: 'Referenced from: 00A0628B
+  loc_00A062E1: call __vbaVarIndexLoad(var_24, Me, 00000001h, var_28)
+  loc_00A062EB: __vbaVarIndexLoad(var_24, Me, 00000001h, var_28) = CInt()
+  loc_00A062F6: setz dl
+  loc_00A0630C: If var_48 = 0 Then GoTo loc_00A06339
+  loc_00A06334: GoTo loc_00A06F49
+  loc_00A06339: 'Referenced from: 00A0630C
+  loc_00A06362: call __vbaVarIndexLoad(var_24, Me, 00000001h, var_28)
+  loc_00A0636C: __vbaVarIndexLoad(var_24, Me, 00000001h, var_28) = CInt()
+  loc_00A06377: setz dl
+  loc_00A0638D: If var_48 = 0 Then GoTo loc_00A063BA
+  loc_00A063B5: GoTo loc_00A06F49
+  loc_00A063BA: 'Referenced from: 00A0638D
+  loc_00A063E3: call __vbaVarIndexLoad(var_24, Me, 00000001h, var_28)
+  loc_00A063ED: __vbaVarIndexLoad(var_24, Me, 00000001h, var_28) = CInt()
+  loc_00A063F8: setz dl
+  loc_00A0640E: If var_48 = 0 Then GoTo loc_00A0643B
+  loc_00A06436: GoTo loc_00A06F49
+  loc_00A0643B: 'Referenced from: 00A0640E
+  loc_00A06464: call __vbaVarIndexLoad(var_24, Me, 00000001h, var_28)
+  loc_00A0646E: __vbaVarIndexLoad(var_24, Me, 00000001h, var_28) = CInt()
+  loc_00A06479: setz dl
+  loc_00A0648F: If var_48 = 0 Then GoTo loc_00A064BC
+  loc_00A064B7: GoTo loc_00A06F49
+  loc_00A064BC: 'Referenced from: 00A0648F
+  loc_00A064E5: call __vbaVarIndexLoad(var_24, Me, 00000001h, var_28)
+  loc_00A064EF: __vbaVarIndexLoad(var_24, Me, 00000001h, var_28) = CInt()
+  loc_00A064FA: setz dl
+  loc_00A06510: If var_48 = 0 Then GoTo loc_00A0653D
+  loc_00A06538: GoTo loc_00A06F49
+  loc_00A0653D: 'Referenced from: 00A06510
+  loc_00A06566: call __vbaVarIndexLoad(var_24, Me, 00000001h, var_28)
+  loc_00A06570: __vbaVarIndexLoad(var_24, Me, 00000001h, var_28) = CInt()
+  loc_00A0657B: setz dl
+  loc_00A06591: If var_48 = 0 Then GoTo loc_00A065BE
+  loc_00A065B9: GoTo loc_00A06F49
+  loc_00A065BE: 'Referenced from: 00A06591
+  loc_00A065E7: call __vbaVarIndexLoad(var_24, Me, 00000001h, var_28)
+  loc_00A065F1: __vbaVarIndexLoad(var_24, Me, 00000001h, var_28) = CInt()
+  loc_00A065FC: setz dl
+  loc_00A06612: If var_48 = 0 Then GoTo loc_00A0663F
+  loc_00A0663A: GoTo loc_00A06F49
+  loc_00A0663F: 'Referenced from: 00A06612
+  loc_00A06668: call __vbaVarIndexLoad(var_24, Me, 00000001h, var_28)
+  loc_00A06672: __vbaVarIndexLoad(var_24, Me, 00000001h, var_28) = CInt()
+  loc_00A0667D: setz dl
+  loc_00A06693: If var_48 = 0 Then GoTo loc_00A066C0
+  loc_00A066BB: GoTo loc_00A06F49
+  loc_00A066C0: 'Referenced from: 00A06693
+  loc_00A066E9: call __vbaVarIndexLoad(var_24, Me, 00000001h, var_28)
+  loc_00A066F3: __vbaVarIndexLoad(var_24, Me, 00000001h, var_28) = CInt()
+  loc_00A066FE: setz dl
+  loc_00A06714: If var_48 = 0 Then GoTo loc_00A06741
+  loc_00A0673C: GoTo loc_00A06F49
+  loc_00A06741: 'Referenced from: 00A06714
+  loc_00A0676A: call __vbaVarIndexLoad(var_24, Me, 00000001h, var_28)
+  loc_00A06774: __vbaVarIndexLoad(var_24, Me, 00000001h, var_28) = CInt()
+  loc_00A0677F: setz dl
+  loc_00A06795: If var_48 = 0 Then GoTo loc_00A067C2
+  loc_00A067BD: GoTo loc_00A06F49
+  loc_00A067C2: 'Referenced from: 00A06795
+  loc_00A067EB: call __vbaVarIndexLoad(var_24, Me, 00000001h, var_28)
+  loc_00A067F5: __vbaVarIndexLoad(var_24, Me, 00000001h, var_28) = CInt()
+  loc_00A06800: setz dl
+  loc_00A06816: If var_48 = 0 Then GoTo loc_00A06843
+  loc_00A0683E: GoTo loc_00A06F49
+  loc_00A06843: 'Referenced from: 00A06816
+  loc_00A0686C: call __vbaVarIndexLoad(var_24, Me, 00000001h, var_28)
+  loc_00A06876: __vbaVarIndexLoad(var_24, Me, 00000001h, var_28) = CInt()
+  loc_00A06881: setz dl
+  loc_00A06897: If var_48 = 0 Then GoTo loc_00A068C4
+  loc_00A068BF: GoTo loc_00A06F49
+  loc_00A068C4: 'Referenced from: 00A06897
+  loc_00A068ED: call __vbaVarIndexLoad(var_24, Me, 00000001h, var_28)
+  loc_00A068F7: __vbaVarIndexLoad(var_24, Me, 00000001h, var_28) = CInt()
+  loc_00A06902: setz dl
+  loc_00A06918: If var_48 = 0 Then GoTo loc_00A06945
+  loc_00A06940: GoTo loc_00A06F49
+  loc_00A06945: 'Referenced from: 00A06918
+  loc_00A0696E: call __vbaVarIndexLoad(var_24, Me, 00000001h, var_28)
+  loc_00A06978: __vbaVarIndexLoad(var_24, Me, 00000001h, var_28) = CInt()
+  loc_00A06983: setz dl
+  loc_00A06999: If var_48 = 0 Then GoTo loc_00A069C6
+  loc_00A069C1: GoTo loc_00A06F49
+  loc_00A069C6: 'Referenced from: 00A06999
+  loc_00A069EF: call __vbaVarIndexLoad(var_24, Me, 00000001h, var_28)
+  loc_00A069F9: __vbaVarIndexLoad(var_24, Me, 00000001h, var_28) = CInt()
+  loc_00A06A04: setz dl
+  loc_00A06A1A: If var_48 = 0 Then GoTo loc_00A06A47
+  loc_00A06A42: GoTo loc_00A06F49
+  loc_00A06A47: 'Referenced from: 00A06A1A
+  loc_00A06A70: call __vbaVarIndexLoad(var_24, Me, 00000001h, var_28)
+  loc_00A06A7A: __vbaVarIndexLoad(var_24, Me, 00000001h, var_28) = CInt()
+  loc_00A06A85: setz dl
+  loc_00A06A9B: If var_48 = 0 Then GoTo loc_00A06AC8
+  loc_00A06AC3: GoTo loc_00A06F49
+  loc_00A06AC8: 'Referenced from: 00A06A9B
+  loc_00A06AF1: call __vbaVarIndexLoad(var_24, Me, 00000001h, var_28)
+  loc_00A06AFB: __vbaVarIndexLoad(var_24, Me, 00000001h, var_28) = CInt()
+  loc_00A06B06: setz dl
+  loc_00A06B1C: If var_48 = 0 Then GoTo loc_00A06B49
+  loc_00A06B44: GoTo loc_00A06F49
+  loc_00A06B49: 'Referenced from: 00A06B1C
+  loc_00A06B72: call __vbaVarIndexLoad(var_24, Me, 00000001h, var_28)
+  loc_00A06B7C: __vbaVarIndexLoad(var_24, Me, 00000001h, var_28) = CInt()
+  loc_00A06B87: setz dl
+  loc_00A06B9D: If var_48 = 0 Then GoTo loc_00A06BCA
+  loc_00A06BC5: GoTo loc_00A06F49
+  loc_00A06BCA: 'Referenced from: 00A06B9D
+  loc_00A06BF3: call __vbaVarIndexLoad(var_24, Me, 00000001h, var_28)
+  loc_00A06BFD: __vbaVarIndexLoad(var_24, Me, 00000001h, var_28) = CInt()
+  loc_00A06C08: setz dl
+  loc_00A06C1E: If var_48 = 0 Then GoTo loc_00A06C4B
+  loc_00A06C46: GoTo loc_00A06F49
+  loc_00A06C4B: 'Referenced from: 00A06C1E
+  loc_00A06C74: call __vbaVarIndexLoad(var_24, Me, 00000001h, var_28)
+  loc_00A06C7E: __vbaVarIndexLoad(var_24, Me, 00000001h, var_28) = CInt()
+  loc_00A06C89: setz dl
+  loc_00A06C9F: If var_48 = 0 Then GoTo loc_00A06CCC
+  loc_00A06CC7: GoTo loc_00A06F49
+  loc_00A06CCC: 'Referenced from: 00A06C9F
+  loc_00A06CF5: call __vbaVarIndexLoad(var_24, Me, 00000001h, var_28)
+  loc_00A06CFF: __vbaVarIndexLoad(var_24, Me, 00000001h, var_28) = CInt()
+  loc_00A06D0A: setz dl
+  loc_00A06D20: If var_48 = 0 Then GoTo loc_00A06D4D
+  loc_00A06D48: GoTo loc_00A06F49
+  loc_00A06D4D: 'Referenced from: 00A06D20
+  loc_00A06D76: call __vbaVarIndexLoad(var_24, Me, 00000001h, var_28)
+  loc_00A06D80: __vbaVarIndexLoad(var_24, Me, 00000001h, var_28) = CInt()
+  loc_00A06D8B: setz dl
+  loc_00A06DA1: If var_48 = 0 Then GoTo loc_00A06DCE
+  loc_00A06DC9: GoTo loc_00A06F49
+  loc_00A06DCE: 'Referenced from: 00A06DA1
+  loc_00A06DF7: call __vbaVarIndexLoad(var_24, Me, 00000001h, var_28)
+  loc_00A06E01: __vbaVarIndexLoad(var_24, Me, 00000001h, var_28) = CInt()
+  loc_00A06E0C: setz dl
+  loc_00A06E22: If var_48 = 0 Then GoTo loc_00A06E4F
+  loc_00A06E4A: GoTo loc_00A06F49
+  loc_00A06E4F: 'Referenced from: 00A06E22
+  loc_00A06E78: call __vbaVarIndexLoad(var_24, Me, 00000001h, var_28)
+  loc_00A06E82: __vbaVarIndexLoad(var_24, Me, 00000001h, var_28) = CInt()
+  loc_00A06E8D: setz dl
+  loc_00A06EA3: If var_48 = 0 Then GoTo loc_00A06ECD
+  loc_00A06ECB: GoTo loc_00A06F49
+  loc_00A06ECD: 'Referenced from: 00A06EA3
+  loc_00A06EF6: call __vbaVarIndexLoad(var_24, Me, 00000001h, var_28)
+  loc_00A06F00: __vbaVarIndexLoad(var_24, Me, 00000001h, var_28) = CInt()
+  loc_00A06F0B: setz dl
+  loc_00A06F21: If var_48 = 0 Then GoTo loc_00A06F73
+  loc_00A06F49: 'Referenced from: 00A05FAD
+  loc_00A06F4F: var_eax = call Proc_9FFFB0(var_4C, , )
+  loc_00A06F59: var_14 = call Proc_9FFFB0(var_4C, , )
+  loc_00A06F61: FmRem190xxx.Caption = var_14
+  loc_00A06F68: 'Referenced from: 00A05F26
+  loc_00A06F68: If var_14 >= 0 Then GoTo loc_00A0701C
+  loc_00A06F6E: GoTo loc_00A0700D
+  loc_00A06F73: 
+  loc_00A06F9C: call __vbaVarIndexLoad(var_24, Me, 00000001h, var_28)
+  loc_00A06FA6: __vbaVarIndexLoad(var_24, Me, 00000001h, var_28) = CInt()
+  loc_00A06FB1: setz dl
+  loc_00A06FC4: If edx = 0 Then GoTo loc_00A07025
+  loc_00A06FF2: var_eax = call Proc_9FFFB0(var_4C, , )
+  loc_00A06FFC: var_14 = call Proc_9FFFB0(var_4C, , )
+  loc_00A07004: FmRem190xxx.Caption = var_14
+  loc_00A0700B: If var_14 >= 0 Then GoTo loc_00A0701C
+  loc_00A0700D: 'Referenced from: 00A06F6E
+  loc_00A07016: var_14 = CheckObj(var_00A23160, var_004A9BDC, 84)
+  loc_00A0701C: 'Referenced from: 00A06F68
+  loc_00A07025: 
+  loc_00A0702A: GoTo loc_00A0703F
+  loc_00A0703E: Exit Sub
+  loc_00A0703F: 'Referenced from: 00A0702A
+End Sub
+
+Public Sub Proc_98_15_A07650
+  Dim var_00A23160 As CommandButton
+  loc_00A0769A: If edi+00000314h <> 0 Then GoTo loc_00A0790C
+  loc_00A076E1: FmRem190xxx.BtClose.Enabled = ebx
+  loc_00A0774B: FmRem190xxx.UpdateScreen.Enabled = False
+  loc_00A0777D: var_70 = FmRem190xxx.DetermineKeyId(arg_C, arg_10)
+  loc_00A0779C: var_18 = var_70
+  loc_00A0779F: If var_70 = var_FFFFFF Then GoTo loc_00A0784D
+  loc_00A077AC: var_eax = FmRem190xxx.Proc_98_14_A05EA0(Me, var_18, var_1C, var_00A23160, var_00A23160, var_1C)
+  loc_00A077B6: var_eax = call Proc_36_3_947390(var_18, var_00A23160, var_00A23160)
+  loc_00A077C3: If edi+00000316h <> 0 Then GoTo loc_00A07839
+  loc_00A077D5: var_64 = var_18
+  loc_00A07805: call __vbaVarIndexLoad(var_2C, FmRem190xxx.UpdateScreen.ToolTipText = %StkVar1, var_40)
+  loc_00A07824: If ( = __vbaVarIndexLoad(var_2C, FmRem190xxx.UpdateScreen.ToolTipText = %StkVar1, var_40)) = 0 Then GoTo loc_00A07830
+  loc_00A0782B: var_eax = call Proc_98C560(500, , )
+  loc_00A07830: 'Referenced from: 00A07824
+  loc_00A07833: var_eax = FmRem190xxx.Proc_98_13_A05620(Me)
+  loc_00A07839: 'Referenced from: 00A077C3
+  loc_00A07847: var_eax = FmRem190xxx.Proc_98_14_A05EA0(Me)
+  loc_00A0784D: 'Referenced from: 00A0779F
+  loc_00A07891: FmRem190xxx.BtClose.Enabled = True
+  loc_00A078E9: FmRem190xxx.UpdateScreen.Enabled = True
+End Sub
+
+Public Sub Proc_98_16_A07950
+  Dim var_18 As Variant
+  loc_00A079AA: BtClose.Left = var_44160000
+  loc_00A079F0: BtClose.Top = var_44160000
+  loc_00A07A28: var_28 = var_18
+  loc_00A07A2B: BtClose.Width = var_428E0000
+  loc_00A07A66: BtClose.Height = var_420C0000
+  loc_00A07AA4: var_28 = var_18
+  loc_00A07AA7: UpdateScreen.Left = var_44160000
+  loc_00A07AE2: UpdateScreen.Top = var_440B0000
+  loc_00A07B1A: var_28 = var_18
+  loc_00A07B1D: UpdateScreen.Width = var_428E0000
+  loc_00A07B58: UpdateScreen.Height = var_420C0000
+  loc_00A07B96: var_28 = var_18
+  loc_00A07B99: ManualOff.Left = var_44160000
+  loc_00A07BD4: ManualOff.Top = var_44000000
+  loc_00A07C0C: var_28 = var_18
+  loc_00A07C0F: ManualOff.Width = var_428E0000
+  loc_00A07C4A: ManualOff.Height = var_420C0000
+  loc_00A07C88: var_28 = var_18
+  loc_00A07C8B: ManualOn.Left = var_44160000
+  loc_00A07CC6: ManualOn.Top = var_44000000
+  loc_00A07CFE: var_28 = var_18
+  loc_00A07D01: ManualOn.Width = var_428E0000
+  loc_00A07D3C: ManualOn.Height = var_420C0000
+  loc_00A07D7A: var_28 = var_18
+  loc_00A07D7D: PbGraph.Left = var_43280000
+  loc_00A07DB8: PbGraph.Top = var_42FA0000
+  loc_00A07DF2: var_24 = PbGraph.ScaleWidth
+  loc_00A07E29: var_20 = PbGraph.Width
+  loc_00A07E52: var_14 = CLng((var_20 - var_24))
+  loc_00A07E86: var_3C = var_14 + 00000143h
+  loc_00A07E94: PbGraph.Width = var_40
+  loc_00A07ED4: var_24 = PbGraph.ScaleHeight
+  loc_00A07F0B: var_20 = PbGraph.Height
+  loc_00A07F34: var_14 = CLng((var_20 - var_24))
+  loc_00A07F68: var_44 = var_14 + 000000F2h
+  loc_00A07F76: PbGraph.Height = var_48
+  loc_00A07FB4: var_28 = var_18
+  loc_00A07FB7: ProgressBar.Left = var_43840000
+  loc_00A07FF2: ProgressBar.Top = var_43BC0000
+  loc_00A0802C: var_24 = ProgressBar.ScaleWidth
+  loc_00A08063: var_20 = ProgressBar.Width
+  loc_00A0808C: var_14 = CLng((var_20 - var_24))
+  loc_00A080C0: var_4C = var_14 + 00000085h
+  loc_00A080CE: ProgressBar.Width = var_50
+  loc_00A0810E: var_24 = ProgressBar.ScaleHeight
+  loc_00A08145: var_20 = ProgressBar.Height
+  loc_00A0816E: var_14 = CLng((var_20 - var_24))
+  loc_00A0819C: var_54 = var_14 + 0000000Fh
+  loc_00A081AC: ProgressBar.Height = var_58
+  loc_00A081D5: GoTo loc_00A081EB
+  loc_00A081EA: Exit Sub
+  loc_00A081EB: 'Referenced from: 00A081D5
+End Sub

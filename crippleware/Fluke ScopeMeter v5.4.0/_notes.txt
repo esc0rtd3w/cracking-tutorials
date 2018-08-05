@@ -1,0 +1,166 @@
+
+Accept any value for activation Status registry key
+009FE10C
+
+
+
+
+1st DEMO reference
+
+Calls to Activation Key Check?
+009FE040 | 55                       | push ebp                                |
+
+Address   Disassembly                                                                                                                                                                          
+008F6FEF  call fv90win.9FE040
+009068DF  call fv90win.9FE040
+00945802  call fv90win.9FE040
+0094815B  call fv90win.9FE040
+00948209  call fv90win.9FE040
+00948270  call fv90win.9FE040
+009485C0  call fv90win.9FE040
+00949DEC  call fv90win.9FE040
+0094DC43  call fv90win.9FE040
+0094DD02  call fv90win.9FE040
+0096EC25  call fv90win.9FE040
+0096EDB8  call fv90win.9FE040
+0096EEEB  call fv90win.9FE040
+00978F95  call fv90win.9FE040
+00979601  call fv90win.9FE040
+009799DE  call fv90win.9FE040
+0097B94C  call fv90win.9FE040
+00981699  call fv90win.9FE040
+009829CC  call fv90win.9FE040
+00983284  call fv90win.9FE040
+0098345F  call fv90win.9FE040
+00984040  call fv90win.9FE040
+009841FC  call fv90win.9FE040
+0098564C  call fv90win.9FE040
+0098B022  call fv90win.9FE040
+0098B09D  call fv90win.9FE040
+0098B116  call fv90win.9FE040
+0098B17E  call fv90win.9FE040
+0099A19C  call fv90win.9FE040
+009A40CB  call fv90win.9FE040
+009B5FCB  call fv90win.9FE040
+009B8BE6  call fv90win.9FE040
+009B92DD  call fv90win.9FE040
+009BA265  call fv90win.9FE040
+009BA6F0  call fv90win.9FE040
+009BA763  call fv90win.9FE040
+009C9A53  call fv90win.9FE040
+009EFADF  call fv90win.9FE040
+
+
+
+
+009FE083 | 0F 85 C8 00 00 00        | jnz fv90win.9FE151                      |
+009FE089 | 8B 1D 50 12 40 00        | mov ebx,dword ptr ds:[<&__vbaStrCopy>]  |
+009FE08F | BA 6C AA 4A 00           | mov edx,fv90win.4AAA6C                  | ;4AAA6C:L"HKEY_LOCAL_MACHINE\\SOFTWARE\\Fluke\\FlukeView\\5.4.0\\activationKey"
+009FE094 | 8D 4D E8                 | lea ecx,dword ptr ss:[ebp-18]           |
+009FE097 | FF D3                    | call ebx                                |
+009FE099 | 8D 4D E8                 | lea ecx,dword ptr ss:[ebp-18]           |
+009FE09C | 51                       | push ecx                                |
+009FE09D | E8 4E 05 00 00           | call fv90win.9FE5F0                     |
+009FE0A2 | 8B 3D 2C 13 40 00        | mov edi,dword ptr ds:[<&__vbaFreeStr>]  |
+009FE0A8 | 8D 4D E8                 | lea ecx,dword ptr ss:[ebp-18]           |
+009FE0AB | 8B F0                    | mov esi,eax                             |
+009FE0AD | FF D7                    | call edi                                |
+009FE0AF | 66 85 F6                 | test si,si                              |
+009FE0B2 | 0F 84 8D 00 00 00        | je fv90win.9FE145                       | ;jump to DEMO
+009FE0B8 | BA 6C AA 4A 00           | mov edx,fv90win.4AAA6C                  | ;4AAA6C:L"HKEY_LOCAL_MACHINE\\SOFTWARE\\Fluke\\FlukeView\\5.4.0\\activationKey"
+009FE0BD | 8D 4D E8                 | lea ecx,dword ptr ss:[ebp-18]           |
+009FE0C0 | FF D3                    | call ebx                                |
+009FE0C2 | 8D 55 E8                 | lea edx,dword ptr ss:[ebp-18]           |
+009FE0C5 | 52                       | push edx                                |
+009FE0C6 | E8 E5 01 00 00           | call fv90win.9FE2B0                     |
+009FE0CB | 8B D0                    | mov edx,eax                             |
+009FE0CD | B9 8C 17 A2 00           | mov ecx,fv90win.A2178C                  |
+009FE0D2 | FF 15 E4 12 40 00        | call dword ptr ds:[<&__vbaStrMove>]     |
+009FE0D8 | 8D 4D E8                 | lea ecx,dword ptr ss:[ebp-18]           |
+009FE0DB | FF D7                    | call edi                                |
+009FE0DD | A1 8C 17 A2 00           | mov eax,dword ptr ds:[A2178C]           |
+009FE0E2 | 8D 4D E8                 | lea ecx,dword ptr ss:[ebp-18]           |
+009FE0E5 | 50                       | push eax                                |
+009FE0E6 | 51                       | push ecx                                |
+009FE0E7 | FF 15 A0 12 40 00        | call dword ptr ds:[<&__vbaStrToAnsi>]   |
+009FE0ED | 50                       | push eax                                |
+009FE0EE | E8 E5 56 AA FF           | call fv90win.4A37D8                     |
+009FE0F3 | 8B F0                    | mov esi,eax                             |
+009FE0F5 | FF 15 94 10 40 00        | call dword ptr ds:[<&__vbaSetSystemErro |
+009FE0FB | 8B 55 E8                 | mov edx,dword ptr ss:[ebp-18]           |
+009FE0FE | 52                       | push edx                                |
+009FE0FF | 68 8C 17 A2 00           | push fv90win.A2178C                     |
+009FE104 | FF 15 C0 11 40 00        | call dword ptr ds:[<&__vbaStrToUnicode> |
+009FE10A | 33 C0                    | xor eax,eax                             |
+009FE10C | 66 83 FE 01              | cmp si,1                                |
+009FE110 | 0F 94 C0                 | sete al                                 |
+009FE113 | F7 D8                    | neg eax                                 |
+009FE115 | 8D 4D E8                 | lea ecx,dword ptr ss:[ebp-18]           |
+009FE118 | 8B F0                    | mov esi,eax                             |
+009FE11A | FF D7                    | call edi                                |
+009FE11C | 66 F7 DE                 | neg si                                  |
+009FE11F | 1B F6                    | sbb esi,esi                             |
+009FE121 | 66 85 F6                 | test si,si                              |
+009FE124 | 66 89 35 88 17 A2 00     | mov word ptr ds:[A21788],si             |
+009FE12B | 75 24                    | jnz fv90win.9FE151                      |
+009FE12D | BA 6C AA 4A 00           | mov edx,fv90win.4AAA6C                  | ;4AAA6C:L"HKEY_LOCAL_MACHINE\\SOFTWARE\\Fluke\\FlukeView\\5.4.0\\activationKey"
+009FE132 | 8D 4D E8                 | lea ecx,dword ptr ss:[ebp-18]           |
+009FE135 | FF D3                    | call ebx                                |
+009FE137 | 8D 4D E8                 | lea ecx,dword ptr ss:[ebp-18]           |
+009FE13A | 51                       | push ecx                                |
+009FE13B | E8 B0 03 00 00           | call fv90win.9FE4F0                     |
+009FE140 | 8D 4D E8                 | lea ecx,dword ptr ss:[ebp-18]           |
+009FE143 | FF D7                    | call edi                                |
+009FE145 | BA F0 AA 4A 00           | mov edx,fv90win.4AAAF0                  | ;4AAAF0:L"DEMO"
+
+
+
+
+
+
+2nd DEMO reference
+
+009FE21B | 75 13                    | jnz fv90win.9FE230                      |
+009FE21D | BA F0 AA 4A 00           | mov edx,fv90win.4AAAF0                  | ;4AAAF0:L"DEMO"
+009FE222 | B9 8C 17 A2 00           | mov ecx,fv90win.A2178C                  |
+009FE227 | FF D6                    | call esi                                |
+009FE229 | 68 8B E2 9F 00           | push fv90win.9FE28B                     |
+009FE22E | EB 5A                    | jmp fv90win.9FE28A                      |
+009FE230 | BA A4 01 4A 00           | mov edx,fv90win.4A01A4                  | ;4A01A4:L"REG_SZ"
+009FE235 | 8D 4D E4                 | lea ecx,dword ptr ss:[ebp-1C]           |
+009FE238 | FF D6                    | call esi                                |
+009FE23A | BA 6C AA 4A 00           | mov edx,fv90win.4AAA6C                  | ;4AAA6C:L"HKEY_LOCAL_MACHINE\\SOFTWARE\\Fluke\\FlukeView\\5.4.0\\activationKey"
+
+
+
+
+Calls To DEMO
+
+* Referenced by a CALL at Addresses:
+|:0097960F   , :009799EC   , :009EFB49   
+
+
+
+* Referenced by a (U)nconditional or (C)onditional Jump at Addresses:
+|:009EF9F6(U), :009EF9F8(U), :009EFA0F(C)
+
+
+
+* Referenced by a CALL at Addresses:
+|:0094DC1F   , :009EA510   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

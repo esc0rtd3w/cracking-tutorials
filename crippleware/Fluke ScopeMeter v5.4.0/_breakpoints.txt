@@ -1,0 +1,176 @@
+Software  Name                              Module/Label                      State     Comment                                                                                                    
+0018EB58                                                                      Disabled  eax:BaseThreadInitThunk
+72A29596                                    <msvbvm60.dll.__vbaStrCmp>        Disabled  start compare routine
+008E942D                                    fv90win.exe                       Disabled  
+008E945D                                    fv90win.exe                       Disabled  
+008F6FE9                                    fv90win.exe                       Enabled   
+008F6FEF                                    fv90win.exe                       Disabled  
+008F6FF7                                    fv90win.exe                       Enabled   
+008F700C                                    fv90win.exe                       Enabled   
+009061A1                                    fv90win.exe                       Disabled  
+009068DF                                    fv90win.exe                       Disabled  
+0091470A                                    fv90win.exe                       Disabled  
+009150E8                                    fv90win.exe                       Disabled  
+0091F9D1                                    fv90win.exe                       Disabled  
+0092C6B2                                    fv90win.exe                       Disabled  
+0093F083                                    fv90win.exe                       Disabled  
+0093F1E4                                    fv90win.exe                       Disabled  
+0093F345                                    fv90win.exe                       Disabled  
+00945802                                    fv90win.exe                       Disabled  
+0094815B                                    fv90win.exe                       Disabled  
+00948209                                    fv90win.exe                       Disabled  
+00948270                                    fv90win.exe                       Disabled  
+009485C0                                    fv90win.exe                       Disabled  
+00949DEC                                    fv90win.exe                       Disabled  
+0094DBD8                                    fv90win.exe                       Disabled  
+0094DBE6                                    fv90win.exe                       Disabled  
+0094DC02                                    fv90win.exe                       Disabled  
+0094DC1F                                    fv90win.exe                       Disabled  msgbox??
+0094DC43                                    fv90win.exe                       Disabled  
+0094DC4B                                    fv90win.exe                       Disabled  
+0094DC69                                    fv90win.exe                       Disabled  
+0094DC85                                    fv90win.exe                       Disabled  
+0094DD02                                    fv90win.exe                       Disabled  
+0095011D                                    fv90win.exe                       Disabled  
+0095012E                                    fv90win.exe                       Disabled  
+00950153                                    fv90win.exe                       Disabled  4A81FC:L"Demo"
+009523CC                                    fv90win.exe                       Disabled  4A849C:L"Enabled"
+00953364                                    fv90win.exe                       Disabled  
+00953599                                    fv90win.exe                       Disabled  
+0095492E                                    fv90win.exe                       Disabled  
+00954B44                                    fv90win.exe                       Disabled  
+00954BD4                                    fv90win.exe                       Disabled  
+00954E1C                                    fv90win.exe                       Disabled  
+009551B7                                    fv90win.exe                       Disabled  
+0095537E                                    fv90win.exe                       Disabled  
+009577C5                                    fv90win.exe                       Disabled  
+00957AF1                                    fv90win.exe                       Disabled  
+00958363                                    fv90win.exe                       Disabled  
+0095A7C7                                    fv90win.exe                       Disabled  4A849C:L"Enabled"
+0095D099                                    fv90win.exe                       Disabled  
+0095D56E                                    fv90win.exe                       Disabled  4A849C:L"Enabled"
+0095DAC0                                    fv90win.exe                       Disabled  4A849C:L"Enabled"
+0096EC25                                    fv90win.exe                       Disabled  
+0096EDB8                                    fv90win.exe                       Disabled  
+0096EEEB                                    fv90win.exe                       Disabled  
+009766A7                                    fv90win.exe                       Disabled  4A849C:L"Enabled"
+00978F95                                    fv90win.exe                       Disabled  
+00979601                                    fv90win.exe                       Disabled  
+009799DE                                    fv90win.exe                       Disabled  
+0097B695                                    fv90win.exe                       Disabled  4A8E54:L"FV90GEN.DLL"
+0097B94C                                    fv90win.exe                       Disabled  
+0097FE05                                    fv90win.exe                       Disabled  49F658:L"FlukeView"
+009800D8                                    fv90win.exe                       Disabled  49F658:L"FlukeView"
+00980132                                    fv90win.exe                       Disabled  49F658:L"FlukeView"
+0098018C                                    fv90win.exe                       Disabled  49F658:L"FlukeView"
+009801E6                                    fv90win.exe                       Disabled  49F658:L"FlukeView"
+00981699                                    fv90win.exe                       Disabled  
+009829CC                                    fv90win.exe                       Disabled  
+00983284                                    fv90win.exe                       Disabled  
+0098345F                                    fv90win.exe                       Disabled  
+00984040                                    fv90win.exe                       Disabled  
+009841FC                                    fv90win.exe                       Disabled  
+0098564C                                    fv90win.exe                       Disabled  
+0098B022                                    fv90win.exe                       Disabled  
+0098B09D                                    fv90win.exe                       Disabled  
+0098B116                                    fv90win.exe                       Disabled  
+0098B17E                                    fv90win.exe                       Disabled  
+0098C219                                    fv90win.exe                       Disabled  
+0098C67F                                    fv90win.exe                       Disabled  49FEE8:L"fv90gen.dll"
+0098C81E                                    fv90win.exe                       Disabled  49FEE8:L"fv90gen.dll"
+0098C8D6                                    fv90win.exe                       Disabled  
+0099A19C                                    fv90win.exe                       Disabled  
+009A40CB                                    fv90win.exe                       Disabled  
+009AAA50                                    fv90win.exe                       Disabled  
+009AADFD                                    fv90win.exe                       Disabled  
+009AE26D                                    fv90win.exe                       Enabled   
+009B0279                                    fv90win.exe                       Disabled  4A5FF8:L"Text"
+009B5FCB                                    fv90win.exe                       Disabled  
+009B765A                                    fv90win.exe                       Enabled   
+009B853F                                    fv90win.exe                       Enabled   
+009B8BE6                                    fv90win.exe                       Disabled  
+009B92DD                                    fv90win.exe                       Disabled  
+009BA09C                                    fv90win.exe                       Disabled  49FEE8:L"fv90gen.dll"
+009BA0E4                                    fv90win.exe                       Disabled  
+009BA126                                    fv90win.exe                       Disabled  
+009BA14C                                    fv90win.exe                       Disabled  
+009BA173                                    fv90win.exe                       Disabled  
+009BA196                                    fv90win.exe                       Disabled  
+009BA1DF                                    fv90win.exe                       Disabled  
+009BA1E8                                    fv90win.exe                       Disabled  
+009BA219                                    fv90win.exe                       Disabled  load splash
+009BA255                                    fv90win.exe                       Disabled  land here after splash unknown
+009BA265                                    fv90win.exe                       Disabled  call to Proc_93_0_9FE040 to check activation from registry
+009BA26A                                    fv90win.exe                       Disabled  1st hit past DEMO??
+009BA26D                                    fv90win.exe                       Disabled  If call Proc_93_0_9FE040("nternalName", __vbaCastObj(var_30, var_004A3F50) <> 0 Then GoTo loc_009BA2F4
+009BA27A                                    fv90win.exe                       Disabled  
+009BA2AE                                    fv90win.exe                       Disabled  activation window??
+009BA2C2                                    fv90win.exe                       Disabled  
+009BA2CA                                    fv90win.exe                       Disabled  
+009BA2E7                                    fv90win.exe                       Disabled  
+009BA2EA                                    fv90win.exe                       Disabled  If var_30 = 0 Then GoTo loc_009BA2FA
+009BA2FA                                    fv90win.exe                       Disabled  var_eax = call Proc_62_32_9B9730(var_00A231F0, __vbaCastObj(var_30, "‡#ø∑Nó" & Chr(9) & "Iê.ƒk††]ãLabel"), )
+009BA306                                    fv90win.exe                       Disabled  
+009BA36E                                    fv90win.exe                       Disabled  
+009BA37B                                    fv90win.exe                       Disabled  demo nag??
+009BA3D0                                    fv90win.exe                       Disabled  
+009BA3DC                                    fv90win.exe                       Disabled  
+009BA52B                                    fv90win.exe                       Disabled  
+009BA69E                                    fv90win.exe                       Disabled  
+009BA6C5                                    fv90win.exe                       Disabled  
+009BA6F0                                    fv90win.exe                       Disabled  
+009BA763                                    fv90win.exe                       Disabled  
+009BDB19                                    fv90win.exe                       Disabled  
+009C42D5                                    fv90win.exe                       Disabled  
+009C6B34                                    fv90win.exe                       Disabled  
+009C9A53                                    fv90win.exe                       Disabled  
+009C9B00                                    fv90win.exe                       Disabled  
+009DAAAE                                    fv90win.exe                       Disabled  
+009EA510                                    fv90win.exe                       Disabled  msgbox??
+009EFADF                                    fv90win.exe                       Disabled  
+009FA9E3                                    fv90win.exe                       Disabled  
+009FAB01                                    fv90win.exe                       Disabled  
+009FAB71                                    fv90win.exe                       Disabled  
+009FE07B                                    fv90win.exe                       Enabled   check registry for key
+009FE083                                    fv90win.exe                       Enabled   About / DEMO button clicked / close instrument connect
+009FE097                                    fv90win.exe                       Disabled  check activation key?
+009FE09D                                    fv90win.exe                       Enabled   query reg value??
+009FE0AB                                    fv90win.exe                       Disabled  
+009FE0AD                                    fv90win.exe                       Disabled  invalid key not deleted yet from registry
+009FE0AF                                    fv90win.exe                       Enabled   DEMO: si=0 / ACTIVATED: si=FFF / Invalid si=FFFF
+009FE0B2                                    fv90win.exe                       Enabled   jump to DEMO
+009FE0EE                                    fv90win.exe                       Enabled   var_eax = IsValidActivationKeyVB(var_00A2178C)
+009FE0F3                                    fv90win.exe                       Enabled   
+009FE10A                                    fv90win.exe                       Disabled  set eax to 0
+009FE10C                                    fv90win.exe                       Enabled   activate status / compare eax to value in esi
+009FE121                                    fv90win.exe                       Disabled  comparing key to the word DEMO??
+009FE12B                                    fv90win.exe                       Enabled   If eax <> 0 Then GoTo loc_009FE151  jump if matches DEMO??
+009FE13B                                    fv90win.exe                       Disabled  var_eax = call Proc_93_4_9FE4F0("HKEY_LOCAL_MACHINE\SOFTWARE\Fluke\FlukeView\5.4.0\activationKey", , )  call to delete invalid key
+009FE151                                    fv90win.exe                       Disabled  lands here if not equal 0 (invalid key deleted)  If (var_00A2178C <> vbNullString) <> 0 Then GoTo loc_009FE151
+009FE157                                    fv90win.exe                       Enabled   
+009FE190                                    fv90win.exe                       Disabled  Proc_93_1_9FE190  start key compare?
+009FE1AC                                    fv90win.exe                       Disabled  
+009FE1E7                                    fv90win.exe                       Disabled  
+009FE1E8                                    fv90win.exe                       Disabled  var_eax = IsValidActivationKeyVB(var_ret_1, 0)
+009FE21B                                    fv90win.exe                       Disabled  If var_A21788 <> 0 Then GoTo loc_009FE230  jump if key is valid to write to registry
+009FE23A                                    fv90win.exe                       Disabled  4AAA6C:L"HKEY_LOCAL_MACHINE\\SOFTWARE\\Fluke\\FlukeView\\5.4.0\\activationKey"
+009FE580                                    fv90win.exe                       Disabled  4AAB40:L"RegDelete"
+009FE589                                    fv90win.exe                       Disabled  delete wrong key here
+009FE680                                    fv90win.exe                       Disabled  4AAB1C:L"RegRead"
+009FE6CD                                    fv90win.exe                       Disabled  
+009FE75F                                    fv90win.exe                       Disabled  
+009FE76A                                    fv90win.exe                       Disabled  
+009FE781                                    fv90win.exe                       Disabled  
+009FE7A8                                    fv90win.exe                       Disabled  
+009FE7E2                                    fv90win.exe                       Disabled  
+009FE809                                    fv90win.exe                       Disabled  
+009FE84D                                    fv90win.exe                       Disabled  
+009FE870                                    fv90win.exe                       Disabled  
+009FE910                                    fv90win.exe                       Disabled  call activate key compare??
+009FE9C9                                    fv90win.exe                       Disabled  load key into ebp-18
+009FF4FD                                    fv90win.exe                       Disabled  
+009FFE61                                    fv90win.exe                       Disabled  49F658:L"FlukeView"
+00A0780F                                    fv90win.exe                       Disabled  
+00A12F9F                                    fv90win.exe                       Disabled  
+00A2174D                                    fv90win.exe                       Disabled  eax:BaseThreadInitThunk
+00A2178C                                    fv90win.exe                       Disabled  var_ret_1 = var_00A2178C
