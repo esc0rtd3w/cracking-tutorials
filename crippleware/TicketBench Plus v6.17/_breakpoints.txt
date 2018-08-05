@@ -1,0 +1,14 @@
+Software  Name                              Module/Label                      State     Comment                                                                                                    
+0040143C                                    tbplus.exe                        Enabled   
+0040EAE0                                    tbplus.exe                        Enabled   
+0040EB40                                    tbplus.exe                        Enabled   
+0040EB9E                                    tbplus.exe                        Enabled   
+0040EBFC                                    tbplus.exe                        Enabled   
+0040EC5A                                    tbplus.exe                        Enabled   
+0040ECBA                                    tbplus.exe                        Enabled   
+0040ECC2                                    tbplus.exe                        Enabled   
+0040ED22                                    tbplus.exe                        Enabled   
+0040ED80                                    tbplus.exe                        Enabled   ticket check??
+0040EDDE                                    tbplus.exe                        Enabled   test tickets against ticketmax 
+0040EDE0                                    tbplus.exe                        Enabled   jump over ticket max
+ 
