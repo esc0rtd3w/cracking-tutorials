@@ -1,0 +1,6 @@
+2 files get created in /WINDOWS
+
+st32sys.sys -> 108 bytes -> reg info
+
+stt_3.ini -> reg display info and settings
+
