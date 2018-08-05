@@ -1,0 +1,4 @@
+actively scans for registry name and key upon focus
+
+
+ 

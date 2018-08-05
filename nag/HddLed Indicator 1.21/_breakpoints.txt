@@ -1,0 +1,32 @@
+Software  Name                              Module/Label                      State     Comment                                                                                                    
+00F42FF0                                    hddled.exe                        Enabled   
+00F42FF8                                    hddled.exe                        Enabled   
+00F43007                                    hddled.exe                        Enabled   
+00F43341                                    hddled.exe                        Enabled   
+00F43350                                    hddled.exe                        Enabled   
+00F43A1C                                    hddled.exe                        Enabled   
+00F43A3D                                    hddled.exe                        Enabled   
+00F44F92                                    hddled.exe                        Enabled   check key??
+00F44F9A                                    hddled.exe                        Enabled   
+00F45F41                                    hddled.exe                        Enabled   
+00F45F9E                                    hddled.exe                        Enabled   
+00F45FF7                                    hddled.exe                        Enabled   
+00F46023                                    hddled.exe                        Enabled   
+00F46028                                    hddled.exe                        Enabled   
+00F4603A                                    hddled.exe                        Enabled   
+00F4604A                                    hddled.exe                        Enabled   
+00F4684C                                    hddled.exe                        Enabled   
+00F46857                                    hddled.exe                        Enabled   
+00F46870                                    hddled.exe                        Enabled   
+00F468CB                                    hddled.exe                        Enabled   
+00F46901                                    hddled.exe                        Enabled   build key string again
+00F46918                                    hddled.exe                        Enabled   
+00F46CAA                                    hddled.exe                        Enabled   
+00F48218                                    hddled.exe                        Enabled   
+00F48E5A                                    hddled.exe                        Enabled   
+00F7653B                                    hddled.exe                        Enabled   
+00F76544                                    hddled.exe                        Enabled   
+00F78C18                                    hddled.exe                        Enabled   
+00F78C6B                                    hddled.exe                        Enabled   
+00F7AB76                                    hddled.exe                        Enabled   
+ 
