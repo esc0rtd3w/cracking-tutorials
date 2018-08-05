@@ -1,0 +1,45 @@
+Type=Exe
+Reference=*\G{00020430-0000-0000-C000-000000000046}#2.0#0#..\..\..\..\WINDOWS\SYSTEM32\STDOLE2.TLB#OLE Automation
+Form=ChooseBingoGame.frm
+Form=Bingo90.frm
+Form=BingoSightWordsKindergarten.frm
+Form=PrintCardsAlphabet.frm
+Form=PrintOutCardsV1.frm
+Form=BUYREGISTER.frm
+Form=tryagain.frm
+Form=thankyou.frm
+Form=enterkey.frm
+Startup="ChooseBingoGame"
+IconForm="ChooseBingoGame"
+VersionCompanyName="Microhardxce"
+MajorVer=1
+MinorVer=00
+RevisionVer=0
+Command32 = ""
+HelpContextID = "0"
+CompatibleMode = "0"
+AutoIncrementVer = 0
+ServerSupportFiles = 0
+CompilationType = 0
+OptimizationType = 0
+FavorPentiumPro(tm) = 0
+CodeViewDebugInfo = 0
+NoAliasing = 0
+BoundsCheck = 0
+OverflowCheck = -1
+FlPointCheck = 0
+FDIVCheck = 0
+UnroundedFP = 0
+StartMode = 0
+Unattended = 0
+Retained = 0
+ThreadPerObject = 0
+MaxNumberOfThreads = 1
+
+[MS Transaction Server]
+AutoRefresh = 1
+
+[VB Decompiler]
+Build = 9.8.5389.64863
+Date = 8/4/2018
+

@@ -1,0 +1,48 @@
+Type=Exe
+Reference=*\G{00020430-0000-0000-C000-000000000046}#2.0#0#..\..\..\..\WINDOWS\SYSTEM32\STDOLE2.TLB#OLE Automation
+Object={248DD890-BB45-11CF-9ABC0080C7E7B78D}#1.0#0; MSWINSCK.OCX
+Form=First.frm
+Module=Clipbrd; Clipbrd.bas
+Module=FileOps; FileOps.bas
+Module=Funzioni; Funzioni.bas
+Form=frmSplash.frm
+Form=SysMenus.frm
+Module=SerialPort; SerialPort.bas
+Module=SerialNr; SerialNr.bas
+Form=Trasmissione.frm
+Form=PPR.frm
+Form=Working.frm
+Module=basRegistry; basRegistry.bas
+Startup="Sub Main"
+VersionCompanyName="."
+MajorVer=1
+MinorVer=00
+RevisionVer=0
+Command32 = ""
+HelpContextID = "0"
+CompatibleMode = "0"
+AutoIncrementVer = 0
+ServerSupportFiles = 0
+CompilationType = 0
+OptimizationType = 0
+FavorPentiumPro(tm) = 0
+CodeViewDebugInfo = 0
+NoAliasing = 0
+BoundsCheck = 0
+OverflowCheck = -1
+FlPointCheck = 0
+FDIVCheck = 0
+UnroundedFP = 0
+StartMode = 0
+Unattended = 0
+Retained = 0
+ThreadPerObject = 0
+MaxNumberOfThreads = 1
+
+[MS Transaction Server]
+AutoRefresh = 1
+
+[VB Decompiler]
+Build = 9.8.5389.64863
+Date = 8/3/2018
+

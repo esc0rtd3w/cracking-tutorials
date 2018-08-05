@@ -1,0 +1,6 @@
+key static in disassembly 
+
+KC14PR5B
+
+
+exe patched to accept any key
