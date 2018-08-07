@@ -1,0 +1,8 @@
+Software  Name                              Module/Label                      State     Comment                                                                                                    
+013D9709                                    topflash.exe                      Enabled   jump if UNREGISTERED
+013D97D3                                    topflash.exe                      Enabled   15EA0C4:L"UNREGISTERED."
+013DE240                                    topflash.exe                      Enabled   
+013DE257                                    topflash.exe                      Enabled   
+0156B73C                                    topflash.exe                      Enabled   
+0156B73F                                    topflash.exe                      Enabled   
+ 
