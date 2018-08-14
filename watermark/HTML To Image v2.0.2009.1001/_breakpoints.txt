@@ -1,0 +1,8 @@
+Software  Name                              Module/Label                      State     Comment                                                                                                    
+00537DD3                                    htmltoimage.exe                   Enabled   jump to trial
+00537DD8                                    htmltoimage.exe                   Enabled   already registered
+00538281                                    htmltoimage.exe                   Enabled   
+00538286                                    htmltoimage.exe                   Enabled   already registered??
+00539A2D                                    htmltoimage.exe                   Enabled   jump to invalid
+00539A45                                    htmltoimage.exe                   Enabled   already registered
+ 
