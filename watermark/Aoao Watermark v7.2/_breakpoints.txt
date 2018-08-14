@@ -1,0 +1,17 @@
+Software  Name                              Module/Label                      State     Comment                                                                                                    
+0066D572                                    aoao watermark.exe                Enabled   
+0066D6A8                                    aoao watermark.exe                Enabled   
+0066D77A                                    aoao watermark.exe                Enabled   jump to invalid code
+006BCDBC                                    aoao watermark.exe                Enabled   
+006BCE72                                    aoao watermark.exe                Disabled  loop
+006BCE78                                    aoao watermark.exe                Disabled  loop
+006BCEB9                                    aoao watermark.exe                Enabled   
+006BCF49                                    aoao watermark.exe                Enabled   
+006BCF76                                    aoao watermark.exe                Enabled   
+006BCF9B                                    aoao watermark.exe                Enabled   
+006BD14D                                    aoao watermark.exe                Enabled   
+006BD160                                    aoao watermark.exe                Enabled   
+006BD1B3                                    aoao watermark.exe                Enabled   
+006BD1EC                                    aoao watermark.exe                Enabled   
+006BD1FD                                    aoao watermark.exe                Enabled   
+ 

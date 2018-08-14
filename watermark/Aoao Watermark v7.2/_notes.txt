@@ -1,0 +1,23 @@
+
+
+Address   Disassembly                                                       String                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+0066D4BD  mov ecx,aoao watermark.66D55C                                     "Setup.ini"
+0066D5AD  mov ecx,aoao watermark.66D64C                                     "Setup.ini"
+0066F632  mov ecx,aoao watermark.66F850                                     "Setup.ini"
+0066FA14  mov ecx,aoao watermark.66FBD0                                     "Setup.ini"
+0066FE0C  mov ecx,aoao watermark.66FFE4                                     "Setup.ini"
+00676949  mov ecx,aoao watermark.676A00                                     "Setup.ini"
+006771DF  mov ecx,aoao watermark.677318                                     "Setup.ini"
+006A5AB4  mov ecx,aoao watermark.6A5BD0                                     "Setup.ini"
+006A63B1  mov edx,aoao watermark.6A64FC                                     "Setup.ini"
+006A68C6  mov ecx,aoao watermark.6A6B08                                     "Setup.ini"
+006A6C51  mov edx,aoao watermark.6A6DC4                                     "Setup.ini"
+006BCBE9  mov ecx,aoao watermark.6BD520                                     "Setup.ini"
+006BD862  mov ecx,aoao watermark.6BD8E8                                     "Setup.ini"
+006BDCA3  mov ecx,aoao watermark.6BE984                                     "Setup.ini"
+006BDD70  mov ecx,aoao watermark.6BE984                                     "Setup.ini"
+006BEAC3  mov ecx,aoao watermark.6C006C                                     "Setup.ini"
+006BEBE4  mov ecx,aoao watermark.6C006C                                     "Setup.ini"
+
+
+ 
