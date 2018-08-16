@@ -1,0 +1,32 @@
+***Reg check at start - 4124D9   >> NOP    ;only one u need + cosmetic gui changes ;)
+
+
+
+
+Other Notes Along The Way:
+--------------------------
+
+Reg Code Jump if Wrong Code - 412866 >> NOP
+
+Plane Check: 40C866
+
+Load Game with Selected Plane: 411CA2  >> JMP
+
+5 Minute Timer??  - 4122C6
+
+
+Compares with these 2 files:
+
+a10001.000:
+
+412360
+412388
+
+
+Jumps:
+
+s48293.020 (license file???):
+
+412863
+4128bf
+412909

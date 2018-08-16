@@ -1,0 +1,229 @@
+[Bootstrap]
+SetupTitle=Install
+SetupText=Copying Files, please stand by.
+CabFile=Maze Magic.CAB
+Spawn=Setup1.exe
+Uninstal=st6unst.exe
+TmpDir=msftqws.pdw
+Cabs=1
+
+[Bootstrap Files]
+File1=@VB6STKIT.DLL,$(WinSysPathSysFile),,,7/15/00 1:00:00 AM,101888,6.0.84.50
+File2=@COMCAT.DLL,$(WinSysPathSysFile),$(DLLSelfRegister),,5/31/98 1:00:00 AM,22288,4.71.1460.1
+File3=@STDOLE2.TLB,$(WinSysPathSysFile),$(TLBRegister),,6/3/99 1:00:00 AM,17920,2.40.4275.1
+File4=@ASYCFILT.DLL,$(WinSysPathSysFile),,,3/8/99 1:00:00 AM,147728,2.40.4275.1
+File5=@OLEPRO32.DLL,$(WinSysPathSysFile),$(DLLSelfRegister),,3/8/99 1:00:00 AM,164112,5.0.4275.1
+File6=@OLEAUT32.DLL,$(WinSysPathSysFile),$(DLLSelfRegister),,4/12/00 1:00:00 AM,598288,2.40.4275.1
+File7=@MSVBVM60.DLL,$(WinSysPathSysFile),$(DLLSelfRegister),,8/18/01 8:00:00 AM,1388544,6.0.92.37
+
+[IconGroups]
+Group0=Maze Magic
+PrivateGroup0=-1
+Parent0=$(Programs)
+
+[Maze Magic]
+Icon1=""Maze Magic.exe""
+Title1=Maze Magic
+StartIn1=$(AppPath)
+Icon2=""Order Form.htm""
+Title2=Order Form
+StartIn2=$(AppPath)
+Icon3="mz-ReadMe.txt"
+Title3=ReadMe
+StartIn3=$(AppPath)
+
+[Setup]
+Title=Maze Magic
+DefaultDir=$(ProgramFiles)\MazeMagic
+AppExe=Maze Magic.exe
+AppToUninstall=Maze Magic.exe
+
+[Setup1 Files]
+File1=@reg.dat,$(AppPath),,,5/8/03 10:23:04 AM,30,0.0.0.0
+File2=@of.rtf,$(AppPath),,,10/31/03 1:30:58 PM,26860,0.0.0.0
+File3=@mz-whatsnew.txt,$(AppPath),,,5/4/04 2:08:39 PM,494,0.0.0.0
+File4=@mz-ReadMe.txt,$(AppPath),,,5/4/04 1:35:37 PM,5882,0.0.0.0
+File5=@mazedata.dat,$(AppPath),,,5/4/04 1:57:31 PM,45,0.0.0.0
+File6=@Design Help.rtf,$(AppPath),,,5/2/01 4:36:24 PM,17981,0.0.0.0
+File7=@Order Form.htm,$(AppPath),,,10/14/03 8:28:22 PM,27873,0.0.0.0
+File8=@MSSTDFMT.DLL,$(WinSysPath),$(DLLSelfRegister),$(Shared),7/15/00 1:00:00 AM,118784,6.0.88.4
+File9=@MSCOMCTL.OCX,$(WinSysPath),$(DLLSelfRegister),$(Shared),6/6/02 1:12:59 PM,1077344,6.1.95.45
+File10=@COMDLG32.OCX,$(WinSysPath),$(DLLSelfRegister),$(Shared),5/22/00 1:00:00 AM,140488,6.0.84.18
+File11=@RICHED32.DLL,$(WinSysPathSysFile),,,5/7/98 1:00:00 AM,174352,4.0.993.4
+File12=@RICHTX32.OCX,$(WinSysPath),$(DLLSelfRegister),$(Shared),5/22/00 1:00:00 AM,203976,6.0.88.4
+File13=@Maze Magic.exe,$(AppPath),,,5/4/04 2:10:54 PM,598016,1.4.0.0
+File14=@blue cloth.jpg,$(AppPath)\backgrounds,,,5/4/2004 2:20:11 PM,100000,0.0.0.0
+File15=@blue static.jpg,$(AppPath)\backgrounds,,,5/4/2004 2:20:11 PM,100000,0.0.0.0
+File16=@colors.jpg,$(AppPath)\backgrounds,,,5/4/2004 2:20:11 PM,100000,0.0.0.0
+File17=@leaves.jpg,$(AppPath)\backgrounds,,,5/4/2004 2:20:11 PM,100000,0.0.0.0
+File18=@ripple.jpg,$(AppPath)\backgrounds,,,5/4/2004 2:20:11 PM,100000,0.0.0.0
+File19=@sand.jpg,$(AppPath)\backgrounds,,,5/4/2004 2:20:11 PM,100000,0.0.0.0
+File20=@swirls.jpg,$(AppPath)\backgrounds,,,5/4/2004 2:20:11 PM,100000,0.0.0.0
+File21=@wood.jpg,$(AppPath)\backgrounds,,,5/4/2004 2:20:11 PM,100000,0.0.0.0
+File22=@yellow static.jpg,$(AppPath)\backgrounds,,,5/4/2004 2:20:11 PM,100000,0.0.0.0
+File23=@char1.gif,$(AppPath)\images,,,5/4/2004 2:20:11 PM,100000,0.0.0.0
+File24=@char2.gif,$(AppPath)\images,,,5/4/2004 2:20:11 PM,100000,0.0.0.0
+File25=@char3.gif,$(AppPath)\images,,,5/4/2004 2:20:11 PM,100000,0.0.0.0
+File26=@char4.gif,$(AppPath)\images,,,5/4/2004 2:20:11 PM,100000,0.0.0.0
+File27=@char5.gif,$(AppPath)\images,,,5/4/2004 2:20:11 PM,100000,0.0.0.0
+File28=@char6.gif,$(AppPath)\images,,,5/4/2004 2:20:11 PM,100000,0.0.0.0
+File29=@char7.gif,$(AppPath)\images,,,5/4/2004 2:20:11 PM,100000,0.0.0.0
+File30=@GadBack.jpg,$(AppPath)\images,,,5/4/2004 2:20:11 PM,100000,0.0.0.0
+File31=@goal1.gif,$(AppPath)\images,,,5/4/2004 2:20:11 PM,100000,0.0.0.0
+File32=@goal2.gif,$(AppPath)\images,,,5/4/2004 2:20:11 PM,100000,0.0.0.0
+File33=@goal3.gif,$(AppPath)\images,,,5/4/2004 2:20:11 PM,100000,0.0.0.0
+File34=@goal4.gif,$(AppPath)\images,,,5/4/2004 2:20:11 PM,100000,0.0.0.0
+File35=@goal5.gif,$(AppPath)\images,,,5/4/2004 2:20:11 PM,100000,0.0.0.0
+File36=@GSSplash.jpg,$(AppPath)\images,,,5/4/2004 2:20:11 PM,100000,0.0.0.0
+File37=@mazeback1.jpg,$(AppPath)\images,,,5/4/2004 2:20:11 PM,100000,0.0.0.0
+File38=@mazeback2.jpg,$(AppPath)\images,,,5/4/2004 2:20:11 PM,100000,0.0.0.0
+File39=@mazetitle.jpg,$(AppPath)\images,,,5/4/2004 2:20:11 PM,100000,0.0.0.0
+File40=@arctic.jpg,$(AppPath)\themes,,,5/4/2004 2:20:11 PM,100000,0.0.0.0
+File41=@beach.jpg,$(AppPath)\themes,,,5/4/2004 2:20:11 PM,100000,0.0.0.0
+File42=@desert.jpg,$(AppPath)\themes,,,5/4/2004 2:20:11 PM,100000,0.0.0.0
+File43=@fantasy.jpg,$(AppPath)\themes,,,5/4/2004 2:20:11 PM,100000,0.0.0.0
+File44=@haunted.jpg,$(AppPath)\themes,,,5/4/2004 2:20:11 PM,100000,0.0.0.0
+File45=@jungle.jpg,$(AppPath)\themes,,,5/4/2004 2:20:11 PM,100000,0.0.0.0
+File46=@jurrasic.jpg,$(AppPath)\themes,,,5/4/2004 2:20:11 PM,100000,0.0.0.0
+File47=@sea.jpg,$(AppPath)\themes,,,5/4/2004 2:20:11 PM,100000,0.0.0.0
+File48=@space.jpg,$(AppPath)\themes,,,5/4/2004 2:20:11 PM,100000,0.0.0.0
+File49=@wild west.jpg,$(AppPath)\themes,,,5/4/2004 2:20:11 PM,100000,0.0.0.0
+File50=@Save your custom mazes in this folder.txt,$(AppPath)\designs\Custom,,,5/4/2004 2:29:56 PM,100000,0.0.0.0
+File51=@airplane (easy).maz,$(AppPath)\designs\Easy,,,5/4/2004 2:29:56 PM,100000,0.0.0.0
+File52=@birthday (easy).maz,$(AppPath)\designs\Easy,,,5/4/2004 2:29:56 PM,100000,0.0.0.0
+File53=@burst (easy).maz,$(AppPath)\designs\Easy,,,5/4/2004 2:29:56 PM,100000,0.0.0.0
+File54=@cat (easy).maz,$(AppPath)\designs\Easy,,,5/4/2004 2:29:56 PM,100000,0.0.0.0
+File55=@cross (easy).maz,$(AppPath)\designs\Easy,,,5/4/2004 2:29:56 PM,100000,0.0.0.0
+File56=@flower (easy).maz,$(AppPath)\designs\Easy,,,5/4/2004 2:29:56 PM,100000,0.0.0.0
+File57=@happy (easy).maz,$(AppPath)\designs\Easy,,,5/4/2004 2:29:56 PM,100000,0.0.0.0
+File58=@heart (easy).maz,$(AppPath)\designs\Easy,,,5/4/2004 2:29:56 PM,100000,0.0.0.0
+File59=@number 0 (easy).maz,$(AppPath)\designs\Easy,,,5/4/2004 2:29:56 PM,100000,0.0.0.0
+File60=@number 1 (easy).maz,$(AppPath)\designs\Easy,,,5/4/2004 2:29:56 PM,100000,0.0.0.0
+File61=@number 2 (easy).maz,$(AppPath)\designs\Easy,,,5/4/2004 2:29:56 PM,100000,0.0.0.0
+File62=@number 3 (easy).maz,$(AppPath)\designs\Easy,,,5/4/2004 2:29:56 PM,100000,0.0.0.0
+File63=@number 4 (easy).maz,$(AppPath)\designs\Easy,,,5/4/2004 2:29:56 PM,100000,0.0.0.0
+File64=@number 5 (easy).maz,$(AppPath)\designs\Easy,,,5/4/2004 2:29:56 PM,100000,0.0.0.0
+File65=@number 6 (easy).maz,$(AppPath)\designs\Easy,,,5/4/2004 2:29:56 PM,100000,0.0.0.0
+File66=@number 7 (easy).maz,$(AppPath)\designs\Easy,,,5/4/2004 2:29:56 PM,100000,0.0.0.0
+File67=@number 8 (easy).maz,$(AppPath)\designs\Easy,,,5/4/2004 2:29:56 PM,100000,0.0.0.0
+File68=@number 9 (easy).maz,$(AppPath)\designs\Easy,,,5/4/2004 2:29:56 PM,100000,0.0.0.0
+File69=@octogon (easy).maz,$(AppPath)\designs\Easy,,,5/4/2004 2:29:56 PM,100000,0.0.0.0
+File70=@octogon (very easy).maz,$(AppPath)\designs\Easy,,,5/4/2004 2:29:56 PM,100000,0.0.0.0
+File71=@pumpkin (easy).maz,$(AppPath)\designs\Easy,,,5/4/2004 2:29:56 PM,100000,0.0.0.0
+File72=@raindrop (easy).maz,$(AppPath)\designs\Easy,,,5/4/2004 2:29:56 PM,100000,0.0.0.0
+File73=@snowflake (easy).maz,$(AppPath)\designs\Easy,,,5/4/2004 2:29:56 PM,100000,0.0.0.0
+File74=@snowman (easy).maz,$(AppPath)\designs\Easy,,,5/4/2004 2:29:56 PM,100000,0.0.0.0
+File75=@splotch (easy).maz,$(AppPath)\designs\Easy,,,5/4/2004 2:29:56 PM,100000,0.0.0.0
+File76=@starfish (easy).maz,$(AppPath)\designs\Easy,,,5/4/2004 2:29:56 PM,100000,0.0.0.0
+File77=@stop sign (easy).maz,$(AppPath)\designs\Easy,,,5/4/2004 2:29:56 PM,100000,0.0.0.0
+File78=@sun (easy).maz,$(AppPath)\designs\Easy,,,5/4/2004 2:29:56 PM,100000,0.0.0.0
+File79=@Thanksgiving (easy).maz,$(AppPath)\designs\Easy,,,5/4/2004 2:29:56 PM,100000,0.0.0.0
+File80=@triangle (easy).maz,$(AppPath)\designs\Easy,,,5/4/2004 2:29:56 PM,100000,0.0.0.0
+File81=@triangle (very easy).maz,$(AppPath)\designs\Easy,,,5/4/2004 2:29:56 PM,100000,0.0.0.0
+File82=@umbrella (easy).maz,$(AppPath)\designs\Easy,,,5/4/2004 2:29:56 PM,100000,0.0.0.0
+File83=@xmas tree (easy).maz,$(AppPath)\designs\Easy,,,5/4/2004 2:29:56 PM,100000,0.0.0.0
+File84=@airplane (med).maz,$(AppPath)\designs\Medium,,,5/4/2004 2:29:56 PM,100000,0.0.0.0
+File85=@birthday (med).maz,$(AppPath)\designs\Medium,,,5/4/2004 2:29:56 PM,100000,0.0.0.0
+File86=@cat (med).maz,$(AppPath)\designs\Medium,,,5/4/2004 2:29:56 PM,100000,0.0.0.0
+File87=@circle (med).maz,$(AppPath)\designs\Medium,,,5/4/2004 2:29:56 PM,100000,0.0.0.0
+File88=@clover (med).maz,$(AppPath)\designs\Medium,,,5/4/2004 2:29:56 PM,100000,0.0.0.0
+File89=@cross (med).maz,$(AppPath)\designs\Medium,,,5/4/2004 2:29:56 PM,100000,0.0.0.0
+File90=@flower (med).maz,$(AppPath)\designs\Medium,,,5/4/2004 2:29:56 PM,100000,0.0.0.0
+File91=@happy (med).maz,$(AppPath)\designs\Medium,,,5/4/2004 2:29:56 PM,100000,0.0.0.0
+File92=@heart (med).maz,$(AppPath)\designs\Medium,,,5/4/2004 2:29:56 PM,100000,0.0.0.0
+File93=@jagged (med).maz,$(AppPath)\designs\Medium,,,5/4/2004 2:29:56 PM,100000,0.0.0.0
+File94=@Merry Christmas (med).maz,$(AppPath)\designs\Medium,,,5/4/2004 2:29:56 PM,100000,0.0.0.0
+File95=@number 0 (med).maz,$(AppPath)\designs\Medium,,,5/4/2004 2:29:56 PM,100000,0.0.0.0
+File96=@number 1 (med).maz,$(AppPath)\designs\Medium,,,5/4/2004 2:29:56 PM,100000,0.0.0.0
+File97=@number 2 (med).maz,$(AppPath)\designs\Medium,,,5/4/2004 2:29:56 PM,100000,0.0.0.0
+File98=@number 3 (med).maz,$(AppPath)\designs\Medium,,,5/4/2004 2:29:56 PM,100000,0.0.0.0
+File99=@number 4 (med).maz,$(AppPath)\designs\Medium,,,5/4/2004 2:29:56 PM,100000,0.0.0.0
+File100=@number 5 (med).maz,$(AppPath)\designs\Medium,,,5/4/2004 2:29:56 PM,100000,0.0.0.0
+File101=@number 6 (med).maz,$(AppPath)\designs\Medium,,,5/4/2004 2:29:56 PM,100000,0.0.0.0
+File102=@number 7 (med).maz,$(AppPath)\designs\Medium,,,5/4/2004 2:29:56 PM,100000,0.0.0.0
+File103=@number 8 (med).maz,$(AppPath)\designs\Medium,,,5/4/2004 2:29:56 PM,100000,0.0.0.0
+File104=@number 9 (med).maz,$(AppPath)\designs\Medium,,,5/4/2004 2:29:56 PM,100000,0.0.0.0
+File105=@pumpkin (med).maz,$(AppPath)\designs\Medium,,,5/4/2004 2:29:56 PM,100000,0.0.0.0
+File106=@raindrop (med).maz,$(AppPath)\designs\Medium,,,5/4/2004 2:29:56 PM,100000,0.0.0.0
+File107=@spring (med).maz,$(AppPath)\designs\Medium,,,5/4/2004 2:29:56 PM,100000,0.0.0.0
+File108=@star (med).maz,$(AppPath)\designs\Medium,,,5/4/2004 2:29:56 PM,100000,0.0.0.0
+File109=@stop sign (med).maz,$(AppPath)\designs\Medium,,,5/4/2004 2:29:56 PM,100000,0.0.0.0
+File110=@summer (med).maz,$(AppPath)\designs\Medium,,,5/4/2004 2:29:56 PM,100000,0.0.0.0
+File111=@sun (med).maz,$(AppPath)\designs\Medium,,,5/4/2004 2:29:56 PM,100000,0.0.0.0
+File112=@UFO (med).maz,$(AppPath)\designs\Medium,,,5/4/2004 2:29:56 PM,100000,0.0.0.0
+File113=@umbrella (med).maz,$(AppPath)\designs\Medium,,,5/4/2004 2:29:56 PM,100000,0.0.0.0
+File114=@xmas tree (med).maz,$(AppPath)\designs\Medium,,,5/4/2004 2:29:56 PM,100000,0.0.0.0
+File115=@burst (hard).maz,$(AppPath)\designs\Tough,,,5/4/2004 2:29:56 PM,100000,0.0.0.0
+File116=@cat (hard).maz,$(AppPath)\designs\Tough,,,5/4/2004 2:29:56 PM,100000,0.0.0.0
+File117=@clover (hard).maz,$(AppPath)\designs\Tough,,,5/4/2004 2:29:56 PM,100000,0.0.0.0
+File118=@cross (hard).maz,$(AppPath)\designs\Tough,,,5/4/2004 2:29:56 PM,100000,0.0.0.0
+File119=@flower (hard).maz,$(AppPath)\designs\Tough,,,5/4/2004 2:29:56 PM,100000,0.0.0.0
+File120=@happy (hard).maz,$(AppPath)\designs\Tough,,,5/4/2004 2:29:56 PM,100000,0.0.0.0
+File121=@heart (hard).maz,$(AppPath)\designs\Tough,,,5/4/2004 2:29:56 PM,100000,0.0.0.0
+File122=@jagged (hard).maz,$(AppPath)\designs\Tough,,,5/4/2004 2:29:56 PM,100000,0.0.0.0
+File123=@Merry Christmas (hard).maz,$(AppPath)\designs\Tough,,,5/4/2004 2:29:56 PM,100000,0.0.0.0
+File124=@number 0 (hard).maz,$(AppPath)\designs\Tough,,,5/4/2004 2:29:56 PM,100000,0.0.0.0
+File125=@number 2 (hard).maz,$(AppPath)\designs\Tough,,,5/4/2004 2:29:56 PM,100000,0.0.0.0
+File126=@number 3 (hard).maz,$(AppPath)\designs\Tough,,,5/4/2004 2:29:56 PM,100000,0.0.0.0
+File127=@number 4 (hard).maz,$(AppPath)\designs\Tough,,,5/4/2004 2:29:56 PM,100000,0.0.0.0
+File128=@number 5 (hard).maz,$(AppPath)\designs\Tough,,,5/4/2004 2:29:56 PM,100000,0.0.0.0
+File129=@number 6 (hard).maz,$(AppPath)\designs\Tough,,,5/4/2004 2:29:56 PM,100000,0.0.0.0
+File130=@number 7 (hard).maz,$(AppPath)\designs\Tough,,,5/4/2004 2:29:56 PM,100000,0.0.0.0
+File131=@number 8 (hard).maz,$(AppPath)\designs\Tough,,,5/4/2004 2:29:56 PM,100000,0.0.0.0
+File132=@number 9 (hard).maz,$(AppPath)\designs\Tough,,,5/4/2004 2:29:56 PM,100000,0.0.0.0
+File133=@octogon (hard).maz,$(AppPath)\designs\Tough,,,5/4/2004 2:29:56 PM,100000,0.0.0.0
+File134=@pumpkin (hard).maz,$(AppPath)\designs\Tough,,,5/4/2004 2:29:56 PM,100000,0.0.0.0
+File135=@raindrop (hard).maz,$(AppPath)\designs\Tough,,,5/4/2004 2:29:56 PM,100000,0.0.0.0
+File136=@round (hard).maz,$(AppPath)\designs\Tough,,,5/4/2004 2:29:56 PM,100000,0.0.0.0
+File137=@snowflake (hard).maz,$(AppPath)\designs\Tough,,,5/4/2004 2:29:56 PM,100000,0.0.0.0
+File138=@snowman (hard).maz,$(AppPath)\designs\Tough,,,5/4/2004 2:29:56 PM,100000,0.0.0.0
+File139=@splotch (hard).maz,$(AppPath)\designs\Tough,,,5/4/2004 2:29:56 PM,100000,0.0.0.0
+File140=@spring (hard).maz,$(AppPath)\designs\Tough,,,5/4/2004 2:29:56 PM,100000,0.0.0.0
+File141=@star (hard).maz,$(AppPath)\designs\Tough,,,5/4/2004 2:29:56 PM,100000,0.0.0.0
+File142=@stop sign (hard).maz,$(AppPath)\designs\Tough,,,5/4/2004 2:29:56 PM,100000,0.0.0.0
+File143=@summer (hard).maz,$(AppPath)\designs\Tough,,,5/4/2004 2:29:56 PM,100000,0.0.0.0
+File144=@sun (hard).maz,$(AppPath)\designs\Tough,,,5/4/2004 2:29:56 PM,100000,0.0.0.0
+File145=@Thanksgiving (hard).maz,$(AppPath)\designs\Tough,,,5/4/2004 2:29:56 PM,100000,0.0.0.0
+File146=@triangle (hard).maz,$(AppPath)\designs\Tough,,,5/4/2004 2:29:56 PM,100000,0.0.0.0
+File147=@UFO (hard).maz,$(AppPath)\designs\Tough,,,5/4/2004 2:29:56 PM,100000,0.0.0.0
+File148=@umbrella (hard).maz,$(AppPath)\designs\Tough,,,5/4/2004 2:29:56 PM,100000,0.0.0.0
+File149=@xmas tree (hard).maz,$(AppPath)\designs\Tough,,,5/4/2004 2:29:56 PM,100000,0.0.0.0
+
+; The following lines may be deleted in order to obtain extra 
+; space for customizing this file on a full installation diskette.
+; 
+; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX

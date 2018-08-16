@@ -1,0 +1,51 @@
+698484 >> JMP - DEMO MODE (Jump Over) (Printing Too??)
+
+6984A0 >> JMP - Jump Over Trial Expired 1
+
+6984A5 >> JMP - Jump Over Trial Expired 2
+
+6986AD >> JMP - Add New/Copy Site Check 1
+
+6986C7 >> JMP - Add New/Copy Site Check 2
+
+6986E1 >> JMP - Maximum Sites Added
+
+698709 >> JMP - Delete Site Check
+
+698519 >> JMP - Temporary License Expires
+
+69810E >> JMP - 100 Reservation Limit
+
+698143 >> JMP - Trial Over, No more Reservations Added
+
+6D3ADE >> JMP - Updates Subscription Renewal
+
+6D0B73 >> JMP - Updates Subscription Renewal 2
+
+6CDE35 >> JMP - Invalid License to Upgrade
+
+6CDE4F >> JMP - Expired Subscription
+
+6985D3 >> JMP - License Expires in X days
+
+698755 >> JMP - 20 Max Inventory Items
+
+6981DA >> JMP - Software Autorization Expired (No more reservations)
+
+69808D >> NOP - Invalid Authorization Code For Given Key Code 1
+
+698095 >> NOP - Invalid Authorization Code For Given Key Code 2
+
+6980AC >> NOP - Invalid Authorization Code Format 1
+
+6980B4 >> NOP - Invalid Authorization Code Format 2
+
+6980CA >> NOP - New Authorization Code Has Been Accepted 1
+
+6980CE >> NOP - New Authorization Code Has Been Accepted 2
+
+6980D6 >> NOP - New Authorization Code Has Been Accepted 3
+
+6980DE >> NOP - New Authorization Code Has Been Accepted 4
+
+4A0BFB >> NOP - Auth Code Fail

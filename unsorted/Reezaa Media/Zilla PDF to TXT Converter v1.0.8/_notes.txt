@@ -1,0 +1,132 @@
+uses "sound.dll" to hold REG status....it's not a REAL DLL file....it adds "0D0A" in between every 2 bytes when registered.
+
+refer to the notes from FarmVille Tools 2.3.2, as this approach and license file are identical.
+
+----------------------------------------------
+
+:00636250(C), :0063625B(C), :00636266(C), :00636271(C)
+
+patch these 4 addresses (NOP) to accept any serial # and write the proper license file, as shown below.
+
+----------------------------------------------
+
+original license file (sound.dll) at the end in HEX: 7731 32
+
+registered license file (sound.dll) at the end in HEX: 776B 6B0D 0A <- there's that 0D0A again!
+
+
+the license file from FarmVille Tools works as well as the other one from these notes...it doesn't seem to make a difference to the app.
+
+----------------------------------------------
+
+* Possible StringData Ref from Code Obj ->"RR8Z8682LMDUAKHW"		;this again??
+
+----------------------------------------------
+
+* Referenced by a (U)nconditional or (C)onditional Jump at Address:
+|:0061F4E0(C)
+|
+:0061F4F1 8D8D78FFFFFF            lea ecx, dword ptr [ebp+FFFFFF78]
+:0061F4F7 FFD7                    call edi
+:0061F4F9 66833D4830640000        cmp word ptr [00643048], 0000
+:0061F501 0F85F2020000            jne 0061F7F9
+:0061F507 BB04000280              mov ebx, 80020004
+:0061F50C 899D30FFFFFF            mov dword ptr [ebp+FFFFFF30], ebx
+:0061F512 BF0A000000              mov edi, 0000000A
+:0061F517 89BD28FFFFFF            mov dword ptr [ebp+FFFFFF28], edi
+:0061F51D 899D40FFFFFF            mov dword ptr [ebp+FFFFFF40], ebx
+:0061F523 89BD38FFFFFF            mov dword ptr [ebp+FFFFFF38], edi
+
+* Possible StringData Ref from Code Obj ->"RRegister"
+                                  |
+:0061F529 C78550FEFFFFEC545300    mov dword ptr [ebp+FFFFFE50], 005354EC
+:0061F533 C78548FEFFFF08000000    mov dword ptr [ebp+FFFFFE48], 00000008
+:0061F53D 8D9548FEFFFF            lea edx, dword ptr [ebp+FFFFFE48]
+:0061F543 8D8D48FFFFFF            lea ecx, dword ptr [ebp+FFFFFF48]
+
+* Reference To: MSVBVM60.__vbaVarDup, Ord:0000h
+                                  |
+:0061F549 FF1518124000            Call dword ptr [00401218]
+
+* Possible StringData Ref from Code Obj ->"TTrial Version Only Convert the "
+                                        ->"FIRST page."
+
+----------------------------------------------
+
+* Referenced by a (U)nconditional or (C)onditional Jump at Addresses:
+|:00636250(C), :0063625B(C), :00636266(C), :00636271(C)
+|
+:0063659A C745FC22000000          mov [ebp-04], 00000022
+:006365A1 C78578FFFFFF04000280    mov dword ptr [ebp+FFFFFF78], 80020004
+:006365AB C78570FFFFFF0A000000    mov dword ptr [ebp+FFFFFF70], 0000000A
+:006365B5 C7458804000280          mov [ebp-78], 80020004
+:006365BC C745800A000000          mov [ebp-80], 0000000A
+
+* Possible StringData Ref from Code Obj ->"IInvaild"
+                                  |
+:006365C3 C78558FFFFFF10675300    mov dword ptr [ebp+FFFFFF58], 00536710
+:006365CD C78550FFFFFF08000000    mov dword ptr [ebp+FFFFFF50], 00000008
+:006365D7 8D9550FFFFFF            lea edx, dword ptr [ebp+FFFFFF50]
+:006365DD 8D4D90                  lea ecx, dword ptr [ebp-70]
+
+* Reference To: MSVBVM60.__vbaVarDup, Ord:0000h
+                                  |
+:006365E0 FF1518124000            Call dword ptr [00401218]
+
+* Possible StringData Ref from Code Obj ->"IInvaild Serial Code."
+
+
+
+
+
+
+* Referenced by a (U)nconditional or (C)onditional Jump at Address:
+|:00636130(C)
+|
+:0063613F C745FC15000000          mov [ebp-04], 00000015
+:00636146 8D9500FFFFFF            lea edx, dword ptr [ebp+FFFFFF00]
+:0063614C 52                      push edx
+:0063614D 8D8510FFFFFF            lea eax, dword ptr [ebp+FFFFFF10]
+:00636153 50                      push eax
+:00636154 8D4DD0                  lea ecx, dword ptr [ebp-30]
+:00636157 51                      push ecx
+
+* Reference To: MSVBVM60.__vbaVarForNext, Ord:0000h
+                                  |
+:00636158 FF1574124000            Call dword ptr [00401274]
+:0063615E 8985E4FEFFFF            mov dword ptr [ebp+FFFFFEE4], eax
+
+* Referenced by a (U)nconditional or (C)onditional Jump at Address:
+|:00635EBE(U)
+|
+:00636164 83BDE4FEFFFF00          cmp dword ptr [ebp+FFFFFEE4], 00000000
+:0063616B 0F8552FDFFFF            jne 00635EC3
+:00636171 C745FC16000000          mov [ebp-04], 00000016
+:00636178 8B55BC                  mov edx, dword ptr [ebp-44]
+:0063617B 52                      push edx
+
+* Possible StringData Ref from Code Obj ->"RR8Z8682LMDUAKHW"
+                                  |
+:0063617C 68BC665300              push 005366BC
+
+* Reference To: MSVBVM60.__vbaStrCmp, Ord:0000h
+                                  |
+:00636181 FF15F8104000            Call dword ptr [004010F8]
+:00636187 85C0                    test eax, eax
+:00636189 0F85B5000000            jne 00636244
+:0063618F C745FC17000000          mov [ebp-04], 00000017
+:00636196 C78578FFFFFF04000280    mov dword ptr [ebp+FFFFFF78], 80020004
+:006361A0 C78570FFFFFF0A000000    mov dword ptr [ebp+FFFFFF70], 0000000A
+:006361AA C7458804000280          mov [ebp-78], 80020004
+:006361B1 C745800A000000          mov [ebp-80], 0000000A
+
+* Possible StringData Ref from Code Obj ->"IInvaild"
+
+----------------------------------------------
+
+
+
+
+
+
+

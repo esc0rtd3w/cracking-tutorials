@@ -1,0 +1,6 @@
+- Nags on compiled EXE's
+
+- DEMO texts scattered throughout
+
+- Company Web Page loads on Exit
+

@@ -1,0 +1,51 @@
+
+
+
+0050B48D  |. /0F84 D7000000 JE 0050B56A
+
+
+change to
+
+0050B48D      90            NOP
+0050B48E      90            NOP
+0050B48F      90            NOP
+0050B490      90            NOP
+0050B491      90            NOP
+0050B492      90            NOP
+
+
+
+doing the above appears to force REGISTERED status?!??
+
+
+
+
+
+
+
+
+
+
+00510592   .  B9 E8075100   MOV ECX,005107E8                         ;  ASCII "DPR90"
+
+
+005105BA   .  B9 F8075100   MOV ECX,005107F8                         ;  ASCII "DPRE"
+
+
+0051062F   .  BA 0C085100   MOV EDX,0051080C                         ;  ASCII "242G2I25"
+
+
+
+0051067D   .  BA 0C085100   MOV EDX,0051080C                         ; |ASCII "242G2I25"
+
+
+
+0051072A   .  BA 0C085100   MOV EDX,0051080C                         ;  ASCII "242G2I25"
+
+
+00510762   .  BA 0C085100   MOV EDX,0051080C                         ; |ASCII "242G2I25"
+
+
+
+
+

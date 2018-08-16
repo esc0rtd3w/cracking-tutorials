@@ -1,0 +1,31 @@
+accept any serial:
+
+:00404B39 7423                    je 00404B5E
+
+change to
+
+:00404B39 EB23                    jmps 00404B5E
+
+
+
+
+extras
+------
+
+will accept any name and serial if added to registry manually.
+
+example: REG-BINARY --> regkey = hex:00
+         REG-BINARY --> reguser = hex:00
+
+
+
+
+7 day trial:
+
+:00404A35 6A07                    push 00000007  <-- COMPARE TO 7 days
+
+:00404A4D 0F84BC010000            je 00404C0F  <-- ALLOWS CONTINUE UNREGISTERED INSTEAD OF EXIT
+
+
+
+

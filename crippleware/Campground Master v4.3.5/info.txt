@@ -1,0 +1,10 @@
+The demo is actually the complete program with just two limitations -- up to 100 reservations may be entered, and sites cannot be added (40 sites are already in the sample database, which can be modified any way you choose). There is no time limit when using the sample database included with the demo.
+
+If you would like to set up more than 40 sites and use all functions without reservation limits, see below for 30-day trial information. 
+
+The free demo download above is perfect for experimenting with all of Campground Master's features. But if you would like to set up the software for all of your sites or rooms and try it in a "live" situation, please contact us for a free 30-day trial license which will make it fully functional for 30 days. (The same "demo" software above is used -- you'll simply get an authorization code to unlock it for 30 days of unlimited functionality.)
+
+RISK-FREE: If you decide to purchase Campground Master, all information that you enter during the 30-day trial version will transfer automatically to the full version.
+
+You can request a 30-day free trial by filling out this form (click here).
+(You can also call us or send an E-mail to request the trial.) 

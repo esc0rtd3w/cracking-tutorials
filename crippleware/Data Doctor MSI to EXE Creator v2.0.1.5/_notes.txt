@@ -1,0 +1,41 @@
+***after program exit, it still launches whatever folder you are in with "EXPLORER"***
+
+
+setupcreator.com Web Page after exit - BP on ShellExecuteExA & ShellExecuteExW
+
+
+OFFSET 001426A9 (D0CF11E0 - start bytes) on Compiled EXEs - Start of MSI installer. 
+
+------------------------------------------------------------------------------------------
+
+- change the first 2 hex bytes "44"to "00" for the "D" on "D.e.m.o. .M.e.s.s.a.g.e." to kill popup message on compiled EXE's
+
+
+BEFORE:
+
+"D.e.m.o. .M.e.s.s.a.g.e." = 4400 6500 6D00 6F00 2000 4D00 6500 7300 7300 6100 6700 6500
+
+
+AFTER:
+
+"..e.m.o. .M.e.s.s.a.g.e." = 0000 6500 6D00 6F00 2000 4D00 6500 7300 7300 6100 6700 6500
+
+or
+
+"........................" = 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 
+
+------------------------------------------------------------------------------------------
+
+
+
+same with "s.e.t.u.p.c.r.e.a.t.o.r...c.o.m." as above.
+
+
+- Change "DEMO", "D.e.m.o.", and "Demo" TEXTS to "FULL" or something in hex editor
+
+
+
+
+7CA411B4    E8 6CFCFFFF     CALL ShellExecuteExA                     ; ??????????
+
+

@@ -1,0 +1,3 @@
+:00411E47 0F85BB010000            jne 00412008			;invalid key?
+
+nop

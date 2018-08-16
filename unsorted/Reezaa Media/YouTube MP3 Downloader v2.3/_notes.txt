@@ -1,0 +1,125 @@
+uses "sound.dll" to hold REG status....it's not a REAL DLL file....it adds "0D0A" in between every 2 bytes when registered.
+
+refer to the notes from FarmVille Tools 2.3.2, as this approach and license file are identical.
+
+-------------------------------------
+
+patch these 2 address (004F92FD,004F8EC2) to accept any serial # and write the proper license file, as shown below. 
+
+---
+004F92FD   . /0F85 C9040000 JNZ 004F97CC
+
+change to
+
+004F92FD      90            NOP
+004F92FE      90            NOP
+004F92FF      90            NOP
+004F9300      90            NOP
+004F9301      90            NOP
+004F9302      90            NOP
+---
+
+---
+004F8EC2     /0F84 CA000000 JE 004F8F92
+
+change to
+
+004F8EC2     /E9 CB000000   JMP 004F8F92
+004F8EC7     |90            NOP
+---
+
+
+-----------------------------------------
+
+original license file (sound.dll) at the end in HEX: 7731 32
+
+registered license file (sound.dll) at the end in HEX: 776B 6B0D 0A <- there's that 0D0A again!
+
+
+the license file from FarmVille Tools works as well as the other one from these notes...it doesn't seem to make a difference to the app.
+
+-------------------------------------
+
+* Referenced by a (U)nconditional or (C)onditional Jump at Address:
+|:004D2C76(C)
+|
+:004D2C98 C785CCFDFFFF00000000    mov dword ptr [ebp+FFFFFDCC], 00000000
+
+* Referenced by a (U)nconditional or (C)onditional Jump at Address:
+|:004D2C96(U)
+|
+:004D2CA2 8B5594                  mov edx, dword ptr [ebp-6C]
+:004D2CA5 52                      push edx
+
+* Possible StringData Ref from Code Obj ->"  - Free Version"		;free huh...hmmmm
+
+-------------------------------------
+
+* Referenced by a (U)nconditional or (C)onditional Jump at Address:
+|:004D2E52(C)
+|
+:004D2E74 C785BCFDFFFF00000000    mov dword ptr [ebp+FFFFFDBC], 00000000
+
+* Referenced by a (U)nconditional or (C)onditional Jump at Address:
+|:004D2E72(U)
+|
+:004D2E7E 8B4D94                  mov ecx, dword ptr [ebp-6C]
+:004D2E81 51                      push ecx
+
+* Possible StringData Ref from Code Obj ->"  - Unregistered"
+
+-------------------------------------
+
+:004F8EC2 0F84CA000000            je 004F8F92			;force JMP
+:004F8EC8 C745FC04000000          mov [ebp-04], 00000004
+:004F8ECF C78564FFFFFF04000280    mov dword ptr [ebp+FFFFFF64], 80020004
+:004F8ED9 C7855CFFFFFF0A000000    mov dword ptr [ebp+FFFFFF5C], 0000000A
+:004F8EE3 C78574FFFFFF04000280    mov dword ptr [ebp+FFFFFF74], 80020004
+:004F8EED C7856CFFFFFF0A000000    mov dword ptr [ebp+FFFFFF6C], 0000000A
+
+* Possible StringData Ref from Code Obj ->"WWarning"
+                                  |
+:004F8EF7 C78514FFFFFFE8354300    mov dword ptr [ebp+FFFFFF14], 004335E8
+:004F8F01 C7850CFFFFFF08000000    mov dword ptr [ebp+FFFFFF0C], 00000008
+:004F8F0B 8D950CFFFFFF            lea edx, dword ptr [ebp+FFFFFF0C]
+:004F8F11 8D8D7CFFFFFF            lea ecx, dword ptr [ebp+FFFFFF7C]
+
+* Reference To: MSVBVM60.__vbaVarDup, Ord:0000h
+                                  |
+:004F8F17 FF1550124000            Call dword ptr [00401250]
+
+* Possible StringData Ref from Code Obj ->"IInvaild Regstration Code."
+
+-------------------------------------
+
+* Referenced by a (U)nconditional or (C)onditional Jump at Address:
+|:004F92FD(C)
+|
+:004F97CC C745FC16000000          mov [ebp-04], 00000016
+:004F97D3 C78564FFFFFF04000280    mov dword ptr [ebp+FFFFFF64], 80020004
+:004F97DD C7855CFFFFFF0A000000    mov dword ptr [ebp+FFFFFF5C], 0000000A
+:004F97E7 C78574FFFFFF04000280    mov dword ptr [ebp+FFFFFF74], 80020004
+:004F97F1 C7856CFFFFFF0A000000    mov dword ptr [ebp+FFFFFF6C], 0000000A
+
+* Possible StringData Ref from Code Obj ->"WWarning"
+                                  |
+:004F97FB C78514FFFFFFE8354300    mov dword ptr [ebp+FFFFFF14], 004335E8
+:004F9805 C7850CFFFFFF08000000    mov dword ptr [ebp+FFFFFF0C], 00000008
+:004F980F 8D950CFFFFFF            lea edx, dword ptr [ebp+FFFFFF0C]
+:004F9815 8D8D7CFFFFFF            lea ecx, dword ptr [ebp+FFFFFF7C]
+
+* Reference To: MSVBVM60.__vbaVarDup, Ord:0000h
+                                  |
+:004F981B FF1550124000            Call dword ptr [00401250]
+
+* Possible StringData Ref from Code Obj ->"IInvaild Regstration Code."
+
+-------------------------------------
+
+
+
+
+
+
+
+

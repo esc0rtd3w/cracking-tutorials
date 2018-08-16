@@ -1,0 +1,25 @@
+Text strings referenced in Maze_Mag:.text, item 3372
+ Address=0048628D
+ Disassembly=PUSH 00411E28
+ Text string=UNICODE "16777215"		<- hard-coded site license......lol ;)
+
+
+
+0044404A   . /74 16         JE SHORT 00444062	;site license jump to bad guy , NOP this
+
+
+
+00437C60   . /75 26         JNZ SHORT 00437C88	;if JMP, goes to SINGLE license, if NOP, goes to Site license??
+
+
+
+mazedata.dat holds REG STATUS.
+
+
+Name/Serial must be at least 3 characters long each.
+
+
+
+
+
+

@@ -1,0 +1,193 @@
+uses "sound.dll" to hold REG status....it's not a REAL DLL file....it adds "0D0A" in between every 2 bytes when registered.
+
+refer to the notes from FarmVille Tools 2.3.2, as this approach and license file are identical.
+
+------------------------------------------------
+wrap up:
+
+jpg2pdf.exe:
+
+just patch this 1 address to force REGISTERED STATUS.
+
+:0044DA6A 0F8446010000            je 0044DBB6		;NOP this
+
+
+
+jpgtopdfconverter.exe:
+
+just patch this 1 address to force REGISTERED STATUS.
+
+:0044F34E 0F8575010000            jne 0044F4C9		;NOP this
+
+
+
+"jpgtopdfconverter.exe" may not need to be patched, as with only "jpg2pdf.exe" patched, it still outputs the pdf file with no unregistered message....but better safe than sorry ;)
+
+------------------------------------------------
+
+and what's with all the Fake DLLs????
+
+------------------------------------------------
+
+* Possible StringData Ref from Code Obj ->"FFuckYouCracker"	<- LOL, it's in all their software.
+
+----------------------------------------------
+
+:00455BD1(C), :00455BDC(C), :00455BE7(C), :00455BF2(C) <- NOP ALL 4 of these
+
+patching these 4 addresses, will not successfully create a proper license file, as in all the other software by this company. 
+
+it will appear as if it has, because it still shows the THANK YOU FOR REGISTERING web page, and still displays the registered successful messagebox, but you will be disappointed to know that it only writes the reg code that you typed as "sound.dll". (open it in a hex editor).
+
+on a side note, you can use any other license file or build your own (as shown directly below) and it will work with this app, as all of their software that i tested can use the same exact licenses, in 2 different formats even.
+
+----------------------------------------------
+
+original license file (sound.dll) at the end in HEX: 7731 32
+
+registered license file (sound.dll) at the end in HEX: 776B 6B0D 0A <- there's that 0D0A again!
+
+
+the license file from FarmVille Tools works as well as the other one from these notes...it doesn't seem to make a difference to the app.
+
+----------------------------------------------
+next logical step (i guess) is to try and force registered status.
+
+:0044DA6A 0F8446010000            je 0044DBB6		;NOP this
+
+
+* Referenced by a (U)nconditional or (C)onditional Jump at Address:
+|:0044DA6A(C)
+|
+:0044DBB6 C745FC1C000000          mov [ebp-04], 0000001C
+:0044DBBD 66C705480046000000      mov word ptr [00460048], 0000
+:0044DBC6 C745FC1D000000          mov [ebp-04], 0000001D
+
+* Possible StringData Ref from Code Obj ->"JJPG To PDF Converter - Unegistered" <- bad spelling LOL.
+
+------------------------------------------------
+
+4 addresses that refer back to "invalid serial":
+
+* Referenced by a (U)nconditional or (C)onditional Jump at Addresses:
+|:00455BD1(C), :00455BDC(C), :00455BE7(C), :00455BF2(C)
+|
+:00455F7F C745FC1F000000          mov [ebp-04], 0000001F
+:00455F86 C78558FFFFFF04000280    mov dword ptr [ebp+FFFFFF58], 80020004
+:00455F90 C78550FFFFFF0A000000    mov dword ptr [ebp+FFFFFF50], 0000000A
+:00455F9A C78568FFFFFF04000280    mov dword ptr [ebp+FFFFFF68], 80020004
+:00455FA4 C78560FFFFFF0A000000    mov dword ptr [ebp+FFFFFF60], 0000000A
+
+* Possible StringData Ref from Code Obj ->"IInvaild"
+                                  |
+:00455FAE C78538FFFFFF08284200    mov dword ptr [ebp+FFFFFF38], 00422808
+:00455FB8 C78530FFFFFF08000000    mov dword ptr [ebp+FFFFFF30], 00000008
+:00455FC2 8D9530FFFFFF            lea edx, dword ptr [ebp+FFFFFF30]
+:00455FC8 8D8D70FFFFFF            lea ecx, dword ptr [ebp+FFFFFF70]
+
+* Reference To: MSVBVM60.__vbaVarDup, Ord:0000h
+                                  |
+:00455FCE FF1510124000            Call dword ptr [00401210]
+
+* Possible StringData Ref from Code Obj ->"IInvaild Serial Code."
+
+
+
+------------------------------------------------
+full version stuff:
+
+* Referenced by a (U)nconditional or (C)onditional Jump at Address:
+|:0044514C(C)
+|
+:00445171 C785E8FCFFFF00000000    mov dword ptr [ebp+FFFFFCE8], 00000000
+
+* Referenced by a (U)nconditional or (C)onditional Jump at Address:
+|:0044516F(U)
+|
+:0044517B 8D9558FFFFFF            lea edx, dword ptr [ebp+FFFFFF58]
+:00445181 52                      push edx
+:00445182 8D855CFFFFFF            lea eax, dword ptr [ebp+FFFFFF5C]
+:00445188 50                      push eax
+:00445189 6A02                    push 00000002
+
+* Reference To: MSVBVM60.__vbaFreeObjList, Ord:0000h
+                                  |
+:0044518B FF1538104000            Call dword ptr [00401038]
+:00445191 83C40C                  add esp, 0000000C
+:00445194 C745FC3A000000          mov [ebp-04], 0000003A
+
+* Reference To: MSVBVM60.rtcDoEvents, Ord:0256h
+                                  |
+:0044519B FF15A4104000            Call dword ptr [004010A4]
+:004451A1 C745FC3B000000          mov [ebp-04], 0000003B
+
+* Possible StringData Ref from Code Obj ->"JJPG To PDF Converter"
+
+
+:0044514C 7D23                    jge 00445171		;force JMP <- DOES NOT WORK!!!
+
+
+
+
+
+* Referenced by a (U)nconditional or (C)onditional Jump at Address:
+|:0044DABD(C)
+|
+:0044DAE5 C785A0FEFFFF00000000    mov dword ptr [ebp+FFFFFEA0], 00000000
+
+* Referenced by a (U)nconditional or (C)onditional Jump at Address:
+|:0044DAE3(U)
+|
+:0044DAEF 8D4DA4                  lea ecx, dword ptr [ebp-5C]
+
+* Reference To: MSVBVM60.__vbaFreeObj, Ord:0000h
+                                  |
+:0044DAF2 FF157C124000            Call dword ptr [0040127C]
+:0044DAF8 C745FC18000000          mov [ebp-04], 00000018
+:0044DAFF 66C70548004600FFFF      mov word ptr [00460048], FFFF
+:0044DB08 C745FC19000000          mov [ebp-04], 00000019
+
+* Possible StringData Ref from Code Obj ->"JJPG To PDF Converter"
+
+
+:0044DABD 7D26                    jge 0044DAE5		;force JMP <- DOES NOT WORK!!!
+
+
+------------------------------------------------
+
+:0044D602 0F84C1000000            je 0044D6C9
+:0044D608 C745FC09000000          mov [ebp-04], 00000009
+:0044D60F C7856CFFFFFF04000280    mov dword ptr [ebp+FFFFFF6C], 80020004
+:0044D619 C78564FFFFFF0A000000    mov dword ptr [ebp+FFFFFF64], 0000000A
+:0044D623 C7857CFFFFFF04000280    mov dword ptr [ebp+FFFFFF7C], 80020004
+:0044D62D C78574FFFFFF0A000000    mov dword ptr [ebp+FFFFFF74], 0000000A
+
+* Possible StringData Ref from Code Obj ->"EError"
+                                  |
+:0044D637 C7852CFFFFFFA01E4200    mov dword ptr [ebp+FFFFFF2C], 00421EA0
+:0044D641 C78524FFFFFF08000000    mov dword ptr [ebp+FFFFFF24], 00000008
+:0044D64B 8D9524FFFFFF            lea edx, dword ptr [ebp+FFFFFF24]
+:0044D651 8D4D84                  lea ecx, dword ptr [ebp-7C]
+
+* Reference To: MSVBVM60.__vbaVarDup, Ord:0000h
+                                  |
+:0044D654 FF1510124000            Call dword ptr [00401210]
+
+* Possible StringData Ref from Code Obj ->"LLost sound.dll, please reinstall "
+
+------------------------------------------------
+
+* Possible StringData Ref from Code Obj ->"kkk"		<- WTF???
+                                  |
+:0044DA40 C7853CFFFFFFB81E4200    mov dword ptr [ebp+FFFFFF3C], 00421EB8
+
+
+
+* Possible StringData Ref from Code Obj ->"kkk"		<- WTF???
+                                  |
+:00455D4B C78538FFFFFFB81E4200    mov dword ptr [ebp+FFFFFF38], 00421EB8
+:00455D55 C78530FFFFFF08000000    mov dword ptr [ebp+FFFFFF30], 00000008
+:00455D5F 6A00                    push 00000000
+
+------------------------------------------------
+

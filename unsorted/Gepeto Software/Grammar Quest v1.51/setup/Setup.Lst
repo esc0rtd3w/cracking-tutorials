@@ -1,0 +1,284 @@
+[Bootstrap]
+SetupTitle=Install
+SetupText=Copying Files, please stand by.
+CabFile=Grammar Quest.CAB
+Spawn=Setup1.exe
+Uninstal=st6unst.exe
+TmpDir=msftqws.pdw
+Cabs=1
+
+[Bootstrap Files]
+File1=@VB6STKIT.DLL,$(WinSysPathSysFile),,,7/15/00 12:00:00 AM,101888,6.0.84.50
+File2=@COMCAT.DLL,$(WinSysPathSysFile),$(DLLSelfRegister),,9/18/01 12:00:00 AM,22288,4.71.1460.1
+File3=@STDOLE2.TLB,$(WinSysPathSysFile),$(TLBRegister),,8/28/01 12:00:00 AM,17920,2.40.4275.1
+File4=@ASYCFILT.DLL,$(WinSysPathSysFile),,,9/18/01 12:00:00 AM,147728,2.40.4275.1
+File5=@OLEPRO32.DLL,$(WinSysPathSysFile),$(DLLSelfRegister),,8/18/01 12:00:00 AM,164112,5.0.4275.1
+File6=@OLEAUT32.DLL,$(WinSysPathSysFile),$(DLLSelfRegister),,8/28/02 12:00:00 AM,598288,2.40.4275.1
+File7=@msvbvm60.dll,$(WinSysPathSysFile),$(DLLSelfRegister),,5/27/00 12:10:18 AM,1388544,6.0.88.77
+
+[IconGroups]
+Group0=Grammar Quest
+PrivateGroup0=-1
+Parent0=$(Programs)
+
+[Grammar Quest]
+Icon1=""Grammar Quest.exe""
+Title1=Grammar Quest
+StartIn1=$(AppPath)
+Icon2=""Order Form.htm""
+Title2=Order Form
+StartIn2=$(AppPath)
+Icon3="ReadMe.txt"
+Title3=ReadMe
+StartIn3=$(AppPath)
+
+[Setup]
+Title=Grammar Quest
+DefaultDir=$(ProgramFiles)\Grammar Quest
+AppExe=Grammar Quest.exe
+AppToUninstall=Grammar Quest.exe
+
+[Setup1 Files]
+File1=@ReadMe.txt,$(AppPath),,,10/21/03 9:14:42 AM,8173,0.0.0.0
+File2=@Order Form.htm,$(AppPath),,,10/14/03 8:28:22 PM,27873,0.0.0.0
+File3=@COMDLG32.OCX,$(WinSysPath),$(DLLSelfRegister),$(Shared),5/22/00 1:00:00 AM,140488,6.0.84.18
+File4=@MSCOMCTL.OCX,$(WinSysPath),$(DLLSelfRegister),$(Shared),6/6/02 1:12:59 PM,1077344,6.1.95.45
+File5=@RICHED32.DLL,$(WinSysPathSysFile),,,5/7/98 1:00:00 AM,174352,4.0.993.4
+File6=@RICHTX32.OCX,$(WinSysPath),$(DLLSelfRegister),$(Shared),5/22/00 1:00:00 AM,203976,6.0.88.4
+File7=@Grammar Quest.exe,$(AppPath),,,10/21/03 9:45:24 AM,774144,1.5.0.0
+File8=@Directory.dat,$(AppPath),,,10/21/2003 9:54:02 AM,100000,0.0.0.0
+File9=@gqdata.new,$(AppPath),,,10/21/2003 9:54:02 AM,100000,0.0.0.0
+File10=@QuestNames.dat,$(AppPath),,,10/21/2003 9:54:02 AM,100000,0.0.0.0
+File11=@reg-gq.dat,$(AppPath),,,10/21/2003 9:54:02 AM,100000,0.0.0.0
+File12=@Themes.dat,$(AppPath),,,10/21/2003 9:54:02 AM,100000,0.0.0.0
+File13=@translate.dat,$(AppPath),,,10/21/2003 9:54:02 AM,100000,0.0.0.0
+File14=@whatsnew.txt,$(AppPath),,,10/21/2003 9:54:02 AM,100000,0.0.0.0
+File15=@Direct and Indirect Objects.dir,$(AppPath)\Direct and Indirect Objects,,,10/21/2003 9:54:02 AM,100000,0.0.0.0
+File16=@Direct and Indirect Objects.rtf,$(AppPath)\Direct and Indirect Objects,,,10/21/2003 9:54:02 AM,100000,0.0.0.0
+File17=@Lesson 1-- Finding Direct Objects.ans,$(AppPath)\Direct and Indirect Objects,,,10/21/2003 9:54:02 AM,100000,0.0.0.0
+File18=@Lesson 1-- Finding Direct Objects.que,$(AppPath)\Direct and Indirect Objects,,,10/21/2003 9:54:02 AM,100000,0.0.0.0
+File19=@Lesson 2-- Finding More Direct Objects.ans,$(AppPath)\Direct and Indirect Objects,,,10/21/2003 9:54:02 AM,100000,0.0.0.0
+File20=@Lesson 2-- Finding More Direct Objects.que,$(AppPath)\Direct and Indirect Objects,,,10/21/2003 9:54:02 AM,100000,0.0.0.0
+File21=@Lesson 3-- Finding Indirect Objects.ans,$(AppPath)\Direct and Indirect Objects,,,10/21/2003 9:54:02 AM,100000,0.0.0.0
+File22=@Lesson 3-- Finding Indirect Objects.que,$(AppPath)\Direct and Indirect Objects,,,10/21/2003 9:54:02 AM,100000,0.0.0.0
+File23=@Lesson 4-- Finding More Indirect Objects.ans,$(AppPath)\Direct and Indirect Objects,,,10/21/2003 9:54:02 AM,100000,0.0.0.0
+File24=@Lesson 4-- Finding More Indirect Objects.que,$(AppPath)\Direct and Indirect Objects,,,10/21/2003 9:54:02 AM,100000,0.0.0.0
+File25=@Lesson 5-- Direct versus Indirect Object.ans,$(AppPath)\Direct and Indirect Objects,,,10/21/2003 9:54:02 AM,100000,0.0.0.0
+File26=@Lesson 5-- Direct versus Indirect Object.que,$(AppPath)\Direct and Indirect Objects,,,10/21/2003 9:54:02 AM,100000,0.0.0.0
+File27=@fragments and run-ons.dir,$(AppPath)\Fragments and Run-ons,,,10/21/2003 9:54:02 AM,100000,0.0.0.0
+File28=@Fragments and Run-ons.rtf,$(AppPath)\Fragments and Run-ons,,,10/21/2003 9:54:02 AM,100000,0.0.0.0
+File29=@Lesson 1-- Sentence Fragments.ans,$(AppPath)\Fragments and Run-ons,,,10/21/2003 9:54:02 AM,100000,0.0.0.0
+File30=@Lesson 1-- Sentence Fragments.que,$(AppPath)\Fragments and Run-ons,,,10/21/2003 9:54:02 AM,100000,0.0.0.0
+File31=@Lesson 2-- More Sentence Fragments.ans,$(AppPath)\Fragments and Run-ons,,,10/21/2003 9:54:02 AM,100000,0.0.0.0
+File32=@Lesson 2-- More Sentence Fragments.que,$(AppPath)\Fragments and Run-ons,,,10/21/2003 9:54:02 AM,100000,0.0.0.0
+File33=@Lesson 3-- Run-On Sentences.ans,$(AppPath)\Fragments and Run-ons,,,10/21/2003 9:54:02 AM,100000,0.0.0.0
+File34=@Lesson 3-- Run-On Sentences.que,$(AppPath)\Fragments and Run-ons,,,10/21/2003 9:54:02 AM,100000,0.0.0.0
+File35=@Lesson 4-- More Run-On Sentences.ans,$(AppPath)\Fragments and Run-ons,,,10/21/2003 9:54:02 AM,100000,0.0.0.0
+File36=@Lesson 4-- More Run-On Sentences.que,$(AppPath)\Fragments and Run-ons,,,10/21/2003 9:54:02 AM,100000,0.0.0.0
+File37=@Review-- Fragments and Run-Ons.ans,$(AppPath)\Fragments and Run-ons,,,10/21/2003 9:54:02 AM,100000,0.0.0.0
+File38=@Review-- Fragments and Run-Ons.que,$(AppPath)\Fragments and Run-ons,,,10/21/2003 9:54:02 AM,100000,0.0.0.0
+File39=@arctic.cor,$(AppPath)\graphics,,,10/21/2003 9:54:02 AM,100000,0.0.0.0
+File40=@arctic.jpg,$(AppPath)\graphics,,,10/21/2003 9:54:02 AM,100000,0.0.0.0
+File41=@arcticback.jpg,$(AppPath)\graphics,,,10/21/2003 9:54:02 AM,100000,0.0.0.0
+File42=@beach.cor,$(AppPath)\graphics,,,10/21/2003 9:54:02 AM,100000,0.0.0.0
+File43=@Beach.jpg,$(AppPath)\graphics,,,10/21/2003 9:54:02 AM,100000,0.0.0.0
+File44=@beachback.jpg,$(AppPath)\graphics,,,10/21/2003 9:54:02 AM,100000,0.0.0.0
+File45=@Burst.gif,$(AppPath)\graphics,,,10/21/2003 9:54:02 AM,100000,0.0.0.0
+File46=@cave.cor,$(AppPath)\graphics,,,10/21/2003 9:54:02 AM,100000,0.0.0.0
+File47=@colorback.jpg,$(AppPath)\graphics,,,10/21/2003 9:54:02 AM,100000,0.0.0.0
+File48=@desert.cor,$(AppPath)\graphics,,,10/21/2003 9:54:02 AM,100000,0.0.0.0
+File49=@desert.jpg,$(AppPath)\graphics,,,10/21/2003 9:54:02 AM,100000,0.0.0.0
+File50=@desertback.JPG,$(AppPath)\graphics,,,10/21/2003 9:54:02 AM,100000,0.0.0.0
+File51=@dino.cor,$(AppPath)\graphics,,,10/21/2003 9:54:02 AM,100000,0.0.0.0
+File52=@Dino.jpg,$(AppPath)\graphics,,,10/21/2003 9:54:02 AM,100000,0.0.0.0
+File53=@dinoback.JPG,$(AppPath)\graphics,,,10/21/2003 9:54:02 AM,100000,0.0.0.0
+File54=@fantasy.cor,$(AppPath)\graphics,,,10/21/2003 9:54:02 AM,100000,0.0.0.0
+File55=@fantasy.jpg,$(AppPath)\graphics,,,10/21/2003 9:54:02 AM,100000,0.0.0.0
+File56=@fantasyback.jpg,$(AppPath)\graphics,,,10/21/2003 9:54:02 AM,100000,0.0.0.0
+File57=@GadBack.jpg,$(AppPath)\graphics,,,10/21/2003 9:54:02 AM,100000,0.0.0.0
+File58=@glossaryback.jpg,$(AppPath)\graphics,,,10/21/2003 9:54:02 AM,100000,0.0.0.0
+File59=@gq.gif,$(AppPath)\graphics,,,10/21/2003 9:54:02 AM,100000,0.0.0.0
+File60=@GQBack.jpg,$(AppPath)\graphics,,,10/21/2003 9:54:02 AM,100000,0.0.0.0
+File61=@GQBackground.jpg,$(AppPath)\graphics,,,10/21/2003 9:54:02 AM,100000,0.0.0.0
+File62=@GSSplash.jpg,$(AppPath)\graphics,,,10/21/2003 9:54:02 AM,100000,0.0.0.0
+File63=@haunted.cor,$(AppPath)\graphics,,,10/21/2003 9:54:02 AM,100000,0.0.0.0
+File64=@haunted.jpg,$(AppPath)\graphics,,,10/21/2003 9:54:02 AM,100000,0.0.0.0
+File65=@hauntedback.JPG,$(AppPath)\graphics,,,10/21/2003 9:54:02 AM,100000,0.0.0.0
+File66=@jungle.cor,$(AppPath)\graphics,,,10/21/2003 9:54:02 AM,100000,0.0.0.0
+File67=@Jungle.JPG,$(AppPath)\graphics,,,10/21/2003 9:54:02 AM,100000,0.0.0.0
+File68=@jungleback.jpg,$(AppPath)\graphics,,,10/21/2003 9:54:02 AM,100000,0.0.0.0
+File69=@locked.gif,$(AppPath)\graphics,,,10/21/2003 9:54:02 AM,100000,0.0.0.0
+File70=@OpenChest.gif,$(AppPath)\graphics,,,10/21/2003 9:54:02 AM,100000,0.0.0.0
+File71=@sea.cor,$(AppPath)\graphics,,,10/21/2003 9:54:02 AM,100000,0.0.0.0
+File72=@sea.jpg,$(AppPath)\graphics,,,10/21/2003 9:54:02 AM,100000,0.0.0.0
+File73=@seaback.jpg,$(AppPath)\graphics,,,10/21/2003 9:54:02 AM,100000,0.0.0.0
+File74=@smallchest.gif,$(AppPath)\graphics,,,10/21/2003 9:54:02 AM,100000,0.0.0.0
+File75=@space.cor,$(AppPath)\graphics,,,10/21/2003 9:54:02 AM,100000,0.0.0.0
+File76=@Space.jpg,$(AppPath)\graphics,,,10/21/2003 9:54:02 AM,100000,0.0.0.0
+File77=@spaceback.jpg,$(AppPath)\graphics,,,10/21/2003 9:54:02 AM,100000,0.0.0.0
+File78=@titlescreen.jpg,$(AppPath)\graphics,,,10/21/2003 9:54:02 AM,100000,0.0.0.0
+File79=@unlocked.gif,$(AppPath)\graphics,,,10/21/2003 9:54:02 AM,100000,0.0.0.0
+File80=@wildwest.cor,$(AppPath)\graphics,,,10/21/2003 9:54:02 AM,100000,0.0.0.0
+File81=@wildwest.jpg,$(AppPath)\graphics,,,10/21/2003 9:54:02 AM,100000,0.0.0.0
+File82=@wildwestback.jpg,$(AppPath)\graphics,,,10/21/2003 9:54:02 AM,100000,0.0.0.0
+File83=@Lesson 1-- Adverbs.ans,$(AppPath)\More Parts of Speech,,,10/21/2003 9:54:02 AM,100000,0.0.0.0
+File84=@Lesson 1-- Adverbs.que,$(AppPath)\More Parts of Speech,,,10/21/2003 9:54:02 AM,100000,0.0.0.0
+File85=@Lesson 2-- Prepositions.ans,$(AppPath)\More Parts of Speech,,,10/21/2003 9:54:02 AM,100000,0.0.0.0
+File86=@Lesson 2-- Prepositions.que,$(AppPath)\More Parts of Speech,,,10/21/2003 9:54:02 AM,100000,0.0.0.0
+File87=@Lesson 3-- Parts of Speech Practice.ans,$(AppPath)\More Parts of Speech,,,10/21/2003 9:54:02 AM,100000,0.0.0.0
+File88=@Lesson 3-- Parts of Speech Practice.que,$(AppPath)\More Parts of Speech,,,10/21/2003 9:54:02 AM,100000,0.0.0.0
+File89=@Lesson 4-- More Parts of Speech Practice.ans,$(AppPath)\More Parts of Speech,,,10/21/2003 9:54:02 AM,100000,0.0.0.0
+File90=@Lesson 4-- More Parts of Speech Practice.que,$(AppPath)\More Parts of Speech,,,10/21/2003 9:54:02 AM,100000,0.0.0.0
+File91=@More Parts of Speech.dir,$(AppPath)\More Parts of Speech,,,10/21/2003 9:54:02 AM,100000,0.0.0.0
+File92=@More Parts of Speech.rtf,$(AppPath)\More Parts of Speech,,,10/21/2003 9:54:02 AM,100000,0.0.0.0
+File93=@Review-- More Parts of Speech.ans,$(AppPath)\More Parts of Speech,,,10/21/2003 9:54:02 AM,100000,0.0.0.0
+File94=@Review-- More Parts of Speech.que,$(AppPath)\More Parts of Speech,,,10/21/2003 9:54:02 AM,100000,0.0.0.0
+File95=@Lesson 1-- Good-Well-Bad-Badly.ans,$(AppPath)\More Word Choice,,,10/21/2003 9:54:02 AM,100000,0.0.0.0
+File96=@Lesson 1-- Good-Well-Bad-Badly.que,$(AppPath)\More Word Choice,,,10/21/2003 9:54:02 AM,100000,0.0.0.0
+File97=@Lesson 2-- More-Most-Less-Least.ans,$(AppPath)\More Word Choice,,,10/21/2003 9:54:02 AM,100000,0.0.0.0
+File98=@Lesson 2-- More-Most-Less-Least.que,$(AppPath)\More Word Choice,,,10/21/2003 9:54:02 AM,100000,0.0.0.0
+File99=@Lesson 3-- They're-Their-There.ans,$(AppPath)\More Word Choice,,,10/21/2003 9:54:02 AM,100000,0.0.0.0
+File100=@Lesson 3-- They're-Their-There.que,$(AppPath)\More Word Choice,,,10/21/2003 9:54:02 AM,100000,0.0.0.0
+File101=@Lesson 4-- Between-Among-Beside-Besides.ans,$(AppPath)\More Word Choice,,,10/21/2003 9:54:02 AM,100000,0.0.0.0
+File102=@Lesson 4-- Between-Among-Beside-Besides.que,$(AppPath)\More Word Choice,,,10/21/2003 9:54:02 AM,100000,0.0.0.0
+File103=@more word choice.dir,$(AppPath)\More Word Choice,,,10/21/2003 9:54:02 AM,100000,0.0.0.0
+File104=@more word choice.rtf,$(AppPath)\More Word Choice,,,10/21/2003 9:54:02 AM,100000,0.0.0.0
+File105=@Review-- More Word Choice.ans,$(AppPath)\More Word Choice,,,10/21/2003 9:54:02 AM,100000,0.0.0.0
+File106=@Review-- More Word Choice.que,$(AppPath)\More Word Choice,,,10/21/2003 9:54:02 AM,100000,0.0.0.0
+File107=@Lesson 1-- Nouns.ans,$(AppPath)\Parts of Speech,,,10/21/2003 9:54:03 AM,100000,0.0.0.0
+File108=@Lesson 1-- Nouns.que,$(AppPath)\Parts of Speech,,,10/21/2003 9:54:03 AM,100000,0.0.0.0
+File109=@Lesson 2-- Verbs.ans,$(AppPath)\Parts of Speech,,,10/21/2003 9:54:03 AM,100000,0.0.0.0
+File110=@Lesson 2-- Verbs.que,$(AppPath)\Parts of Speech,,,10/21/2003 9:54:03 AM,100000,0.0.0.0
+File111=@Lesson 3-- Adjectives.ans,$(AppPath)\Parts of Speech,,,10/21/2003 9:54:03 AM,100000,0.0.0.0
+File112=@Lesson 3-- Adjectives.que,$(AppPath)\Parts of Speech,,,10/21/2003 9:54:03 AM,100000,0.0.0.0
+File113=@Lesson 4-- Pronouns and Proper Nouns.ans,$(AppPath)\Parts of Speech,,,10/21/2003 9:54:03 AM,100000,0.0.0.0
+File114=@Lesson 4-- Pronouns and Proper Nouns.que,$(AppPath)\Parts of Speech,,,10/21/2003 9:54:03 AM,100000,0.0.0.0
+File115=@parts of speech.dir,$(AppPath)\Parts of Speech,,,10/21/2003 9:54:03 AM,100000,0.0.0.0
+File116=@Parts of Speech.rtf,$(AppPath)\Parts of Speech,,,10/21/2003 9:54:03 AM,100000,0.0.0.0
+File117=@Review-- Parts of Speech.ans,$(AppPath)\Parts of Speech,,,10/21/2003 9:54:03 AM,100000,0.0.0.0
+File118=@Review-- Parts of Speech.que,$(AppPath)\Parts of Speech,,,10/21/2003 9:54:03 AM,100000,0.0.0.0
+File119=@Lesson 1-- Prepositional Phrases.ans,$(AppPath)\Phrases,,,10/21/2003 9:54:03 AM,100000,0.0.0.0
+File120=@Lesson 1-- Prepositional Phrases.que,$(AppPath)\Phrases,,,10/21/2003 9:54:03 AM,100000,0.0.0.0
+File121=@Lesson 2-- Adverb Phrases.ans,$(AppPath)\Phrases,,,10/21/2003 9:54:03 AM,100000,0.0.0.0
+File122=@Lesson 2-- Adverb Phrases.que,$(AppPath)\Phrases,,,10/21/2003 9:54:03 AM,100000,0.0.0.0
+File123=@Lesson 3-- Adjective Phrases.ans,$(AppPath)\Phrases,,,10/21/2003 9:54:03 AM,100000,0.0.0.0
+File124=@Lesson 3-- Adjective Phrases.que,$(AppPath)\Phrases,,,10/21/2003 9:54:03 AM,100000,0.0.0.0
+File125=@Lesson 4-- Adjective vs. Adverb Phrases.ans,$(AppPath)\Phrases,,,10/21/2003 9:54:03 AM,100000,0.0.0.0
+File126=@Lesson 4-- Adjective vs. Adverb Phrases.que,$(AppPath)\Phrases,,,10/21/2003 9:54:03 AM,100000,0.0.0.0
+File127=@Phrases.dir,$(AppPath)\Phrases,,,10/21/2003 9:54:03 AM,100000,0.0.0.0
+File128=@Phrases.rtf,$(AppPath)\Phrases,,,10/21/2003 9:54:03 AM,100000,0.0.0.0
+File129=@Review-- Recognizing Phrases.ans,$(AppPath)\Phrases,,,10/21/2003 9:54:03 AM,100000,0.0.0.0
+File130=@Review-- Recognizing Phrases.que,$(AppPath)\Phrases,,,10/21/2003 9:54:03 AM,100000,0.0.0.0
+File131=@Lesson 1-- Possessive Nouns.ans,$(AppPath)\Possession,,,10/21/2003 9:54:03 AM,100000,0.0.0.0
+File132=@Lesson 1-- Possessive Nouns.que,$(AppPath)\Possession,,,10/21/2003 9:54:03 AM,100000,0.0.0.0
+File133=@Lesson 2-- Possessive Pronouns.ans,$(AppPath)\Possession,,,10/21/2003 9:54:03 AM,100000,0.0.0.0
+File134=@Lesson 2-- Possessive Pronouns.que,$(AppPath)\Possession,,,10/21/2003 9:54:03 AM,100000,0.0.0.0
+File135=@Lesson 3-- Its versus It's.ans,$(AppPath)\Possession,,,10/21/2003 9:54:03 AM,100000,0.0.0.0
+File136=@Lesson 3-- Its versus It's.que,$(AppPath)\Possession,,,10/21/2003 9:54:03 AM,100000,0.0.0.0
+File137=@Lesson 4-- Whose versus Who's.ans,$(AppPath)\Possession,,,10/21/2003 9:54:03 AM,100000,0.0.0.0
+File138=@Lesson 4-- Whose versus Who's.que,$(AppPath)\Possession,,,10/21/2003 9:54:03 AM,100000,0.0.0.0
+File139=@possession.dir,$(AppPath)\Possession,,,10/21/2003 9:54:03 AM,100000,0.0.0.0
+File140=@possession.rtf,$(AppPath)\Possession,,,10/21/2003 9:54:03 AM,100000,0.0.0.0
+File141=@Review-- Possession.ans,$(AppPath)\Possession,,,10/21/2003 9:54:03 AM,100000,0.0.0.0
+File142=@Review-- Possession.que,$(AppPath)\Possession,,,10/21/2003 9:54:03 AM,100000,0.0.0.0
+File143=@Sample 1-- Fragments and Run-Ons.ans,$(AppPath)\Sample Lessons,,,10/21/2003 9:54:03 AM,100000,0.0.0.0
+File144=@Sample 1-- Fragments and Run-Ons.que,$(AppPath)\Sample Lessons,,,10/21/2003 9:54:03 AM,100000,0.0.0.0
+File145=@Sample 2-- Parts of Speech.ans,$(AppPath)\Sample Lessons,,,10/21/2003 9:54:03 AM,100000,0.0.0.0
+File146=@Sample 2-- Parts of Speech.que,$(AppPath)\Sample Lessons,,,10/21/2003 9:54:03 AM,100000,0.0.0.0
+File147=@Sample 3--Subject-Verb Agreement.ans,$(AppPath)\Sample Lessons,,,10/21/2003 9:54:03 AM,100000,0.0.0.0
+File148=@Sample 3--Subject-Verb Agreement.que,$(AppPath)\Sample Lessons,,,10/21/2003 9:54:03 AM,100000,0.0.0.0
+File149=@Sample 4-- They're-Their-There.ans,$(AppPath)\Sample Lessons,,,10/21/2003 9:54:03 AM,100000,0.0.0.0
+File150=@Sample 4-- They're-Their-There.que,$(AppPath)\Sample Lessons,,,10/21/2003 9:54:03 AM,100000,0.0.0.0
+File151=@Sample 5-- Adjective vs. Adverb Phrases.ans,$(AppPath)\Sample Lessons,,,10/21/2003 9:54:03 AM,100000,0.0.0.0
+File152=@Sample 5-- Adjective vs. Adverb Phrases.que,$(AppPath)\Sample Lessons,,,10/21/2003 9:54:03 AM,100000,0.0.0.0
+File153=@Sample Lessons.dir,$(AppPath)\Sample Lessons,,,10/21/2003 9:54:03 AM,100000,0.0.0.0
+File154=@Sample Lessons.rtf,$(AppPath)\Sample Lessons,,,10/21/2003 9:54:03 AM,100000,0.0.0.0
+File155=@Lesson 1--Making Plurals.ans,$(AppPath)\Singular vs Plural,,,10/21/2003 9:54:03 AM,100000,0.0.0.0
+File156=@Lesson 1--Making Plurals.que,$(AppPath)\Singular vs Plural,,,10/21/2003 9:54:03 AM,100000,0.0.0.0
+File157=@Lesson 2--More Making Plurals.ans,$(AppPath)\Singular vs Plural,,,10/21/2003 9:54:03 AM,100000,0.0.0.0
+File158=@Lesson 2--More Making Plurals.que,$(AppPath)\Singular vs Plural,,,10/21/2003 9:54:03 AM,100000,0.0.0.0
+File159=@Lesson 3--Subject-Verb Agreement.ans,$(AppPath)\Singular vs Plural,,,10/21/2003 9:54:03 AM,100000,0.0.0.0
+File160=@Lesson 3--Subject-Verb Agreement.que,$(AppPath)\Singular vs Plural,,,10/21/2003 9:54:03 AM,100000,0.0.0.0
+File161=@Lesson 4--More Subject-Verb Agreement.ans,$(AppPath)\Singular vs Plural,,,10/21/2003 9:54:03 AM,100000,0.0.0.0
+File162=@Lesson 4--More Subject-Verb Agreement.que,$(AppPath)\Singular vs Plural,,,10/21/2003 9:54:03 AM,100000,0.0.0.0
+File163=@Review--Singular vs Plural.ans,$(AppPath)\Singular vs Plural,,,10/21/2003 9:54:03 AM,100000,0.0.0.0
+File164=@Review--Singular vs Plural.que,$(AppPath)\Singular vs Plural,,,10/21/2003 9:54:03 AM,100000,0.0.0.0
+File165=@Singular vs Plural.dir,$(AppPath)\Singular vs Plural,,,10/21/2003 9:54:03 AM,100000,0.0.0.0
+File166=@Singular vs Plural.rtf,$(AppPath)\Singular vs Plural,,,10/21/2003 9:54:03 AM,100000,0.0.0.0
+File167=@arctic.wav,$(AppPath)\Sounds,,,10/21/2003 9:54:03 AM,100000,0.0.0.0
+File168=@beach.wav,$(AppPath)\Sounds,,,10/21/2003 9:54:03 AM,100000,0.0.0.0
+File169=@cave.wav,$(AppPath)\Sounds,,,10/21/2003 9:54:03 AM,100000,0.0.0.0
+File170=@dino.wav,$(AppPath)\Sounds,,,10/21/2003 9:54:03 AM,100000,0.0.0.0
+File171=@fantasy.wav,$(AppPath)\Sounds,,,10/21/2003 9:54:03 AM,100000,0.0.0.0
+File172=@gepeto.wav,$(AppPath)\Sounds,,,10/21/2003 9:54:03 AM,100000,0.0.0.0
+File173=@Gong.wav,$(AppPath)\Sounds,,,10/21/2003 9:54:03 AM,100000,0.0.0.0
+File174=@Harp.wav,$(AppPath)\Sounds,,,10/21/2003 9:54:03 AM,100000,0.0.0.0
+File175=@haunted.wav,$(AppPath)\Sounds,,,10/21/2003 9:54:03 AM,100000,0.0.0.0
+File176=@jungle.wav,$(AppPath)\Sounds,,,10/21/2003 9:54:03 AM,100000,0.0.0.0
+File177=@Lock.wav,$(AppPath)\Sounds,,,10/21/2003 9:54:03 AM,100000,0.0.0.0
+File178=@sea.wav,$(AppPath)\Sounds,,,10/21/2003 9:54:03 AM,100000,0.0.0.0
+File179=@space.wav,$(AppPath)\Sounds,,,10/21/2003 9:54:03 AM,100000,0.0.0.0
+File180=@wildwest.wav,$(AppPath)\Sounds,,,10/21/2003 9:54:03 AM,100000,0.0.0.0
+File181=@Lesson 1--Subject and Predicate.ans,$(AppPath)\Subject and Predicate,,,10/21/2003 9:54:03 AM,100000,0.0.0.0
+File182=@Lesson 1--Subject and Predicate.que,$(AppPath)\Subject and Predicate,,,10/21/2003 9:54:03 AM,100000,0.0.0.0
+File183=@Lesson 2--Simple Subject and Simple Predicate.ans,$(AppPath)\Subject and Predicate,,,10/21/2003 9:54:03 AM,100000,0.0.0.0
+File184=@Lesson 2--Simple Subject and Simple Predicate.que,$(AppPath)\Subject and Predicate,,,10/21/2003 9:54:03 AM,100000,0.0.0.0
+File185=@Lesson 3--Compund Subject and Predicate.ans,$(AppPath)\Subject and Predicate,,,10/21/2003 9:54:03 AM,100000,0.0.0.0
+File186=@Lesson 3--Compund Subject and Predicate.que,$(AppPath)\Subject and Predicate,,,10/21/2003 9:54:03 AM,100000,0.0.0.0
+File187=@Lesson 4--Inverted Order Sentences.ans,$(AppPath)\Subject and Predicate,,,10/21/2003 9:54:03 AM,100000,0.0.0.0
+File188=@Lesson 4--Inverted Order Sentences.que,$(AppPath)\Subject and Predicate,,,10/21/2003 9:54:03 AM,100000,0.0.0.0
+File189=@Review--Subject and Predicate.ans,$(AppPath)\Subject and Predicate,,,10/21/2003 9:54:03 AM,100000,0.0.0.0
+File190=@Review--Subject and Predicate.que,$(AppPath)\Subject and Predicate,,,10/21/2003 9:54:03 AM,100000,0.0.0.0
+File191=@subject and predicate.dir,$(AppPath)\Subject and Predicate,,,10/21/2003 9:54:03 AM,100000,0.0.0.0
+File192=@Subject and Predicate.rtf,$(AppPath)\Subject and Predicate,,,10/21/2003 9:54:03 AM,100000,0.0.0.0
+File193=@Lesson 1-- Lie versus Lay.ans,$(AppPath)\Word Choice,,,10/21/2003 9:54:03 AM,100000,0.0.0.0
+File194=@Lesson 1-- Lie versus Lay.que,$(AppPath)\Word Choice,,,10/21/2003 9:54:03 AM,100000,0.0.0.0
+File195=@Lesson 2-- Sit versus Set.ans,$(AppPath)\Word Choice,,,10/21/2003 9:54:03 AM,100000,0.0.0.0
+File196=@Lesson 2-- Sit versus Set.que,$(AppPath)\Word Choice,,,10/21/2003 9:54:03 AM,100000,0.0.0.0
+File197=@Lesson 3-- Irregular Verbs.ans,$(AppPath)\Word Choice,,,10/21/2003 9:54:03 AM,100000,0.0.0.0
+File198=@Lesson 3-- Irregular Verbs.que,$(AppPath)\Word Choice,,,10/21/2003 9:54:03 AM,100000,0.0.0.0
+File199=@Lesson 4-- More Irregular Verbs.ans,$(AppPath)\Word Choice,,,10/21/2003 9:54:03 AM,100000,0.0.0.0
+File200=@Lesson 4-- More Irregular Verbs.que,$(AppPath)\Word Choice,,,10/21/2003 9:54:03 AM,100000,0.0.0.0
+File201=@Review-- Word Choice.ans,$(AppPath)\Word Choice,,,10/21/2003 9:54:03 AM,100000,0.0.0.0
+File202=@Review-- Word Choice.que,$(AppPath)\Word Choice,,,10/21/2003 9:54:03 AM,100000,0.0.0.0
+File203=@word choice.dir,$(AppPath)\Word Choice,,,10/21/2003 9:54:03 AM,100000,0.0.0.0
+File204=@word choice.rtf,$(AppPath)\Word Choice,,,10/21/2003 9:54:03 AM,100000,0.0.0.0
+
+; The following lines may be deleted in order to obtain extra 
+; space for customizing this file on a full installation diskette.
+; 
+; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX

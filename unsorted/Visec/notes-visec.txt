@@ -1,0 +1,8 @@
+491244 - GetTickCount
+491314 - GetLocalTime
+491244 - GetTickCount (Loop?)
+491388 - GetSystemTime
+
+42af45 - Subtract %number of days%
+
+429840 - Trial Dialog

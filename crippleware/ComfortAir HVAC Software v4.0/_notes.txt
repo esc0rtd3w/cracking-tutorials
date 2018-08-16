@@ -1,0 +1,52 @@
+
+Weather Station DEMO restriction:
+
+00448E18     /74 1F         JE SHORT 00448E39                 
+
+>> JMP
+
+
+
+invalid weather radio station selected:
+
+0040813D   . /0F86 C3060000 JBE 00408806
+
+
+0040814E   . /0F83 B2060000 JNB 00408806
+
+
+004087BA   . /76 4A         JBE SHORT 00408806
+
+
+004087C7   . /73 3D         JNB SHORT 00408806
+
+
+>> NOP ALL 4 OF THESE!!!!!!!!
+
+
+
+About Box Fixes:
+
+using hex editor, remove the following text:
+
+- "DEMO" on the 2nd line from top. << UNICODE, just fill with spaces ( . . . .)
+
+- Buy blah, blah, blah........ << UNICODE, just fill with spaces ( . . . . . . . .)
+
+- Rent blah, blah, blah....... << UNICODE, just fill with spaces ( . . . . . . . .)
+
+
+ZERO OUT the following web links:
+
+- http://www.comfortair-software.com/credcard.html
+
+- http://www.comfortair-software.com/rent.html
+
+
+ << UNICODE, just fill with zeros (h.t.t.p.:././.w.w.w...........) >> (............................)
+
+
+use Resource Replacer and remove the splash nag (BITMAP >> 1st entry) and change the Buy and Rent texts on about box to "" for both (DIALOG >> 1st entry).
+
+
+

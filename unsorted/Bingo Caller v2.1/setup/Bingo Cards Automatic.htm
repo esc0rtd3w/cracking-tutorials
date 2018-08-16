@@ -1,0 +1,89 @@
+<!-- saved from url=(0032)http://farmtek-fti.com/bingo.htm -->
+<html>
+
+<head>
+<meta http-equiv="Content-Type"
+content="text/html; charset=iso-8859-1">
+<meta name="GENERATOR" content="Microsoft FrontPage Express 2.0">
+<title>Bingo Cards Automatic</title>
+</head>
+
+<body bgcolor="#FFFFFF" topmargin="0" leftmargin="0">
+<script language="JavaScript">
+
+function CreateCard()
+{
+	var row, col, i;
+	var UsedNums = new Array(76);
+
+/*  Write "BINGO"  */
+
+	document.writeln("<table cellspacing=3 cellpadding=6 border=3><tr align=center>");
+	document.writeln("<td width='20%'><font size=6><b>B</b></font></td>");
+	document.writeln("<td width='20%'><font size=6><b>I</b></font></td>");
+	document.writeln("<td width='20%'><font size=6><b>N</b></font></td>");
+	document.writeln("<td width='20%'><font size=6><b>G</b></font></td>");
+	document.writeln("<td width='20%'><font size=6><b>O</b></font></td></tr>");
+
+/*  Init "used numbers" array to "none used"  */
+
+	for (i=1; i<76; i++)
+	   UsedNums[i] = 0;
+
+/*  Loop through 5 rows of 5 columns  */
+
+	for (row=0; row<5; row++) {
+	   document.writeln("<tr align=center>"); 
+	   for (col=0; col<5; col++) 
+		if ((row == 2) && (col == 2))
+		   document.writeln("<td><font size=4><b>Free<br>Space</b></font></td>");
+		else {
+		   do		/* find a number that hasn't been used yet */
+	   		newNum = Math.floor(15*Math.random())+15*col+1;
+		   while (UsedNums[newNum] != 0);
+		   UsedNums[newNum] = 1;
+		   document.writeln("<td><font size=7><b>" + newNum + "</b></font></td>");
+		}
+	   document.writeln("</tr>");
+	}
+	document.writeln("</table>");
+}
+
+</script>
+
+<table border="0" cellpadding="0">
+<TBODY>    <tr>
+        <td><script language="JavaScript">  CreateCard()  </script> </td>
+        <td><script language="JavaScript">  CreateCard()  </script> </td>
+    </tr>
+    <tr>
+        <td align="middle"><font size="1">Get Cards at</font><a
+        href="http://wagesplace.com/Bingo%20Cards.htm"><font
+        size="1"> http://www.wagesplace.com/Bingo Cards.htm</font></a><font
+        size="1"><br>
+        <br>
+        <br>
+        </font></td>
+        <td align="middle"><font size="1">Get Cards at</font><a
+        href="http://wagesplace.com/Bingo%20Cards.htm"><font
+        size="1"> http://www.wagesplace.com/Bingo Cards.htm</font></a><font
+        size="1"><br>
+        <br>
+        <br>
+        </font></td>
+    </tr>
+    <tr>
+        <td><script language="JavaScript">  CreateCard()  </script> </td>
+        <td><script language="JavaScript">  CreateCard()  </script> </td>
+    </tr>
+    <tr>
+        <td align="middle"><font size="1">Get Cards at</font><a
+        href="http://wagesplace.com/Bingo%20Cards.htm"><font
+        size="1"> http://www.wagesplace.com/Bingo Cards.htm</font></a></td>
+        <td align="middle"><font size="1">Get Cards at</font><a
+        href="http://wagesplace.com/Bingo%20Cards.htm"><font
+        size="1"> http://www.wagesplace.com/Bingo Cards.htm</font></a></td>
+    </tr>
+</TBODY></table>
+</body>
+</html>

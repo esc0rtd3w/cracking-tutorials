@@ -1,0 +1,60 @@
+00402AB6  |. /74 64         JE SHORT 00402B1C
+00402AB8  |. |C646 10 01    MOV BYTE PTR DS:[ESI+10],1
+00402ABC  |. |83C6 0C       ADD ESI,0C
+00402ABF  |. |8D55 0C       LEA EDX,DWORD PTR SS:[EBP+C]
+00402AC2  |. |8BC6          MOV EAX,ESI
+00402AC4  |. |E8 6B331300   CALL 00535E34
+00402AC9  |. |66:C747 10 30>MOV WORD PTR DS:[EDI+10],30
+00402ACF  |. |33C9          XOR ECX,ECX
+00402AD1  |. |894D F0       MOV DWORD PTR SS:[EBP-10],ECX
+00402AD4  |. |FF47 1C       INC DWORD PTR DS:[EDI+1C]
+00402AD7  |. |8D4D F0       LEA ECX,DWORD PTR SS:[EBP-10]
+00402ADA  |. |FF47 1C       INC DWORD PTR DS:[EDI+1C]
+00402ADD  |. |8D55 0C       LEA EDX,DWORD PTR SS:[EBP+C]
+00402AE0  |. |B8 2D895300   MOV EAX,0053892D                         ;  ASCII "License Registered : "
+00402AE5  |. |E8 7E000000   CALL 00402B68
+00402AEA  |. |8D4D F0       LEA ECX,DWORD PTR SS:[EBP-10]
+00402AED  |. |8B01          MOV EAX,DWORD PTR DS:[ECX]
+00402AEF  |. |50            PUSH EAX                                 ; /Arg5
+00402AF0  |. |68 0B895300   PUSH 0053890B                            ; |Arg4 = 0053890B ASCII "TApplicationInfo::CheckLicenseKey"
+00402AF5  |. |6A 3C         PUSH 3C                                  ; |Arg3 = 0000003C
+00402AF7  |. |68 FF885300   PUSH 005388FF                            ; |Arg2 = 005388FF ASCII "AppInfo.cpp"
+00402AFC  |. |68 1CF85400   PUSH 0054F81C                            ; |Arg1 = 0054F81C
+00402B01  |. |E8 8ACC0100   CALL 0041F790                            ; \JoyToKey.0041F790
+00402B06  |. |83C4 14       ADD ESP,14
+00402B09  |. |8D45 F0       LEA EAX,DWORD PTR SS:[EBP-10]
+00402B0C  |. |836F 1C 02    SUB DWORD PTR DS:[EDI+1C],2
+00402B10  |. |BA 02000000   MOV EDX,2
+00402B15  |. |E8 DAFBFFFF   CALL 004026F4
+00402B1A  |. |EB 27         JMP SHORT 00402B43
+00402B1C  |> \C646 10 00    MOV BYTE PTR DS:[ESI+10],0
+00402B20  |.  837D 0C 00    CMP DWORD PTR SS:[EBP+C],0
+00402B24  |.  75 07         JNZ SHORT 00402B2D
+00402B26  |.  B9 60895300   MOV ECX,00538960
+00402B2B  |.  EB 03         JMP SHORT 00402B30
+00402B2D  |>  8B4D 0C       MOV ECX,DWORD PTR SS:[EBP+C]
+00402B30  |>  51            PUSH ECX                                 ; /Arg3
+00402B31  |.  68 43895300   PUSH 00538943                            ; |Arg2 = 00538943 ASCII "LicenseKey "%s" is not valid"
+00402B36  |.  68 1CF85400   PUSH 0054F81C                            ; |Arg1 = 0054F81C
+00402B3B  |.  E8 38CD0100   CALL 0041F878                            ; \JoyToKey.0041F878
+
+
+
+
+
+
+0041EE9F  |. /74 1A         JE SHORT 0041EEBB
+0041EEA1  |. |A1 14EF5400   MOV EAX,DWORD PTR DS:[54EF14]
+0041EEA6  |. |6A 00         PUSH 0
+0041EEA8  |. |B9 304A5400   MOV ECX,00544A30                         ;  UNICODE "Registered"
+0041EEAD  |. |BA 68495400   MOV EDX,00544968                         ;  UNICODE "Thank you very much for purchasing JoyToKey!
+We hope you enjoy using JoyToKey for various purposes."
+0041EEB2  |. |8B00          MOV EAX,DWORD PTR DS:[EAX]
+0041EEB4  |. |E8 736C1100   CALL 00535B2C
+0041EEB9  |. |EB 18         JMP SHORT 0041EED3
+0041EEBB  |> \A1 14EF5400   MOV EAX,DWORD PTR DS:[54EF14]
+0041EEC0  |.  6A 10         PUSH 10
+0041EEC2  |.  B9 BE4A5400   MOV ECX,00544ABE                         ;  UNICODE "ERROR"
+0041EEC7  |.  BA 464A5400   MOV EDX,00544A46                         ;  UNICODE "The specified key is not valid. Please check and try again."
+
+

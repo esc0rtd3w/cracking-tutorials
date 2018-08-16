@@ -1,0 +1,51 @@
+------------------------------------------------
+0049E51E   . /74 0B         JE SHORT 0049E52B	;if NOP'd it accepts any code to register.
+
+change to
+
+0049E51E      90            NOP
+0049E51F      90            NOP
+------------------------------------------------
+
+------------------------------------------------
+004659DE   . /0F85 9B000000 JNZ 00465A7F
+
+change to
+
+
+004659DE     /E9 9C000000   JMP 00465A7F
+004659E3     |90            NOP
+------------------------------------------------
+
+
+00465C72   . /0F84 1B010000 JE 00465D93		;if NOP'd jumps straight to Single User License
+
+
+
+00465AEB   . /0F84 1B010000 JE 00465C0C		;NOP
+
+00465B63   . /7D 12         JGE SHORT 00465B77	;JMP <- optional
+
+
+
+
+after 1st run, these files get deleted:
+
+cal.new
+lsdata.new
+pn16.dll
+users.new
+
+
+"cal.new" is copied to "resource\cal.res"
+"lsdata.new" is copied to "resource\lsdata.dat"
+"users.new" is copied to "resource\users.res"
+
+"pn32.dll" is created after reg?
+
+.dll files are not really DLL files.
+
+
+
+
+

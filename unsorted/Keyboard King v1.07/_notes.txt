@@ -1,0 +1,15 @@
+00403A49     /74 0D         JE SHORT 00403A58                        ;  Possible Non PS/2 Keyboard error?????
+
+change to JMP - THIS WAS USED PURELY BECAUSE I WAS GETTING AN ERROR AT STARTUP AND COULD NOT GET TO THE REG BOX.
+
+
+
+004055DD   . /75 37         JNZ SHORT 00405616                       ;  Reg success if NOP
+
+change to NOP
+
+
+
+00405619   . /75 1F         JNZ SHORT 0040563A                       ;  Wrong Code error
+
+change to NOP - OPTIONAL!!

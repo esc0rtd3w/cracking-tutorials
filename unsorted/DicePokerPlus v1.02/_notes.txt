@@ -1,0 +1,30 @@
+open w32dasm and click the string ref button...scroll down...see anything interesting?
+hardcoded serial...DPP102BT
+
+enter it to reg
+
+
+--------------------------------------------------------------------------
+
+* Reference To: MSVBVM60.__vbaVarMove, Ord:0000h
+                                  |
+:00425DB2 E81FB9FDFF              Call 004016D6
+
+* Possible StringData Ref from Code Obj ->"DPP102BT"
+                                  |
+:00425DB7 BBE0464100              mov ebx, 004146E0
+:00425DBC 8BD3                    mov edx, ebx
+:00425DBE B9F0324400              mov ecx, 004432F0
+
+* Reference To: MSVBVM60.__vbaStrCopy, Ord:0000h
+                                  |
+:00425DC3 E808B9FDFF              Call 004016D0
+:00425DC8 8D9550FFFFFF            lea edx, dword ptr [ebp+FFFFFF50]
+:00425DCE 8D8D70FFFFFF            lea ecx, dword ptr [ebp+FFFFFF70]
+
+* Possible StringData Ref from Code Obj ->"C:\DPP\DPP102BT.TXT"
+                                  |
+:00425DD4 C78558FFFFFFF8464100    mov dword ptr [ebp+FFFFFF58], 004146F8
+:00425DDE C78550FFFFFF08000000    mov dword ptr [ebp+FFFFFF50], 00000008
+
+--------------------------------------------------------------------------

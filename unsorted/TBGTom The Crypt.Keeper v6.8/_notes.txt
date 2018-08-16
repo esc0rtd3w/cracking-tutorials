@@ -1,0 +1,114 @@
+
+
+Target: wck6.exe
+
+--------------------------------------------
+
+wck.mdb <- holds license info
+
+--------------------------------------------
+
+Register with any serial:
+
+
+:0049256D 0F8415090000            je 00492E88
+
+change to
+
+:0049256D 909090909090            nop(x6)
+
+--------------------------------------------
+
+
+* Referenced by a (U)nconditional or (C)onditional Jump at Address:
+|:0049256D(C)
+|
+:00492E88 B904000280              mov ecx, 80020004
+:00492E8D B80A000000              mov eax, 0000000A
+:00492E92 898D50FFFFFF            mov dword ptr [ebp+FFFFFF50], ecx
+:00492E98 898D60FFFFFF            mov dword ptr [ebp+FFFFFF60], ecx
+:00492E9E 898D70FFFFFF            mov dword ptr [ebp+FFFFFF70], ecx
+:00492EA4 8D95F8FEFFFF            lea edx, dword ptr [ebp+FFFFFEF8]
+:00492EAA 8D8D78FFFFFF            lea ecx, dword ptr [ebp+FFFFFF78]
+:00492EB0 898548FFFFFF            mov dword ptr [ebp+FFFFFF48], eax
+:00492EB6 898558FFFFFF            mov dword ptr [ebp+FFFFFF58], eax
+:00492EBC 898568FFFFFF            mov dword ptr [ebp+FFFFFF68], eax
+
+* Possible StringData Ref from Code Obj ->"IINVALID REGISTRATION INFORMATION!"
+
+
+
+
+
+
+
+:00464C32 7508                    jne 00464C3C
+:00464C34 D835B0124000            fdiv dword ptr [004012B0]
+:00464C3A EB0B                    jmp 00464C47
+
+
+
+
+
+* Referenced by a (U)nconditional or (C)onditional Jump at Address:
+|:00464C5C(C)
+|
+:00464C69 8D4DD4                  lea ecx, dword ptr [ebp-2C]
+
+* Reference To: MSVBVM60.__vbaFreeObj, Ord:0000h
+                                  |
+:00464C6C FF1570124000            Call dword ptr [00401270]
+:00464C72 8B16                    mov edx, dword ptr [esi]
+:00464C74 56                      push esi
+:00464C75 FF9204030000            call dword ptr [edx+00000304]
+:00464C7B 50                      push eax
+:00464C7C 8D45D4                  lea eax, dword ptr [ebp-2C]
+:00464C7F 50                      push eax
+
+* Reference To: MSVBVM60.__vbaObjSet, Ord:0000h
+                                  |
+:00464C80 FF15B0104000            Call dword ptr [004010B0]
+
+* Reference To: MSVBVM60.rtcVarBstrFromAnsi, Ord:0260h
+                                  |
+:00464C86 8B3584114000            mov esi, dword ptr [00401184]
+:00464C8C 8D4DBC                  lea ecx, dword ptr [ebp-44]
+:00464C8F BB08000000              mov ebx, 00000008
+:00464C94 6A0A                    push 0000000A
+:00464C96 51                      push ecx
+:00464C97 898528FEFFFF            mov dword ptr [ebp+FFFFFE28], eax
+
+* Possible StringData Ref from Code Obj ->"TTHE CRYPT KEEPER"
+                                  |
+:00464C9D C78584FEFFFFF0A04100    mov dword ptr [ebp+FFFFFE84], 0041A0F0
+:00464CA7 899D7CFEFFFF            mov dword ptr [ebp+FFFFFE7C], ebx
+:00464CAD FFD6                    call esi
+:00464CAF 8D559C                  lea edx, dword ptr [ebp-64]
+:00464CB2 6A0A                    push 0000000A
+:00464CB4 52                      push edx
+:00464CB5 FFD6                    call esi
+:00464CB7 8D856CFFFFFF            lea eax, dword ptr [ebp+FFFFFF6C]
+:00464CBD 6A0A                    push 0000000A
+:00464CBF 50                      push eax
+
+* Possible StringData Ref from Code Obj ->"YYou are running an UNREGISTERED "
+                                        ->"version of this software."
+                                  |
+:00464CC0 C78574FEFFFF64A14100    mov dword ptr [ebp+FFFFFE74], 0041A164
+:00464CCA 899D6CFEFFFF            mov dword ptr [ebp+FFFFFE6C], ebx
+:00464CD0 FFD6                    call esi
+:00464CD2 8D8D4CFFFFFF            lea ecx, dword ptr [ebp+FFFFFF4C]
+:00464CD8 6A0A                    push 0000000A
+:00464CDA 51                      push ecx
+:00464CDB FFD6                    call esi
+:00464CDD 8D951CFFFFFF            lea edx, dword ptr [ebp+FFFFFF1C]
+:00464CE3 6A0A                    push 0000000A
+:00464CE5 52                      push edx
+
+* Possible StringData Ref from Code Obj ->"YYou are allowed to have up to "
+                                        ->"100 records in the database. After "
+                                        ->"that, the program will automatically "
+                                        ->"lock."
+
+
+

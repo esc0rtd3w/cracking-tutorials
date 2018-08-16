@@ -1,0 +1,39 @@
+:00419327 0F857C010000            jne 004194A9			;invalid key
+
+nop this
+
+
+
+
+* Possible StringData Ref from Code Obj ->"337000"
+
+reg code???
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+:0040D7B6 7D12                    jge 0040D7CA			;  40 word limit??
+
+CRASHES!!!!
+
+
+
+
+
+:0040D7E8 0F84A3000000            je 0040D891
+
+-->
+
+0040D7E8     /E9 A4000000   JMP 0040D891
+0040D7ED     |90            NOP
+

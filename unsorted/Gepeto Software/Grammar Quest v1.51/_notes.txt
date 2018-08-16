@@ -1,0 +1,74 @@
+Registered Status Without Reg Code:
+
+
+004753A0   . /74 1F         JE SHORT 004753C1			;NOP
+004753A2   . |8B7D 08       MOV EDI,DWORD PTR SS:[EBP+8]
+004753A5   . |66:C705 2CC14>MOV WORD PTR DS:[4BC12C],0FFFF
+004753AE   . |68 341D4100   PUSH 00411D34                            ;  UNICODE "Grammar Quest-- Full Registered Version"
+004753B3   . |57            PUSH EDI
+004753B4   . |8B0F          MOV ECX,DWORD PTR DS:[EDI]
+004753B6   . |FF51 54       CALL NEAR DWORD PTR DS:[ECX+54]
+004753B9   . |85C0          TEST EAX,EAX
+004753BB   . |DBE2          FCLEX
+004753BD   . |7D 2C         JGE SHORT 004753EB
+004753BF   . |EB 1B         JMP SHORT 004753DC
+004753C1   > \66:893D 2CC14>MOV WORD PTR DS:[4BC12C],DI
+004753C8   .  8B7D 08       MOV EDI,DWORD PTR SS:[EBP+8]
+004753CB   .  68 481C4100   PUSH 00411C48                            ;  UNICODE "Grammar Quest-- Unregistered Shareware Version"
+
+
+
+
+00474FB1   . /75 3B         JNZ SHORT 00474FEE			;force JMP
+00474FB3   . |A1 10C04B00   MOV EAX,DWORD PTR DS:[4BC010]
+00474FB8   . |85C0          TEST EAX,EAX
+00474FBA   . |75 10         JNZ SHORT 00474FCC
+00474FBC   . |68 10C04B00   PUSH 004BC010                            ; /Arg2 = 004BC010
+00474FC1   . |68 48754000   PUSH 00407548                            ; |Arg1 = 00407548
+00474FC6   . |FF15 68114000 CALL NEAR DWORD PTR DS:[<&MSVBVM60.__vba>; \__vbaNew2
+00474FCC   > |8B3D 10C04B00 MOV EDI,DWORD PTR DS:[4BC010]
+00474FD2   . |8B07          MOV EAX,DWORD PTR DS:[EDI]
+00474FD4   . |68 481C4100   PUSH 00411C48                            ;  UNICODE "Grammar Quest-- Unregistered Shareware Version"
+
+
+
+
+
+Serial Fishing:
+
+MultiByteToWideChar
+WideCharToMultiByte
+__vbaStrCopy
+
+if setting BP on memcpy, and pressing F9 (ETR), in Olly, the 9th time hits INVALID REGISTRATION CODE!
+
+
+
+
+"reg-gq.dat" holds license info??
+
+"gqdata.dat" holds settings??
+
+
+
+-------------------------------------
+Addon Packs
+-------------------------------------
+
+GPack-1.exe:
+
+0041D80B   . /74 2C         JE SHORT 0041D839		;NOP
+
+0041D818   . /0F80 58010000 JO 0041D976			;NOP
+
+
+GPack-2.exe:
+
+0041D813   . /74 2C         JE SHORT 0041D841		;NOP
+
+0041D820   . /0F80 58010000 JO 0041D97E			;NOP
+
+
+
+
+

@@ -1,0 +1,12 @@
+0012F2CC  |00282CAC  UNICODE "ESP7542129"  <- serial from bp __vbaStrCmp
+
+
+
+
+
+"espdata.bak" gets renamed to "espdata.dat" after 1st run.
+
+"espdata2.dat" holds license information.
+
+
+

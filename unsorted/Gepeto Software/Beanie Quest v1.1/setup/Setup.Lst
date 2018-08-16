@@ -1,0 +1,434 @@
+[Bootstrap]
+SetupTitle=Install
+SetupText=Copying Files, please stand by.
+CabFile=BeanieQuest.CAB
+Spawn=Setup1.exe
+Uninstal=st6unst.exe
+TmpDir=msftqws.pdw
+Cabs=1
+
+[Bootstrap Files]
+File1=@VB6STKIT.DLL,$(WinSysPathSysFile),,,7/15/00 12:00:00 AM,101888,6.0.84.50
+File2=@COMCAT.DLL,$(WinSysPathSysFile),$(DLLSelfRegister),,5/8/02 6:47:42 AM,22288,4.71.1460.1
+File3=@STDOLE2.TLB,$(WinSysPathSysFile),$(TLBRegister),,5/8/02 6:47:44 AM,17920,2.40.4275.1
+File4=@ASYCFILT.DLL,$(WinSysPathSysFile),,,5/8/02 6:47:42 AM,147728,2.40.4275.1
+File5=@OLEPRO32.DLL,$(WinSysPathSysFile),$(DLLSelfRegister),,5/8/02 6:47:44 AM,164112,5.0.4275.1
+File6=@OLEAUT32.DLL,$(WinSysPathSysFile),$(DLLSelfRegister),,4/12/00 1:00:22 PM,598288,2.40.4275.1
+File7=@msvbvm60.dll,$(WinSysPathSysFile),$(DLLSelfRegister),,2/23/04 8:42:40 PM,1386496,6.0.97.82
+
+[IconGroups]
+Group0=Beanie Quest
+PrivateGroup0=-1
+Parent0=$(Programs)
+
+[Beanie Quest]
+Icon1="BeanieQuest.exe"
+Title1=Beanie Quest
+StartIn1=$(AppPath)
+Icon2=""Order Form.htm""
+Title2=Order Form
+StartIn2=$(AppPath)
+Icon3="bq-ReadMe.txt"
+Title3=ReadMe
+StartIn3=$(AppPath)
+Icon4=$(AppPath)\bq-help\bqindex.htm
+Title4=BQ Help
+StartIn4=$(AppPath)\bq-help\
+
+[Setup]
+Title=Beanie Quest by Gepeto Software
+DefaultDir=$(ProgramFiles)\BeanieQuest
+AppExe=BeanieQuest.exe
+AppToUninstall=BeanieQuest.exe
+
+[Setup1 Files]
+File1=@whatsnew.txt,$(AppPath),,,4/21/06 10:18:45 AM,4441,0.0.0.0
+File2=@reg.dat,$(AppPath),,,1/23/06 9:37:46 AM,30,0.0.0.0
+File3=@Order Form.htm,$(AppPath),,,9/13/05 2:12:41 PM,27465,0.0.0.0
+File4=@bq-ReadMe.txt,$(AppPath),,,4/21/06 10:19:00 AM,4082,0.0.0.0
+File5=@bqdata.new,$(AppPath),,,4/21/06 11:38:38 AM,157,0.0.0.0
+File6=@RICHED32.DLL,$(WinSysPathSysFile),,,5/7/98 12:00:00 AM,174352,4.0.993.4
+File7=@RICHTX32.OCX,$(WinSysPath),$(DLLSelfRegister),$(Shared),3/9/04 1:00:00 AM,212240,6.1.97.82
+File8=@BeanieQuest.exe,$(AppPath),,,4/21/06 11:58:42 AM,1441792,1.0.0.0
+File9=@bqfilenotfound.htm,$(AppPath)\bq-help,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File10=@bqhowtoplay.htm,$(AppPath)\bq-help,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File11=@bqindex.htm,$(AppPath)\bq-help,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File12=@bqnetwork1.htm,$(AppPath)\bq-help,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File13=@bq-options.htm,$(AppPath)\bq-help,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File14=@bqregcodes.htm,$(AppPath)\bq-help,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File15=@bqresolution.htm,$(AppPath)\bq-help,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File16=@bquninstall.htm,$(AppPath)\bq-help,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File17=@beanie1.jpg,$(AppPath)\images,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File18=@beanie2.jpg,$(AppPath)\images,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File19=@beanie3.jpg,$(AppPath)\images,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File20=@beaniedoor.jpg,$(AppPath)\images,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File21=@block.jpg,$(AppPath)\images,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File22=@bomb.jpg,$(AppPath)\images,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File23=@bombbutton.jpg,$(AppPath)\images,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File24=@bombhole.jpg,$(AppPath)\images,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File25=@bombmask.jpg,$(AppPath)\images,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File26=@book.jpg,$(AppPath)\images,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File27=@boulder.jpg,$(AppPath)\images,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File28=@boulderm.jpg,$(AppPath)\images,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File29=@bqtitle.jpg,$(AppPath)\images,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File30=@brickwall.jpg,$(AppPath)\images,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File31=@brickwalltop.jpg,$(AppPath)\images,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File32=@bubble.jpg,$(AppPath)\images,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File33=@bubblem.jpg,$(AppPath)\images,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File34=@bubblesolid.jpg,$(AppPath)\images,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File35=@bush.jpg,$(AppPath)\images,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File36=@bushmask.jpg,$(AppPath)\images,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File37=@button.jpg,$(AppPath)\images,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File38=@clearedbanner.jpg,$(AppPath)\images,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File39=@clearedbannermask.jpg,$(AppPath)\images,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File40=@column.jpg,$(AppPath)\images,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File41=@columnmask.jpg,$(AppPath)\images,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File42=@cornermask1.jpg,$(AppPath)\images,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File43=@cornermask2.jpg,$(AppPath)\images,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File44=@cornermask3.jpg,$(AppPath)\images,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File45=@cornermask4.jpg,$(AppPath)\images,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File46=@crate.jpg,$(AppPath)\images,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File47=@crystal-p.jpg,$(AppPath)\images,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File48=@crystal-r.jpg,$(AppPath)\images,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File49=@crystal-t.jpg,$(AppPath)\images,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File50=@crystal-y.jpg,$(AppPath)\images,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File51=@e0.jpg,$(AppPath)\images,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File52=@emask.jpg,$(AppPath)\images,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File53=@endscreen.jpg,$(AppPath)\images,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File54=@endstory1.jpg,$(AppPath)\images,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File55=@endstory2.jpg,$(AppPath)\images,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File56=@exitanim.jpg,$(AppPath)\images,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File57=@filledhole.jpg,$(AppPath)\images,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File58=@flood button.jpg,$(AppPath)\images,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File59=@goldframe.jpg,$(AppPath)\images,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File60=@grass01.jpg,$(AppPath)\images,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File61=@grass02.jpg,$(AppPath)\images,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File62=@grass03.jpg,$(AppPath)\images,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File63=@grass04.jpg,$(AppPath)\images,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File64=@grass05.jpg,$(AppPath)\images,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File65=@grass06.jpg,$(AppPath)\images,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File66=@grass07.jpg,$(AppPath)\images,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File67=@grass08.jpg,$(AppPath)\images,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File68=@grass09.jpg,$(AppPath)\images,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File69=@grass10.jpg,$(AppPath)\images,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File70=@grass11.jpg,$(AppPath)\images,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File71=@grasscorner1.jpg,$(AppPath)\images,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File72=@grasscorner2.jpg,$(AppPath)\images,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File73=@grasscorner3.jpg,$(AppPath)\images,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File74=@grasscorner4.jpg,$(AppPath)\images,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File75=@ice.JPG,$(AppPath)\images,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File76=@icecorner1.jpg,$(AppPath)\images,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File77=@icecorner2.jpg,$(AppPath)\images,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File78=@icecorner3.jpg,$(AppPath)\images,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File79=@icecorner4.jpg,$(AppPath)\images,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File80=@LBAnim.jpg,$(AppPath)\images,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File81=@LBAnim2.jpg,$(AppPath)\images,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File82=@LBAnim3.jpg,$(AppPath)\images,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File83=@LBAnim4.jpg,$(AppPath)\images,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File84=@LBAnim5.jpg,$(AppPath)\images,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File85=@LBAnim6.jpg,$(AppPath)\images,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File86=@LBAnimM.jpg,$(AppPath)\images,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File87=@levelbutton1.jpg,$(AppPath)\images,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File88=@p5.jpg,$(AppPath)\images,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File89=@parchment.jpg,$(AppPath)\images,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File90=@pc1.jpg,$(AppPath)\images,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File91=@pc2.jpg,$(AppPath)\images,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File92=@pc3.jpg,$(AppPath)\images,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File93=@rc1.jpg,$(AppPath)\images,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File94=@rc2.jpg,$(AppPath)\images,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File95=@rc3.jpg,$(AppPath)\images,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File96=@rock.jpg,$(AppPath)\images,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File97=@rockcorner1.jpg,$(AppPath)\images,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File98=@rockcorner2.jpg,$(AppPath)\images,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File99=@rockcorner3.jpg,$(AppPath)\images,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File100=@rockcorner4.jpg,$(AppPath)\images,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File101=@sand.jpg,$(AppPath)\images,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File102=@sandcorner1.jpg,$(AppPath)\images,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File103=@sandcorner2.jpg,$(AppPath)\images,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File104=@sandcorner3.jpg,$(AppPath)\images,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File105=@sandcorner4.jpg,$(AppPath)\images,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File106=@shallowhole.jpg,$(AppPath)\images,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File107=@skyback.jpg,$(AppPath)\images,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File108=@spring.jpg,$(AppPath)\images,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File109=@springboard.jpg,$(AppPath)\images,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File110=@springmask.jpg,$(AppPath)\images,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File111=@stalagmites.jpg,$(AppPath)\images,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File112=@stalagmitesmask.jpg,$(AppPath)\images,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File113=@starstrip.jpg,$(AppPath)\images,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File114=@starstripmask.jpg,$(AppPath)\images,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File115=@stone.jpg,$(AppPath)\images,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File116=@stonecorner1.jpg,$(AppPath)\images,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File117=@stonecorner2.jpg,$(AppPath)\images,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File118=@stonecorner3.jpg,$(AppPath)\images,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File119=@stonecorner4.jpg,$(AppPath)\images,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File120=@story1.jpg,$(AppPath)\images,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File121=@story2.jpg,$(AppPath)\images,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File122=@tc1.jpg,$(AppPath)\images,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File123=@tc2.jpg,$(AppPath)\images,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File124=@tc3.jpg,$(AppPath)\images,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File125=@towerback.jpg,$(AppPath)\images,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File126=@towerbutton.jpg,$(AppPath)\images,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File127=@trapdoor.jpg,$(AppPath)\images,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File128=@treestump.jpg,$(AppPath)\images,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File129=@treestumpmask.jpg,$(AppPath)\images,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File130=@wandhand.jpg,$(AppPath)\images,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File131=@wandhand2.jpg,$(AppPath)\images,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File132=@water.jpg,$(AppPath)\images,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File133=@watercorner1.jpg,$(AppPath)\images,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File134=@watercorner2.jpg,$(AppPath)\images,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File135=@watercorner3.jpg,$(AppPath)\images,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File136=@watercorner4.jpg,$(AppPath)\images,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File137=@wizard1.jpg,$(AppPath)\images,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File138=@wizard2.jpg,$(AppPath)\images,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File139=@wizard3.jpg,$(AppPath)\images,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File140=@wood.jpg,$(AppPath)\images,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File141=@yc1.jpg,$(AppPath)\images,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File142=@yc2.jpg,$(AppPath)\images,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File143=@yc3.jpg,$(AppPath)\images,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File144=@zapper-down.jpg,$(AppPath)\images,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File145=@zapper-down-m.jpg,$(AppPath)\images,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File146=@zapper-left.jpg,$(AppPath)\images,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File147=@zapper-left-m.jpg,$(AppPath)\images,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File148=@zapper-right.jpg,$(AppPath)\images,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File149=@zapper-right-m.jpg,$(AppPath)\images,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File150=@zapper-up.jpg,$(AppPath)\images,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File151=@zapper-up-m.jpg,$(AppPath)\images,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File152=@01-01.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File153=@01-02.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File154=@01-03.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File155=@01-04.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File156=@01-05.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File157=@01-06.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File158=@01-07.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File159=@01-08.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File160=@01-09.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File161=@01-10.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File162=@01-11.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File163=@01-12.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File164=@01-13.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File165=@01-14.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File166=@01-15.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File167=@01-16.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File168=@01-17.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File169=@01-18.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File170=@01-19.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File171=@01-20.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File172=@01-21.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File173=@01-22.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File174=@01-23.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File175=@01-24.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File176=@01-25.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File177=@02-01.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File178=@02-02.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File179=@02-03.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File180=@02-04.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File181=@02-05.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File182=@02-06.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File183=@02-07.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File184=@02-08.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File185=@02-09.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File186=@02-10.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File187=@02-11.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File188=@02-12.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File189=@02-13.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File190=@02-14.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File191=@02-15.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File192=@02-16.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File193=@02-17.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File194=@02-18.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File195=@02-19.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File196=@02-20.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File197=@02-21.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File198=@02-22.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File199=@02-23.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File200=@02-24.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File201=@02-25.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File202=@03-01.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File203=@03-02.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File204=@03-03.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File205=@03-04.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File206=@03-05.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File207=@03-06.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File208=@03-07.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File209=@03-08.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File210=@03-09.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File211=@03-10.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File212=@03-11.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File213=@03-12.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File214=@03-13.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File215=@03-14.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File216=@03-15.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File217=@03-16.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File218=@03-17.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File219=@03-18.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File220=@03-19.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File221=@03-20.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File222=@03-21.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File223=@03-22.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File224=@03-23.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File225=@03-24.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File226=@03-25.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File227=@04-01.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File228=@04-02.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File229=@04-03.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File230=@04-04.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File231=@04-05.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File232=@04-06.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File233=@04-07.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File234=@04-08.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File235=@04-09.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File236=@04-10.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File237=@04-11.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File238=@04-12.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File239=@04-13.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File240=@04-14.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File241=@04-15.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File242=@04-16.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File243=@04-17.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File244=@04-18.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File245=@04-19.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File246=@04-20.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File247=@04-21.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File248=@04-22.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File249=@04-23.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File250=@04-24.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File251=@04-25.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File252=@05-01.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File253=@05-02.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File254=@05-03.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File255=@05-04.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File256=@05-05.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File257=@05-06.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File258=@05-07.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File259=@05-08.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File260=@05-09.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File261=@05-10.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File262=@05-11.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File263=@05-12.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File264=@05-13.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File265=@05-14.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File266=@05-15.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File267=@05-16.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File268=@05-17.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File269=@05-18.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File270=@05-19.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File271=@05-20.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File272=@05-21.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File273=@05-22.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File274=@05-23.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File275=@05-24.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File276=@05-25.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File277=@BB-01.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File278=@BB-02.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File279=@BB-03.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File280=@BB-04.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File281=@BB-05.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File282=@BB-06.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File283=@BB-07.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File284=@BB-08.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File285=@BB-09.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File286=@BB-10.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File287=@BB-11.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File288=@BB-12.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File289=@BB-13.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File290=@P2-26.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File291=@P2-27.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File292=@P2-28.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File293=@P2-29.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File294=@P2-30.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File295=@P2-31.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File296=@P2-32.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File297=@P2-33.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File298=@P2-34.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File299=@P2-35.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File300=@PL-01.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File301=@PL-02.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File302=@PL-03.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File303=@PL-04.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File304=@PL-05.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File305=@PL-06.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File306=@PL-07.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File307=@PL-08.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File308=@PL-09.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File309=@PL-10.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File310=@PL-11.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File311=@PL-12.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File312=@PL-13.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File313=@PL-14.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File314=@PL-15.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File315=@PL-16.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File316=@PL-17.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File317=@PL-18.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File318=@PL-19.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File319=@PL-20.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File320=@PL-21.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File321=@PL-22.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File322=@PL-23.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File323=@PL-24.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File324=@PL-25.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File325=@PL-26.lev,$(AppPath)\levels,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File326=@endgame.txt,$(AppPath)\resource,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File327=@story.txt,$(AppPath)\resource,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File328=@towers.txt,$(AppPath)\resource,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File329=@Bleep2.wav,$(AppPath)\sounds,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File330=@boing.wav,$(AppPath)\sounds,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File331=@bonk.wav,$(AppPath)\sounds,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File332=@boom.WAV,$(AppPath)\sounds,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File333=@crumble.wav,$(AppPath)\sounds,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File334=@crystal.wav,$(AppPath)\sounds,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File335=@dissolve.wav,$(AppPath)\sounds,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File336=@endmusic.MID,$(AppPath)\sounds,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File337=@exit.WAV,$(AppPath)\sounds,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File338=@fall.wav,$(AppPath)\sounds,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File339=@fanfare.wav,$(AppPath)\sounds,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File340=@floorcrumble.wav,$(AppPath)\sounds,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File341=@harp.wav,$(AppPath)\sounds,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File342=@LASER.WAV,$(AppPath)\sounds,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File343=@magic.WAV,$(AppPath)\sounds,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File344=@music_1.MID,$(AppPath)\sounds,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File345=@music_2.MID,$(AppPath)\sounds,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File346=@music_3.MID,$(AppPath)\sounds,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File347=@music_main.MID,$(AppPath)\sounds,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File348=@openscroll.wav,$(AppPath)\sounds,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File349=@slide.wav,$(AppPath)\sounds,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File350=@splash.wav,$(AppPath)\sounds,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+File351=@zap.wav,$(AppPath)\sounds,,,4/21/2006 12:16:29 PM,100000,0.0.0.0
+
+; The following lines may be deleted in order to obtain extra 
+; space for customizing this file on a full installation diskette.
+; 
+; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX

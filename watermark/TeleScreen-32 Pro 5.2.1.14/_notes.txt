@@ -1,0 +1,297 @@
+
+Target: telescreen32.exe
+
+
+Wrap-Up:
+
+----------
+Patch #1:
+----------
+
+Disable the "TeleScreen 5" watermark from writing to the screen on play :)
+
+*Tested on a 100 line text file*
+
+
+:0048F546 7534                    jne 0048F57C
+
+change to
+
+:0048F546 EB34                    jmp 0048F57C
+
+
+----------
+Patch #2:
+----------
+
+Disable "TeleScreen 5" watermark on "Display Color Bars" play option:
+
+
+
+00492782  |. /75 17         JNZ SHORT 0049279B
+
+change  to
+
+00492782     /EB 17         JMP SHORT 0049279B
+
+
+----------
+Patch #3:
+----------
+
+Disable the "UNREGISTERED" footer message:
+
+(I haven't actually seen this yet?!?)
+
+
+:0048789F 0F85C1010000            jne 00487A66
+
+change to
+
+:0048789F E9C201000090            jmp 00487A66
+
+------------------------------------------------
+
+funny thing is that it's supposed to be fully functional and show a watermark every 6th line......i have played with it and tried loading different text files and typing random text, and to my surprise, i dont see any watermarks or anything else?!?!?!?!??
+
+
+
+
+ResHack -> RCData -> TFORM1 ->
+
+  object TELEICELOCK1: TDRSIceLock
+    UserPad = #0
+    ProgPad = #0
+    IceString1 = 'CAllforHelp'
+    IceString2 = 'May You Answer'
+    IceSeed1 = 10524247
+    IceSeed2 = 14444350
+    ProgramKey1 = 188376417
+    ProgramKey2 = 1826594724
+    KeyFile = 'thesoundofmusic'
+    stype = Tele5
+    trialDays = 0
+    DemoLicense = False
+    Headfuck = 0	<- WTF is this?!?!?
+    Left = 80
+    Top = 272
+  end
+
+
+
+starting at hex 087085
+
+
+Prorgram registration license..9See the complete online help system for more information...4This footer and un-registered screen banners do not ....appear in the licensed version
+
+
+WHERE ARE THESE BANNERS AND FOOTERS???
+
+------------------------------------------------
+
+OK after some more time playing and loading a large text file, i was able to get this thing to display a "TeleScreen 5" chunk of text on some lines. It does not display every 6th line as said by the company....rather i seen it appear on the 10th, 12th, 16th, 25th and 33rd line....it seems random?!??
+
+------------------------------------------------
+
+TeleScreen 5 Text:
+
+
+---------
+Ref#1:
+---------
+
+* Possible StringData Ref from Code Obj ->"M--------------------- Unregistered "
+                                        ->"Version Footer ---------------------------"
+                                  |
+:004878BC BAC87A4800              mov edx, 00487AC8
+:004878C1 8D8530FEFFFF            lea eax, dword ptr [ebp+FFFFFE30]
+:004878C7 E814E6F7FF              call 00405EE0
+:004878CC E836E6F7FF              call 00405F07
+
+* Possible StringData Ref from Code Obj ->"TeleScreen (For a registered "
+                                        ->"version of this program"
+                                  |
+
+
+---------
+Ref#2:
+---------
+
+
+:0048874F 7517                    jne 00488768		;JUMP OVER?!?
+:00488751 56                      push esi
+
+* Possible StringData Ref from Code Obj ->"TeleScreen 5"
+
+
+---------
+Ref#3:
+---------
+
+* Referenced by a CALL at Address:
+|:0049AD26   
+|
+:00492744 55                      push ebp
+:00492745 8BEC                    mov ebp, esp
+:00492747 81C4F0FEFFFF            add esp, FFFFFEF0
+:0049274D 53                      push ebx
+:0049274E 56                      push esi
+:0049274F 57                      push edi
+:00492750 33C0                    xor eax, eax
+:00492752 8985F0FEFFFF            mov dword ptr [ebp+FFFFFEF0], eax
+:00492758 8B3DFC4B4A00            mov edi, dword ptr [004A4BFC]
+:0049275E 33C0                    xor eax, eax
+:00492760 55                      push ebp
+:00492761 68D72E4900              push 00492ED7
+:00492766 64FF30                  push dword ptr fs:[eax]
+:00492769 648920                  mov dword ptr fs:[eax], esp
+:0049276C 8B07                    mov eax, dword ptr [edi]
+:0049276E 8B4064                  mov eax, dword ptr [eax+64]
+:00492771 8945FC                  mov dword ptr [ebp-04], eax
+:00492774 A1684E4A00              mov eax, dword ptr [004A4E68]
+:00492779 8B00                    mov eax, dword ptr [eax]
+:0049277B 83B82C08000000          cmp dword ptr [eax+0000082C], 00000000
+:00492782 7517                    jne 0049279B
+:00492784 57                      push edi
+
+* Possible StringData Ref from Code Obj ->"TeleScreen 5"
+
+
+---------
+Ref#4:
+---------
+
+* Referenced by a (U)nconditional or (C)onditional Jump at Addresses:
+|:0048F4BF(C), :0048F4E9(U), :0048F510(C), :0048F522(U)
+|
+:0048F534 8D45C4                  lea eax, dword ptr [ebp-3C]
+:0048F537 8A1510FD4800            mov dl, byte ptr [0048FD10]
+:0048F53D E8DA130000              call 0049091C
+:0048F542 807D0800                cmp byte ptr [ebp+08], 00
+:0048F546 7534                    jne 0048F57C				;the MAGIC JUMP :)
+:0048F548 833D704A4A000C          cmp dword ptr [004A4A70], 0000000C
+:0048F54F 7C25                    jl 0048F576
+:0048F551 B820000000              mov eax, 00000020
+:0048F556 E8ED39F7FF              call 00402F48
+:0048F55B 83F805                  cmp eax, 00000005
+:0048F55E 7D16                    jge 0048F576
+:0048F560 8D45C4                  lea eax, dword ptr [ebp-3C]
+
+* Possible StringData Ref from Code Obj ->"TeleScreen 5"
+
+
+---------
+Ref#4:
+---------
+
+
+* Referenced by a (U)nconditional or (C)onditional Jump at Address:
+|:0048FF4D(C)
+|
+
+* Possible StringData Ref from Code Obj ->"TeleScreen 5"
+
+
+
+---------
+Ref#5:
+---------
+
+* Referenced by a CALL at Address:
+|:0048D070   
+|
+:00490B80 E83F310000              call 00493CC4
+:00490B85 8B15684E4A00            mov edx, dword ptr [004A4E68]
+:00490B8B 8B12                    mov edx, dword ptr [edx]
+:00490B8D 88824C090000            mov byte ptr [edx+0000094C], al
+:00490B93 E8380D0000              call 004918D0
+:00490B98 A1684E4A00              mov eax, dword ptr [004A4E68]
+:00490B9D 8B00                    mov eax, dword ptr [eax]
+:00490B9F 8B80C4030000            mov eax, dword ptr [eax+000003C4]
+
+* Possible StringData Ref from Code Obj ->"Browse DRS-DIGITRAX SERVICES"
+                                  |
+:00490BA5 BAE00B4900              mov edx, 00490BE0
+:00490BAA E885EAFAFF              call 0043F634
+:00490BAF A1544D4A00              mov eax, dword ptr [004A4D54]
+:00490BB4 8B00                    mov eax, dword ptr [eax]
+
+* Possible StringData Ref from Code Obj ->"TeleScreen"
+
+
+------------------------------------------------
+
+
+
+:00488E7A 0F84AD000000            je 00488F2D
+:00488E80 8B07                    mov eax, dword ptr [edi]
+:00488E82 E86DE3FBFF              call 004471F4
+:00488E87 8B400C                  mov eax, dword ptr [eax+0C]
+:00488E8A E89DF1F8FF              call 0041802C
+:00488E8F 8BF0                    mov esi, eax
+:00488E91 8B07                    mov eax, dword ptr [edi]
+:00488E93 E85CE3FBFF              call 004471F4
+:00488E98 8B400C                  mov eax, dword ptr [eax+0C]
+
+* Possible StringData Ref from Code Obj ->"Arial"
+                                  |
+:00488E9B BA3C8F4800              mov edx, 00488F3C
+:00488EA0 E82BF1F8FF              call 00417FD0
+:00488EA5 8B07                    mov eax, dword ptr [edi]
+:00488EA7 E848E3FBFF              call 004471F4
+:00488EAC 8B400C                  mov eax, dword ptr [eax+0C]
+:00488EAF 50                      push eax
+:00488EB0 8B4338                  mov eax, dword ptr [ebx+38]
+:00488EB3 B918000000              mov ecx, 00000018
+:00488EB8 99                      cdq
+:00488EB9 F7F9                    idiv ecx
+:00488EBB 8BD0                    mov edx, eax
+:00488EBD 58                      pop eax
+:00488EBE E885F1F8FF              call 00418048
+
+* Possible StringData Ref from Code Obj ->"TeleScreen Un-registered"
+                                  |
+:00488EC3 684C8F4800              push 00488F4C
+:00488EC8 8B07                    mov eax, dword ptr [edi]
+:00488ECA E825E3FBFF              call 004471F4
+:00488ECF BA708F4800              mov edx, 00488F70
+:00488ED4 E82701F9FF              call 00419000
+:00488ED9 D1F8                    sar eax, 1
+:00488EDB 7903                    jns 00488EE0
+:00488EDD 83D000                  adc eax, 00000000
+
+* Referenced by a (U)nconditional or (C)onditional Jump at Address:
+|:00488EDB(C)
+|
+:00488EE0 8B533C                  mov edx, dword ptr [ebx+3C]
+:00488EE3 83EA32                  sub edx, 00000032
+:00488EE6 2BD0                    sub edx, eax
+:00488EE8 52                      push edx
+:00488EE9 8B07                    mov eax, dword ptr [edi]
+:00488EEB E804E3FBFF              call 004471F4
+
+* Possible StringData Ref from Code Obj ->"TeleScreen Un-registered "
+
+------------------------------------------------
+
+Unregistered Footer:
+
+
+:0048789F 0F85C1010000            jne 00487A66
+:004878A5 E85E9DF9FF              call 00421608
+:004878AA E8BD97F9FF              call 0042106C
+:004878AF 8B400C                  mov eax, dword ptr [eax+0C]
+:004878B2 BA08000000              mov edx, 00000008
+:004878B7 E88C07F9FF              call 00418048
+
+* Possible StringData Ref from Code Obj ->"M--------------------- Unregistered "
+                                        ->"Version Footer ---------------------------"
+------------------------------------------------
+
+TeleScreen Text on "Display Color Bars" play option:
+
+
+
+00492782  |. /75 17         JNZ SHORT 0049279B
+
+

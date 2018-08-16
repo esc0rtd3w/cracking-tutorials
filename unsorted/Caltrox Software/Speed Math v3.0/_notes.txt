@@ -1,0 +1,1 @@
+use __vbaStrCmp to get serial number compare.

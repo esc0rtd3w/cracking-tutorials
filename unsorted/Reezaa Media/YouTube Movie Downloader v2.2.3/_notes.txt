@@ -1,0 +1,137 @@
+uses "sound.dll" to hold REG status....it's not a REAL DLL file....it adds "0D0A" in between every 2 bytes when registered.
+
+refer to the notes from FarmVille Tools 2.3.2, as this approach and license file are identical.
+
+-----------------------------------------
+
+patch this address (NOP) to accept any serial # and write the proper license file, as shown below.
+
+:0070B9EB(C)
+
+-----------------------------------------
+
+original license file (sound.dll) at the end in HEX: 7731 32
+
+registered license file (sound.dll) at the end in HEX: 776B 6B0D 0A <- there's that 0D0A again!
+
+
+the license file from FarmVille Tools works as well as the other one from these notes...it doesn't seem to make a difference to the app.
+
+-----------------------------------------
+
+
+* Referenced by a (U)nconditional or (C)onditional Jump at Address:
+|:0070B9EB(C)
+|
+:0070BEBA C745FC12000000          mov [ebp-04], 00000012
+:0070BEC1 C78564FFFFFF04000280    mov dword ptr [ebp+FFFFFF64], 80020004
+:0070BECB C7855CFFFFFF0A000000    mov dword ptr [ebp+FFFFFF5C], 0000000A
+:0070BED5 C78574FFFFFF04000280    mov dword ptr [ebp+FFFFFF74], 80020004
+:0070BEDF C7856CFFFFFF0A000000    mov dword ptr [ebp+FFFFFF6C], 0000000A
+
+* Possible StringData Ref from Code Obj ->"WWarning"
+                                  |
+:0070BEE9 C78524FFFFFF946F5700    mov dword ptr [ebp+FFFFFF24], 00576F94
+:0070BEF3 C7851CFFFFFF08000000    mov dword ptr [ebp+FFFFFF1C], 00000008
+:0070BEFD 8D951CFFFFFF            lea edx, dword ptr [ebp+FFFFFF1C]
+:0070BF03 8D8D7CFFFFFF            lea ecx, dword ptr [ebp+FFFFFF7C]
+
+* Reference To: MSVBVM60.__vbaVarDup, Ord:0000h
+                                  |
+:0070BF09 FF1564124000            Call dword ptr [00401264]
+
+* Possible StringData Ref from Code Obj ->"IInvaild Regstration Code."
+
+-----------------------------------------
+
+* Referenced by a (U)nconditional or (C)onditional Jump at Address:
+|:0070BB78(C)
+|
+:0070BBA0 C78538FEFFFF00000000    mov dword ptr [ebp+FFFFFE38], 00000000
+
+* Referenced by a (U)nconditional or (C)onditional Jump at Address:
+|:0070BB9E(U)
+|
+:0070BBAA 8B4DA8                  mov ecx, dword ptr [ebp-58]
+:0070BBAD 51                      push ecx
+
+* Possible StringData Ref from Code Obj ->"aasdfasdfasdfasw"
+                                  |
+:0070BBAE 68A8B35700              push 0057B3A8
+
+* Reference To: MSVBVM60.__vbaStrCat, Ord:0000h
+                                  |
+:0070BBB3 FF1570104000            Call dword ptr [00401070]
+:0070BBB9 8BD0                    mov edx, eax
+:0070BBBB 8D4DA4                  lea ecx, dword ptr [ebp-5C]
+
+* Reference To: MSVBVM60.__vbaStrMove, Ord:0000h
+                                  |
+:0070BBBE FF1598124000            Call dword ptr [00401298]
+:0070BBC4 50                      push eax
+
+* Possible StringData Ref from Code Obj ->"kkk"
+                                  |
+:0070BBC5 684C6D5700              push 00576D4C
+
+* Reference To: MSVBVM60.__vbaStrCat, Ord:0000h
+                                  |
+:0070BBCA FF1570104000            Call dword ptr [00401070]
+:0070BBD0 894594                  mov dword ptr [ebp-6C], eax
+:0070BBD3 C7458C08000000          mov [ebp-74], 00000008
+:0070BBDA 8D558C                  lea edx, dword ptr [ebp-74]
+:0070BBDD 8D4DBC                  lea ecx, dword ptr [ebp-44]
+
+* Reference To: MSVBVM60.__vbaVarMove, Ord:0000h
+                                  |
+:0070BBE0 FF1514104000            Call dword ptr [00401014]
+:0070BBE6 8D55A4                  lea edx, dword ptr [ebp-5C]
+:0070BBE9 52                      push edx
+:0070BBEA 8D45A8                  lea eax, dword ptr [ebp-58]
+:0070BBED 50                      push eax
+:0070BBEE 6A02                    push 00000002
+
+* Reference To: MSVBVM60.__vbaFreeStrList, Ord:0000h
+                                  |
+:0070BBF0 FF152C124000            Call dword ptr [0040122C]
+:0070BBF6 83C40C                  add esp, 0000000C
+:0070BBF9 8D4DA0                  lea ecx, dword ptr [ebp-60]
+
+* Reference To: MSVBVM60.__vbaFreeObj, Ord:0000h
+                                  |
+:0070BBFC FF15EC124000            Call dword ptr [004012EC]
+:0070BC02 C745FC0C000000          mov [ebp-04], 0000000C
+:0070BC09 8D4DBC                  lea ecx, dword ptr [ebp-44]
+:0070BC0C 51                      push ecx
+:0070BC0D 6A01                    push 00000001
+:0070BC0F 6898B25700              push 0057B298
+
+* Reference To: MSVBVM60.__vbaPrintFile, Ord:0000h
+                                  |
+:0070BC14 FF15A4114000            Call dword ptr [004011A4]
+:0070BC1A 83C40C                  add esp, 0000000C
+:0070BC1D C745FC0D000000          mov [ebp-04], 0000000D
+:0070BC24 6A01                    push 00000001
+
+* Reference To: MSVBVM60.__vbaFileClose, Ord:0000h
+                                  |
+:0070BC26 FF1508114000            Call dword ptr [00401108]
+:0070BC2C C745FC0E000000          mov [ebp-04], 0000000E
+:0070BC33 C78564FFFFFF04000280    mov dword ptr [ebp+FFFFFF64], 80020004
+:0070BC3D C7855CFFFFFF0A000000    mov dword ptr [ebp+FFFFFF5C], 0000000A
+:0070BC47 C78574FFFFFF04000280    mov dword ptr [ebp+FFFFFF74], 80020004
+:0070BC51 C7856CFFFFFF0A000000    mov dword ptr [ebp+FFFFFF6C], 0000000A
+
+* Possible StringData Ref from Code Obj ->"SSuccessful"
+                                  |
+:0070BC5B C78524FFFFFF947F5700    mov dword ptr [ebp+FFFFFF24], 00577F94
+:0070BC65 C7851CFFFFFF08000000    mov dword ptr [ebp+FFFFFF1C], 00000008
+:0070BC6F 8D951CFFFFFF            lea edx, dword ptr [ebp+FFFFFF1C]
+:0070BC75 8D8D7CFFFFFF            lea ecx, dword ptr [ebp+FFFFFF7C]
+
+* Reference To: MSVBVM60.__vbaVarDup, Ord:0000h
+                                  |
+:0070BC7B FF1564124000            Call dword ptr [00401264]
+
+* Possible StringData Ref from Code Obj ->"RRegister Successfully! Please "
+                                        ->"restart program."

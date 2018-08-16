@@ -1,0 +1,6 @@
+00448BD5     /0F84 6A040000 JE 00449045                              ;  Jump to bad guy
+
+
+00448BDD     /0F84 62040000 JE 00449045                              ;  Jump to bad guy
+
+change both to NOP
